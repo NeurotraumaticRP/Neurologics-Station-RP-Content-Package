@@ -13,7 +13,7 @@
   <!-- Integrations -->
 
   <!-- Subs -->
-  <Submarine file="%ModDir%/Subs/Neurologics1.sub" />
+  <Submarine file="%ModDir%/Subs/neurologics layout.sub" />
   
   <!-- If any more categories need made then add them as needed -->
 </contentpackage>
