@@ -1,19 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Neurologic station RP content package" modversion="1.0" corepackage="False" gameversion="1.0.13.2">
-  <!-- Genaric XML -->
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Neurologic station RP content package" modversion="1.1" corepackage="False" gameversion="1.5.9.2">
   <Item file="%ModDir%/Xml/items.xml" />
   <Afflictions file="%ModDir%/Xml/Afflictions.xml" />
   <Talents file="%ModDir%/Xml/Talents.xml" />
   <TalentTrees file="%ModDir%/Xml/TalentTrees.xml" />
   <Jobs file="%ModDir%/Xml/Jobs.xml" />
-
-  <!-- Overrides -->
   <Jobs file="%ModDir%/Overrides/JobOverrides.xml" />
-
-  <!-- Integrations -->
-
-  <!-- Subs -->
   <Submarine file="%ModDir%/Subs/neurologics layout.sub" />
-  
-  <!-- If any more categories need made then add them as needed -->
 </contentpackage>
