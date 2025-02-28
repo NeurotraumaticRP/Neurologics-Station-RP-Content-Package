@@ -1,0 +1,26 @@
+
+easy character creator system:
+
+for lua dev stuff, will let you easily develop characters that can be used in other scripts, similar to pirate utils, lets you crate a human character, choose job loadout faction and more with simple eand easy to use formatting
+
+easy lua item patcher:
+
+1 hook that accounts for all items that need patched,
+
+easy to use like above, once you set up an item (something like Neurologics.Items.New["ItemID"] = blah blah blah")
+you can set action types like onuse, one wearing ect and will run scripts, hopefully extremally modular and not performance intensive
+
+Scripts folder:
+A way to clean up random scripts/systems, mostly just for organization, the folder will automatically run all items inside of it
+
+
+
+
+
+Money system:
+
+ points will now be marks, they can be transfered at an atm using some lua code, you write how many marks you want from you "Bank" and it transfers, you can then use these marks for in game stuff, like vending machines, gambling, purchasing food/drinks from chef, ect ect, adds a bit of roleplay element
+
+a couple notes for myself
+
+CHILL OUT WITH HOOKS, making the game laggy asf smh
