@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Afflictions>
+  <!-- Used by the Clown Hammer for Clowncosis, random ass honking -->
+  <Affliction identifier="clownotrauma_clowncosis" type="psychosis" limbspecific="false" indicatorlimb="Head" activationthreshold="0" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="50" treatmentthreshold="0" karmachangeonapplied="0" maxstrength="100" affectmachines="false" achievementonremoved="healpsychosis" healcostmultiplier="1">
+    <Effect minstrength="0" maxstrength="20" strengthchange="-0.25" />
+    <Effect minstrength="20" maxstrength="50" minscreendistort="0" maxscreendistort="0.8" minradialdistort="0.0" maxradialdistort="2.0" minscreenblur="0.0" maxscreenblur="0.2" minchromaticaberration="0.3" maxchromaticaberration="5" mingrainstrength="0.0" maxgrainstrength="0.3" graincolor="0,0,255,100" minfacetint="255,0,255,20" maxfacetint="255,0,255,60" minbodytint="255,0,255,50" maxbodytint="255,0,255,60" minspeedmultiplier="0.8" maxspeedmultiplier="0.75" strengthchange="-1">
+      <StatusEffect target="Character">
+        <ReduceAffliction type="invertcontrols" amount="20" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="50" maxstrength="100" minscreendistort="0.8" maxscreendistort="2" minradialdistort="2.0" maxradialdistort="3.0" minscreenblur="0.2" maxscreenblur="0.4" minchromaticaberration="5" maxchromaticaberration="20" mingrainstrength="0.0" maxgrainstrength="2.0" graincolor="255,0,255,100" minfacetint="255,0,255,60" maxfacetint="255,0,255,200" minbodytint="255,0,255,60" maxbodytint="255,0,255,200" minspeedmultiplier="0.75" maxspeedmultiplier="0.5" strengthchange="-2" resistancefor="damage" minresistance="0" maxresistance="0.5" />
+    <Icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
+    <PeriodicEffect mininterval="5" maxinterval="10">
+      <StatusEffect target="Character">
+        <Conditional clownotrauma_clowncosis="gte 50" />
+        <Affliction identifier="invertcontrols" amount="1" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <PeriodicEffect mininterval="2" maxinterval="3">
+      <StatusEffect target="Character">
+        <Conditional IsLocalPlayer="True" />
+        <Sound file="Content/Items/Weapons/honk.ogg" selectionmode="Random" />
+        <Sound file="%ModDir%/Integrations/ClownOTrauma/sounds/clownotrauma_toyhammerhit1_deep.ogg" />
+        <Sound file="%ModDir%/Integrations/ClownOTrauma/sounds/clownotrauma_pins.ogg" />
+        <Sound file="%ModDir%/Integrations/ClownOTrauma/sounds/clownotrauma_carhorn.ogg" />
+        <Sound file="Content/Characters/Charybdis/CHARYBDIS_idle1.ogg" />
+        <Sound file="Content/Characters/Charybdis/CHARYBDIS_idle2.ogg" />
+        <Sound file="Content/Characters/Charybdis/CHARYBDIS_attack1.ogg" />
+        <Sound file="Content/Characters/Charybdis/CHARYBDIS_attack2.ogg" />
+        <Sound file="Content/Characters/Charybdis/CHARYBDIS_attack3.ogg" />
+        <Sound file="Content/Characters/Endworm/ENDWORM_idle1.ogg" />
+        <Sound file="Content/Characters/Endworm/ENDWORM_idle2.ogg" />
+        <Sound file="Content/Characters/Endworm/ENDWORM_idle3.ogg" />
+        <Sound file="Content/Characters/Endworm/ENDWORM_attack1.ogg" />
+        <Sound file="Content/Characters/Endworm/ENDWORM_attack2.ogg" />
+        <Sound file="Content/Characters/Endworm/ENDWORM_attack3.ogg" />
+      </StatusEffect>
+    </PeriodicEffect>
+  </Affliction>
+  <!-- Cultist Clown Zombie -->
+  <Affliction identifier="clownotrauma_clownzombieinfection" type="alieninfection" targets="human" huskedspeciesname="Clownzombie" causeofdeathdescription="HONK" selfcauseofdeathdescription="You have become one with the Honkmother" limbspecific="True" indicatorlimb="Torso" activationthreshold="0" showiconthreshold="100" maxstrength="2" iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
+    <Effect minstrength="0" maxstrength="2" strengthchange="0.2">
+      <StatusEffect target="Character" stackable="false" delay="5">
+        <SpawnCharacter speciesname="Humanclownzombiedumb" TransferControl="True" RemovePreviousCharacter="True" TransferBuffs="True" TransferInventory="True" />
+        <ParticleEmitter particle="bloodsplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="1.5" scalemax="3.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+        <Sound file="Content/Sounds/Damage/Gore1.ogg" range="500" />
+      </StatusEffect>
+    </Effect>
+    <Icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
+  </Affliction>
+  <!-- Clown Ressurection -->
+  <AfflictionHusk name="Clown Ressurection" identifier="clownotrauma_resurrection" description="HONK." type="alieninfection" targets="human" huskedspeciesname="[speciesname]clownzombiesmart" causeofdeathdescription="HONK!" selfcauseofdeathdescription="You have become one with the Honkmother." limbspecific="false" indicatorlimb="Torso" activationthreshold="0" showiconthreshold="40" showinhealthscannerthreshold="20" maxstrength="100" transferbuffs="true" dormantthreshold="50" activethreshold="75" transformthresholdondeath="75" transitionthreshold="100" controlhusk="true" iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
+    <Effect minstrength="0" maxstrength="75" maxvitalitydecrease="0" strengthchange="0.3" minbodytint="195,195,195,0" maxbodytint="195,195,195,150" />
+    <Effect minstrength="75" maxstrength="100" maxvitalitydecrease="0" strengthchange="0.3" minbodytint="195,195,195,150" maxbodytint="195,195,195,200" />
+    <Icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
+  </AfflictionHusk>
+  <!-- Minion Buff -->
+  <Affliction identifier="clownotrauma_beastmasterbuff" targets="Humanclownzombiedumb,Humanclownzombiesmart,crawler_clown,Mudraptor_pet" type="gaze" limbspecific="false" indicatorlimb="Head" showiconthreshold="1000" showicontoothersthreshold="0" maxstrength="3">
+    <Effect minstrength="0" maxstrength="3" strengthchange="-1">
+      <StatusEffect target="Character" targetlimb="Head" SpeedMultiplier="2.0" HealthMultiplier="2.0" setvalue="true">
+        <ParticleEmitter particle="gazerage" particlespersecond="20" scalemin="0.3" scalemax="0.4" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" copyentityangle="false" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Used by Bowling Ball -->
+  <Affliction name="Fallen" identifier="clownotrauma_fallen" description="The patient has fallen and cannot get up. Give them a second." type="resistance" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="false" showiconthreshold="1000" maxstrength="30" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000">
+    <Effect minstrength="0" maxstrength="30" strengthchange="-30.0" />
+    <icon texture="content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0" />
+  </Affliction>
+  <!-- A whole affliction for doing the homerun check -->
+  <Affliction identifier="clownotrauma_homerun" type="talentbuff" isbuff="true" hideiconafterdelay="true" limbspecific="false" showiconthreshold="1" maxstrength="1" showicontoothersthreshold="1000">
+    <Effect minstrength="0" maxstrength="1" strengthchange="0" tags="homerun" />
+    <Icon texture="content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0" />
+  </Affliction>
+  <!-- Same as engineers basically -->
+  <Affliction identifier="clownotrauma_guarded" type="talentbuff" isbuff="true" hideiconafterdelay="true" limbspecific="false" showiconthreshold="10" maxstrength="10" treatmentthreshold="1000" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="10" strengthchange="1" />
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="1,0" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <!-- Used by the cultist revival -->
+  <Affliction identifier="clownotrauma_arise" type="talentbuff" isbuff="true" limbspecific="false" maxstrength="1" treatmentthreshold="1000" duration="1" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character">
+        <ReduceAffliction type="damage" strength="50" />
+        <ReduceAffliction type="burn" strength="50" />
+        <ReduceAffliction identifier="bloodloss" strength="50" />
+        <ReduceAffliction identifier="bleeding" strength="50" />
+        <ReduceAffliction identifier="oxygenlow" strength="50" />
+        <ReduceAffliction identifier="stun" strength="5" />
+        <Affliction identifier="psychosis" amount="100" />
+        <Affliction identifier="clownotrauma_clowncosis" amount="100" />
+      </StatusEffect>
+    </Effect>
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="0,6" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <!-- Accordion Buff -->
+  <Affliction identifier="clownotrauma_increasedskills" type="talentbuff" isbuff="true" limbspecific="false" maxstrength="2" duration="2" hideiconafterdelay="true" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="2" strengthchange="-1">
+      <StatValue stattype="ElectricalSkillBonus" value="5" />
+      <StatValue stattype="MechanicalSkillBonus" value="5" />
+      <StatValue stattype="HelmSkillBonus" value="5" />
+      <StatValue stattype="WeaponsSkillBonus" value="5" />
+      <StatValue stattype="MedicalSkillBonus" value="5" />
+    </Effect>
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="7,4" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <!-- Inspiring Tunes -->
+  <Affliction identifier="clownotrauma_inspiringtunes" type="talentbuff" isbuff="true" limbspecific="false" maxstrength="10" duration="10" hideiconafterdelay="true" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="10">
+      <StatValue stattype="ElectricalSkillBonus" value="10" />
+      <StatValue stattype="HelmSkillBonus" value="10" />
+      <StatValue stattype="MechanicalSkillBonus" value="10" />
+      <StatValue stattype="MedicalSkillBonus" value="10" />
+      <StatValue stattype="WeaponsSkillBonus" value="10" />
+    </Effect>
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="4,7" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <!-- Provocative Clown -->
+  <Affliction identifier="clownotrauma_provocativeclown" type="talentbuff" isbuff="true" limbspecific="false" maxstrength="1" treatmentthreshold="1000" hideiconafterdelay="true" duration="1" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="1" resistancefor="damage" minresistance="0.15" maxresistance="0.15" tag="provocative">
+      <StatValue stattype="SoundRangeMultiplier" value="1.0" />
+      <StatValue stattype="SightRangeMultiplier" value="1.0" />
+    </Effect>
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="4,5" sheetelementsize="128,128" />
+  </Affliction>
+  <!-- Clown Assistant -->
+  <Affliction identifier="clownotrauma_masterofthecircus" type="talentbuff" isbuff="true" limbspecific="false" hideiconafterdelay="true" showiconthreshold="1" maxstrength="1" duration="1" treatmentthreshold="1000" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="1">
+      <StatValue stattype="HelmSkillBonus" value="20" />
+      <StatValue stattype="WeaponsSkillBonus" value="20" />
+      <StatValue stattype="WeaponsSkillGainSpeed" value="1" />
+      <StatValue stattype="HelmSkillGainSpeed" value="1" />
+    </Effect>
+    <Icon texture="Content/UI/TalentsIcons4.png" sheetindex="3,1" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+</Afflictions>

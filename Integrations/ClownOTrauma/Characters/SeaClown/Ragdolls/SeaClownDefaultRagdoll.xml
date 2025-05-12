@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Ragdoll type="Human" Texture="Content/Characters/Human/Human_male.png" SpritesheetOrientation="180" LimbScale="0.5" JointScale="0.5" TextureColliderHeightFromFloor="140" ImpactTolerance="7.5">
+  <collider Name="Main Collider" Radius="30" Height="110" BodyType="Dynamic" />
+  <collider Name="Secondary Collider" Radius="30" Height="80" BodyType="Dynamic" />
+  <limb Name="Torso (0)" ID="0" Type="Torso" Radius="30" Height="70">
+    <sprite SourceRect="160,0,112,192" Origin="0.5,0.5" Depth="0.06" />
+    <tintmask texture="Content/Characters/Human/Human_male_mask.png" />
+    <damagemodifier DamageMultiplier="0.5" ArmorSector="0,360" AfflictionIdentifiers="gunshotwound,lacerations,blunttrauma" />
+    <damagemodifier DamageMultiplier="0.75" ArmorSector="0,360" AfflictionIdentifiers="bleeding,bitewounds" />
+  </limb>
+  <limb Name="Head (1)" ID="1" Type="Head" Scale="0.5" Radius="45">
+    <sprite SourceRect="0,0,128,128" Origin="0.5,0.5" Depth="0.05" Texture="Content/Characters/Human/Human_male_heads.png" />
+    <tintmask texture="Content/Characters/Human/Human_male_heads_mask.png" />
+    <huskmask texture="Content/Characters/Human/Human_husk_mask.png" />
+    <damagemodifier DamageMultiplier="0.5" ArmorSector="0,360" AfflictionIdentifiers="gunshotwound,lacerations,blunttrauma" />
+    <damagemodifier DamageMultiplier="0.75" ArmorSector="0,360" AfflictionIdentifiers="bleeding,bitewounds" />
+    <StatusEffect type="OnDamaged" target="This">
+      <RequiredAffliction identifier="internaldamage,blunttrauma,bitewounds,explosiondamage" minstrength="5" />
+      <Affliction identifier="concussion" strength="10" probability="0.25" />
+    </StatusEffect>
+    <attack StructureSoundType="StructureBlunt" TargetType="Character" AfterAttack="FallBackUntilCanAttack" Range="90" DamageRange="70" MinRange="0" Duration="0.1" CoolDown="2" CoolDownRandomFactor="0.25" RequiredAngle="20" ApplyForceOnLimbs="15, 0" Force="6" TargetImpulse="10" Priority="5000">
+      <Affliction Strength="40" Identifier="lacerations" Probability="1" DivideByLimbCount="True" MultiplyByMaxVitality="False" />
+      <Affliction Strength="3" Identifier="internaldamage" Probability="1" DivideByLimbCount="True" MultiplyByMaxVitality="False" />
+      <Affliction Strength="25" Identifier="bleeding" Probability="1" DivideByLimbCount="True" MultiplyByMaxVitality="False" />
+      <Affliction Strength="0.5" Identifier="stun" Probability="1" DivideByLimbCount="True" MultiplyByMaxVitality="False" />
+      <Affliction Strength="2" Identifier="stun" Probability="0.3" DivideByLimbCount="True" MultiplyByMaxVitality="False" />
+    </attack>
+  </limb>
+  <limb Name="RightArm (2)" ID="2" Type="RightArm" Radius="15" Height="50" AngularDamping="50">
+    <sprite SourceRect="272,0,64,96" Origin="0.5,0.5" Depth="0.02" />
+    <tintmask texture="Content/Characters/Human/Human_male_mask.png" />
+    <damagemodifier DamageMultiplier="0.5" ArmorSector="0,360" AfflictionIdentifiers="gunshotwound,lacerations,blunttrauma" />
+    <damagemodifier DamageMultiplier="0.75" ArmorSector="0,360" AfflictionIdentifiers="bleeding,bitewounds" />
+  </limb>
+  <limb Name="RightHand (3)" ID="3" Type="RightHand" Radius="13" Height="20" AngularDamping="50">
+    <sprite SourceRect="272,160,64,48" Origin="0.44,0.4" Depth="0.015" />
+    <tintmask texture="Content/Characters/Human/Human_male_mask.png" />
+    <damagemodifier DamageMultiplier="0.5" ArmorSector="0,360" AfflictionIdentifiers="gunshotwound,lacerations,blunttrauma" />
+    <damagemodifier DamageMultiplier="0.75" ArmorSector="0,360" AfflictionIdentifiers="bleeding,bitewounds" />
+  </limb>
+  <limb Name="LeftArm (4)" ID="4" Type="LeftArm" Radius="15" Height="50" AngularDamping="50">
+    <sprite SourceRect="336,0,64,96" Origin="0.5,0.5" Depth="0.14" />
+    <tintmask texture="Content/Characters/Human/Human_male_mask.png" />
+    <damagemodifier DamageMultiplier="0.5" ArmorSector="0,360" AfflictionIdentifiers="gunshotwound,lacerations,blunttrauma" />
+    <damagemodifier DamageMultiplier="0.75" ArmorSector="0,360" AfflictionIdentifiers="bleeding,bitewounds" />
+  </limb>
+  <limb Name="LeftHand (5)" ID="5" Type="LeftHand" Radius="13" Height="20" AngularDamping="50">
+    <sprite SourceRect="336,160,64,48" Origin="0.44,0.4" Depth="0.16" />
+    <tintmask texture="Content/Characters/Human/Human_male_mask.png" />
+    <damagemodifier DamageMultiplier="0.5" ArmorSector="0,360" AfflictionIdentifiers="gunshotwound,lacerations,blunttrauma" />
+    <damagemodifier DamageMultiplier="0.75" ArmorSector="0,360" AfflictionIdentifiers="bleeding,bitewounds" />
+  </limb>
+  <limb Name="LeftThigh (6)" ID="6" Type="LeftThigh" Radius="20" Height="65">
+    <sprite SourceRect="80,0,80,128" Origin="0.5,0.5" Depth="0.13" />
+    <tintmask texture="Content/Characters/Human/Human_male_mask.png" />
+    <damagemodifier DamageMultiplier="0.5" ArmorSector="0,360" AfflictionIdentifiers="gunshotwound,lacerations,blunttrauma" />
+    <damagemodifier DamageMultiplier="0.75" ArmorSector="0,360" AfflictionIdentifiers="bleeding,bitewounds" />
+  </limb>
+  <limb Name="LeftLeg (7)" ID="7" Type="LeftLeg" Radius="15" Height="50">
+    <sprite SourceRect="80,128,80,128" Origin="0.5,0.5" Depth="0.131" />
+    <tintmask texture="Content/Characters/Human/Human_male_mask.png" />
+    <damagemodifier DamageMultiplier="0.5" ArmorSector="0,360" AfflictionIdentifiers="gunshotwound,lacerations,blunttrauma" />
+    <damagemodifier DamageMultiplier="0.75" ArmorSector="0,360" AfflictionIdentifiers="bleeding,bitewounds" />
+  </limb>
+  <limb Name="LeftFoot (8)" ID="8" Type="LeftFoot" SpriteOrientation="90" Radius="12" Width="32" PullPos="-2.8043144,-11.4667225">
+    <sprite SourceRect="336,208,64,48" Origin="0.48,0.55" Depth="0.132" />
+    <tintmask texture="Content/Characters/Human/Human_male_mask.png" />
+    <sound Tag="footstep_metal" />
+    <damagemodifier DamageMultiplier="0.5" ArmorSector="0,360" AfflictionIdentifiers="gunshotwound,lacerations,blunttrauma" />
+    <damagemodifier DamageMultiplier="0.75" ArmorSector="0,360" AfflictionIdentifiers="bleeding,bitewounds" />
+  </limb>
+  <limb Name="RightThigh (9)" ID="9" Type="RightThigh" Radius="20" Height="65">
+    <sprite SourceRect="0,0,80,128" Origin="0.5,0.5" Depth="0.12" />
+    <tintmask texture="Content/Characters/Human/Human_male_mask.png" />
+    <damagemodifier DamageMultiplier="0.5" ArmorSector="0,360" AfflictionIdentifiers="gunshotwound,lacerations,blunttrauma" />
+    <damagemodifier DamageMultiplier="0.75" ArmorSector="0,360" AfflictionIdentifiers="bleeding,bitewounds" />
+  </limb>
+  <limb Name="RightLeg (10)" ID="10" Type="RightLeg" Radius="15" Height="50">
+    <sprite SourceRect="0,128,80,128" Origin="0.5,0.5" Depth="0.121" />
+    <tintmask texture="Content/Characters/Human/Human_male_mask.png" />
+    <damagemodifier DamageMultiplier="0.5" ArmorSector="0,360" AfflictionIdentifiers="gunshotwound,lacerations,blunttrauma" />
+    <damagemodifier DamageMultiplier="0.75" ArmorSector="0,360" AfflictionIdentifiers="bleeding,bitewounds" />
+  </limb>
+  <limb Name="RightFoot (11)" ID="11" Type="RightFoot" SpriteOrientation="90" Radius="12" Width="32" PullPos="-7.0750213,-11.173927">
+    <sprite SourceRect="272,208,64,48" Origin="0.48,0.55" Depth="0.122" />
+    <tintmask texture="Content/Characters/Human/Human_male_mask.png" />
+    <sound Tag="footstep_metal" />
+    <damagemodifier DamageMultiplier="0.5" ArmorSector="0,360" AfflictionIdentifiers="gunshotwound,lacerations,blunttrauma" />
+    <damagemodifier DamageMultiplier="0.75" ArmorSector="0,360" AfflictionIdentifiers="bleeding,bitewounds" />
+  </limb>
+  <limb Name="Waist (12)" ID="12" Type="Waist" Radius="25" AngularDamping="1000">
+    <sprite SourceRect="160,192,112,64" Origin="0.5,0.5" Depth="0.121" />
+    <tintmask texture="Content/Characters/Human/Human_male_mask.png" />
+    <damagemodifier DamageMultiplier="0.5" ArmorSector="0,360" AfflictionIdentifiers="gunshotwound,lacerations,blunttrauma" />
+    <damagemodifier DamageMultiplier="0.75" ArmorSector="0,360" AfflictionIdentifiers="bleeding,bitewounds" />
+  </limb>
+  <limb Name="LeftForearm (13)" ID="13" Type="LeftForearm" SpriteOrientation="180" Radius="13" Height="35" AngularDamping="50">
+    <sprite SourceRect="336,96,64,64" Origin="0.5,0.5" Depth="0.15" />
+    <tintmask texture="Content/Characters/Human/Human_male_mask.png" />
+    <damagemodifier DamageMultiplier="0.5" ArmorSector="0,360" AfflictionIdentifiers="gunshotwound,lacerations,blunttrauma" />
+    <damagemodifier DamageMultiplier="0.75" ArmorSector="0,360" AfflictionIdentifiers="bleeding,bitewounds" />
+  </limb>
+  <limb Name="RightForearm (14)" ID="14" Type="RightForearm" Radius="13" Height="35" AngularDamping="50">
+    <sprite SourceRect="272,96,64,64" Origin="0.5,0.5" Depth="0.01" />
+    <tintmask texture="Content/Characters/Human/Human_male_mask.png" />
+    <damagemodifier DamageMultiplier="0.5" ArmorSector="0,360" AfflictionIdentifiers="gunshotwound,lacerations,blunttrauma" />
+    <damagemodifier DamageMultiplier="0.75" ArmorSector="0,360" AfflictionIdentifiers="bleeding,bitewounds" />
+  </limb>
+  <joint Name="Joint 0 - 1" Limb1="0" Limb2="1" Limb1Anchor="-10.253771,67.140594" Limb2Anchor="-10.745748,-12.599744" UpperLimit="30" LowerLimit="-20" Stiffness="0.5" />
+  <joint Name="Joint 0 - 12" Limb1="0" Limb2="12" Limb1Anchor="-0.6422227,-53.382404" Limb2Anchor="0.10620385,-0.07190597" UpperLimit="18" LowerLimit="-43" Stiffness="1000" WeldJoint="True" />
+  <joint Name="Joint 12 - 6" Limb1="12" Limb2="6" Limb1Anchor="-1.8,-6.7" Limb2Anchor="-2.4,37.57086" UpperLimit="45" LowerLimit="-12" Stiffness="0.25" />
+  <joint Name="Joint 10 - 11" Limb1="10" Limb2="11" Limb1Anchor="0.5,-41.187973" Limb2Anchor="-10.862407,6.005065" UpperLimit="30" LowerLimit="-70" Stiffness="0.25" />
+  <joint Name="Joint 12 - 9" Limb1="12" Limb2="9" Limb1Anchor="-1.8046935,-6.683343" Limb2Anchor="-2.423022,37.601402" UpperLimit="45" LowerLimit="-12" Stiffness="0.25" />
+  <joint Name="Joint 7 - 8" Limb1="7" Limb2="8" Limb1Anchor="0.5,-41.2" Limb2Anchor="-10.937978,6" UpperLimit="30" LowerLimit="-70" Stiffness="0.25" />
+  <joint Name="Joint 0 - 4" Limb1="0" Limb2="4" Limb1Anchor="-10.37207,43.280663" Limb2Anchor="0.6,28.573063" LimitEnabled="False" UpperLimit="0" LowerLimit="0" Stiffness="0.5" />
+  <joint Name="Joint 4 - 13" Limb1="4" Limb2="13" Limb1Anchor="-1.4478967,-28.244104" Limb2Anchor="-1.2,23.5" UpperLimit="170" LowerLimit="5" Stiffness="0.2" ClockWiseRotation="True" />
+  <joint Name="Joint 13 - 5" Limb1="13" Limb2="5" Limb1Anchor="-0.8,-29" Limb2Anchor="-0.5,7.8" UpperLimit="10" LowerLimit="-30.000021" Stiffness="0.5" />
+  <joint Name="Joint 0 - 2" Limb1="0" Limb2="2" Limb1Anchor="-10.39392,43.006573" Limb2Anchor="0.6395478,28.56819" LimitEnabled="False" UpperLimit="0" LowerLimit="0" Stiffness="0.5" />
+  <joint Name="Joint 2 - 14" Limb1="2" Limb2="14" Limb1Anchor="1.2209377,-28.202503" Limb2Anchor="1.7877463,20.79795" UpperLimit="170" LowerLimit="5" Stiffness="0.2" ClockWiseRotation="True" />
+  <joint Name="Joint 14 - 3" Limb1="14" Limb2="3" Limb1Anchor="-0.8303146,-28.958904" Limb2Anchor="-0.51387256,7.8291073" UpperLimit="10" LowerLimit="-30.000021" Stiffness="0.5" />
+  <joint Name="Joint 9 - 10" Limb1="9" Limb2="10" Limb1Anchor="-2.1145673,-39.204475" Limb2Anchor="-0.6147495,41.310158" UpperLimit="-5" LowerLimit="-145" Stiffness="0.25" ClockWiseRotation="True" />
+  <joint Name="Joint 6 - 7" Limb1="6" Limb2="7" Limb1Anchor="-2.1,-39.2" Limb2Anchor="-0.6,41.3" UpperLimit="-5" LowerLimit="-145" Stiffness="0.25" ClockWiseRotation="True" />
+</Ragdoll>

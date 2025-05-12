@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  <!-- Job Stuff -->
+  <jobname.clownotrauma_clown>Clown</jobname.clownotrauma_clown>
+  <jobdescription.clownotrauma_clown>With no real objective other than complete chaos, the Clown is a job for those who want to see the world burn, or watch someone slip on a banana peel.</jobdescription.clownotrauma_clown>
+  <!-- Missions -->
+  <missionname.clownotrauma_cargoclowngear>Honk Honk Revolution (Clown-O-Trauma)</missionname.clownotrauma_cargoclowngear>
+  <missiondescription.clownotrauma_cargoclowngear>A local Jestmaster is offering [reward] marks for delivering a shipment of clowning supplies to [location2] for what they say is an upcoming "Show". At least 98% of the Cargo must arrive. Be warned, Clowns have been known to board and rob cargo ships carrying large amounts of Clowning supplies.</missiondescription.clownotrauma_cargoclowngear>
+  <missionsuccess.clownotrauma_cargoclowngear>The clown gear has been successfully delivered. HONK!</missionsuccess.clownotrauma_cargoclowngear>
+  <missionname.clownotrauma_abandonedoutpostpsychoclowns>Outpost Recovery (Clown-O-Trauma)</missionname.clownotrauma_abandonedoutpostpsychoclowns>
+  <missiondescription.clownotrauma_abandonedoutpostpsychoclowns>Contact with [location1] was recently lost, and it's suspected to have been taken over by Clowns for one of their "Pranks". Destroy the outpost's reactor to drive them away and ensure they don't return.</missiondescription.clownotrauma_abandonedoutpostpsychoclowns>
+  <missionsuccess.clownotrauma_abandonedoutpostpsychoclowns>The Clowns were driven away from the outpost successfully.</missionsuccess.clownotrauma_abandonedoutpostpsychoclowns>
+  <missionfailure.clownotrauma_abandonedoutpostpsychoclowns>Destroying the outpost's reactor failed.</missionfailure.clownotrauma_abandonedoutpostpsychoclowns>
+  <missionheader0.clownotrauma_abandonedoutpostpsychoclowns>Reactor destroyed</missionheader0.clownotrauma_abandonedoutpostpsychoclowns>
+  <missionmessage0.clownotrauma_abandonedoutpostpsychoclowns>The reactor has been destroyed. This should make sure those Clowns won't try to take over the outpost again. Undock from the outpost to complete the mission.</missionmessage0.clownotrauma_abandonedoutpostpsychoclowns>
+  <missionname.clownotrauma_abandonedoutpostrescueclowns>Clown Rescue (Clown-O-Trauma)</missionname.clownotrauma_abandonedoutpostrescueclowns>
+  <missiondescription.clownotrauma_abandonedoutpostrescueclowns>A group of Husk Cultists have claimed [location1] and recently sent out a message in which they demand a ransom for releasing a group of Clowns they're holding hostage. Apparently the Clowns were pranking and profaning their rituals. Clowns never take negotiations seriously, but have promised a considerable reward to anyone who manages to rescue the hostages.</missiondescription.clownotrauma_abandonedoutpostrescueclowns>
+  <missionsuccess.clownotrauma_abandonedoutpostrescueclowns>The Clowns were rescued successfully.</missionsuccess.clownotrauma_abandonedoutpostrescueclowns>
+  <missionfailure.clownotrauma_abandonedoutpostrescueclowns>Rescuing the Clowns failed.</missionfailure.clownotrauma_abandonedoutpostrescueclowns>
+  <missionheader0.clownotrauma_abandonedoutpostrescueclowns>Clowns rescued</missionheader0.clownotrauma_abandonedoutpostrescueclowns>
+  <missionmessage0.clownotrauma_abandonedoutpostrescueclowns>The Clowns are now all safely on board the sub. Undock from the outpost to complete the mission.</missionmessage0.clownotrauma_abandonedoutpostrescueclowns>
+  <!-- Monster Names -->
+  <character.crawler_clown>Clown Crawler</character.crawler_clown>
+  <character.Humanclownzombie>Clown Zombie</character.Humanclownzombie>
+  <character.SeaClown>Sea Clown</character.SeaClown>
+  <!-- Talent Names -->
+  <talentname.clownotrauma_clownpower>Follower of the Honk</talentname.clownotrauma_clownpower>
+  <talentdescription.clownotrauma_clownpower>Become a follower of Honkmotherian teachings. As long as you are wearing a full clown outfit, you gain [afflictionname].</talentdescription.clownotrauma_clownpower>
+  <talentdescription.clownotrauma_clownpower_honk>Be sure to spread the Honkmother's word with your ‖color:gui.orange‖Bike Horn‖end‖. She may reward you.</talentdescription.clownotrauma_clownpower_honk>
+  <talentname.clownotrauma_clownconnections>Clown Connections</talentname.clownotrauma_clownconnections>
+  <talentdescription.clownotrauma_clownconnections>Using your alumni network you can find additional work for your crew. Increases max jobs/missions and special sales by [amount]. Additionally your Clown contacts can help smuggle contraband on board in the form of bikehorns every round.</talentdescription.clownotrauma_clownconnections>
+  <talentdescription.clownotrauma_clownconnections2>Honking a ‖color:gui.orange‖Bikehorn‖end‖ at a newly discovered outpost grants you +[amount] reputation with the [faction]. HONK!</talentdescription.clownotrauma_clownconnections2>
+  <talentname.clownotrauma_explosiveentertainment>Explosive Entertainment</talentname.clownotrauma_explosiveentertainment>
+  <talentdescription.clownotrauma_explosiveentertainment>People love fireworks, so what's different about explosives? Gain access to homemade explosives that are as dangerous to your enemies as yourself.</talentdescription.clownotrauma_explosiveentertainment>
+  <talentname.clownotrauma_funpolice>The Fun Police</talentname.clownotrauma_funpolice>
+  <talentdescription.clownotrauma_funpolicelore>Hand buzzers are a great practical prank on the unsuspecting, so what's more unsuspecting than electrified armor? Gain access to some more combat focused abilities to keep you alive.</talentdescription.clownotrauma_funpolicelore>
+  <talentdescription.clownotrauma_funpolice>When wearing ‖color:gui.orange‖Clown Armor‖end‖ you stun attackers and take ‖color:gui.green‖80‖end‖ percent reduced damage. ‖color:gui.green‖10‖end‖ second cool down.</talentdescription.clownotrauma_funpolice>
+  <talentdescription.clownotrauma_funpolicefunstun>You can now also perform the ‖color:gui.orange‖Fun Stun‖end‖ by ragdolling into characters at high speeds.</talentdescription.clownotrauma_funpolicefunstun>
+  <talentdescription.clownotrauma_funpoliceprovocativeclown>You take ‖color:gui.green‖15‖end‖ percent less damage but enemies are much more likely to target you.\n\n Ragdolling for more than ‖color:gui.green‖2‖end‖ seconds causes enemies to ignore you.</talentdescription.clownotrauma_funpoliceprovocativeclown>
+  <talentname.clownotrauma_humourfoundation>Humour Foundation</talentname.clownotrauma_humourfoundation>
+  <talentdescription.clownotrauma_humourfoundation>There's no shortage of sick and injured people on Europa, so why not help them with a dose of humor? You get a PhD in Clown Medicine and gain access to some new skills to help spread the joy. HONK!</talentdescription.clownotrauma_humourfoundation>
+  <talentdescription.clownotrauma_humourfoundation2>You can drag characters at full speed. Hitting an unconscious ally with a ‖color:gui.orange‖Toy Hammer‖end‖ revives them with [affliction] applied for [duration] seconds. Requires ‖color:gui.orange‖Clown Power‖end‖.</talentdescription.clownotrauma_humourfoundation2>
+  <talentname.clownotrauma_onemanband>One Man Band</talentname.clownotrauma_onemanband>
+  <talentdescription.clownotrauma_onemanband>Music creates a sense of spectacle and your an expert in spectacles! When playing an ‖color:gui.orange‖Instrument‖end‖ or honking a ‖color:gui.orange‖Bike Horn‖end‖ you give nearby allies a bonus of [skill] to all skills. Once per Mission give crewmembers up to [amount] Experience. You also gain tips from your performance and can earn up to [amount] Marks.</talentdescription.clownotrauma_onemanband>
+  <talentdescription.clownotrauma_onemanband2>Note: How this works is you have [amount] stacks of Experience and Marks to give when playing and the stacks are based on you, not your crew mates. Make sure they are nearby ([range] Game Units) before playing!</talentdescription.clownotrauma_onemanband2>
+  <talentname.clownotrauma_masterofthecircus>Master of the Circus</talentname.clownotrauma_masterofthecircus>
+  <talentdescription.clownotrauma_masterofthecircuslore>Leadership is Devotion and since your so devoted to the ‖color:gui.orange‖Way of the Honk‖end‖ you must make a great leader, so why not start your own Circus with the Assistants?</talentdescription.clownotrauma_masterofthecircuslore>
+  <talentdescription.clownotrauma_masterofthecircus>‖color:gui.orange‖Assistants‖end‖ within ‖color:gui.green‖600‖end‖ units of you gain a weaker form of your ‖color:gui.orange‖Clown Powers‖end‖.</talentdescription.clownotrauma_masterofthecircus>
+  <talentname.clownotrauma_watercomedian>Water Comedian</talentname.clownotrauma_watercomedian>
+  <talentdescription.clownotrauma_watercomedianlore>Being aware of the 4th wall has its perks, like choosing to ignore certain rules of the world. You decide it would be a great prank to be immune to pressure, to the bewilderment of your crew.</talentdescription.clownotrauma_watercomedianlore>
+  <talentdescription.clownotrauma_watercomedian>Become immune to pressure when under the effects of ‖color:gui.orange‖Clown Power‖end‖ and gain [swimspeedvalue]% Swimspeed.</talentdescription.clownotrauma_watercomedian>
+  <talentname.clownotrauma_truestpotential>Truest Potential</talentname.clownotrauma_truestpotential>
+  <talentdescription.clownotrauma_truestpotential1>As a master prankster you can tap into the Meta-Physical realm of possibility and probability to play some highly amusing pranks. When under the effects of ‖color:gui.orange‖Clown Power‖end‖ you have a [probability]% to implode your target when using any ‖color:gui.orange‖Clown Melee‖end‖ weapon.</talentdescription.clownotrauma_truestpotential1>
+  <talentdescription.clownotrauma_truestpotential2>If under the effects of [entityname.meth] ([afflictionname.haste]) the chance to implode is doubled ([probability]%).</talentdescription.clownotrauma_truestpotential2>
+  <talentdescription.clownotrauma_truestpotential3>If under the effects of [entityname.steroids] ([afflictionname.strengthen]) there is no limit to the size of what you can implode.</talentdescription.clownotrauma_truestpotential3>
+  <talentdescription.clownotrauma_truestpotential4>If under the effects of [entityname.meth] ([afflictionname.haste]) and [entityname.steroids] ([afflictionname.strengthen]) both effects apply.</talentdescription.clownotrauma_truestpotential4>
+  <talentname.clownotrauma_drhappyvitamins>Dr. Happy's Vitamins</talentname.clownotrauma_drhappyvitamins>
+  <talentdescription.clownotrauma_drhappyvitamins>By regularly taking Dr. Happy brand vitamins you've built up a tolerance to drug addiction. Sampling the goods never hurt anyone, right?</talentdescription.clownotrauma_drhappyvitamins>
+  <talentname.clownotrauma_passiveregenerate>The Beatings Will Continue</talentname.clownotrauma_passiveregenerate>
+  <talentdescription.clownotrauma_passiveregenerate>When you are above [health]% health and under the effects of ‖color:gui.orange‖Clown Power‖end‖ normal damage types slowly heal by themselves.</talentdescription.clownotrauma_passiveregenerate>
+  <talentname.clownotrauma_beastmaster>Beast Master</talentname.clownotrauma_beastmaster>
+  <talentdescription.clownotrauma_beastmasterlore>What's a Circus without some exciting and exotic animals? You have learned how to handle friendly monsters better.</talentdescription.clownotrauma_beastmasterlore>
+  <talentdescription.clownotrauma_beastmaster>When under the effects of ‖color:gui.orange‖Clown Power‖end‖ you buff nearby Clown minions with double Health and Speed. This affects: Human Clown Zombie, Petraptor and the Clown Crawler.</talentdescription.clownotrauma_beastmaster>
+  <talentname.clownotrauma_thelastlaugh>The Last Laugh</talentname.clownotrauma_thelastlaugh>
+  <talentdescription.clownotrauma_thelastlaughlore>Comedy is tragedy plus time and you've figured out the crew takes great joy at the idea of your tragic death. You've decided rather than perish you can suprise them with a twist.</talentdescription.clownotrauma_thelastlaughlore>
+  <talentdescription.clownotrauma_thelastlaugh>When under the effects of ‖color:gui.orange‖Clown Power‖end‖ you rapidly heal normal damage types when you go Unconcious. This can only happen once per mission. When you finally die you are ‖color:gui.orange‖Immune‖end‖ to skill loss on death. You are ‖color:gui.green‖75‖end‖% resistance to extra skill loss when choosing to respawn immediately instead of waiting.</talentdescription.clownotrauma_thelastlaugh>
+  <talentname.clownotrauma_inspiringtunes>Inspiring Tunes</talentname.clownotrauma_inspiringtunes>
+  <talentdescription.clownotrauma_inspiringtunes>Nearby allies gain a bonus of [skillamount] to all Skills for [duration] seconds when you honk a ‖color:gui.orange‖Bike Horn‖end‖ or play an ‖color:gui.orange‖Instrument‖end‖. This effect stacks with ‖color:gui.orange‖One Man Band‖end‖.</talentdescription.clownotrauma_inspiringtunes>
+  <talentname.clownotrauma_chonkytunes>Chonky Tunes</talentname.clownotrauma_chonkytunes>
+  <talentdescription.clownotrauma_chonkytunes>Honking your ‖color:gui.orange‖Bike Horn‖end‖ or playing an ‖color:gui.orange‖Instrument‖end‖ has a ‖color:gui.green‖50‖end‖% chance to stun nearby creatures for one second.</talentdescription.clownotrauma_chonkytunes>
+  <talentname.clownotrauma_skillmaxboost>PhD in Meta-Physics</talentname.clownotrauma_skillmaxboost>
+  <talentdescription.clownotrauma_skillmaxboost>Gain a mastery of Meta-Physics. Your max skill cap (‖color:gui.green‖100‖end‖) is doubled to (‖color:gui.green‖200‖end‖). You can now also craft a mysterious Dementonite based PDA that can give you control over all items with a GUI interface remotely, yes this means the Reactor and Nav Terminal too. Don't let the crew find out about your new PDA!</talentdescription.clownotrauma_skillmaxboost>
+  <talentname.clownotrauma_reincarnation>Reincarnation</talentname.clownotrauma_reincarnation>
+  <talentdescription.clownotrauma_reincarnation>Meta-Physics has taught you that time is an illusion. While you cannot "travel" time you can change a few key variables of your past to change the present you inhabit now, namely you.</talentdescription.clownotrauma_reincarnation>
+  <talentdescription.clownotrauma_reincarnation_effects>Upon creating a new character, retain all of your current experience for that new character.</talentdescription.clownotrauma_reincarnation_effects>
+  <!-- Clown Tinkerer Start -->
+  <talentname.clownotrauma_clowntinkerer>Honkmotherian Ingenuity</talentname.clownotrauma_clowntinkerer>
+  <talentdescription.clownotrauma_clowntinkerer>Clown Engineering has always been poorly understood, the fine line between genius and insanity is a thin one.</talentdescription.clownotrauma_clowntinkerer>
+  <talentdescription.clownotrauma_clowntinkerer.tutorial>You can now use a ‖color:gui.orange‖Wrench‖end‖ to tinker with devices.</talentdescription.clownotrauma_clowntinkerer.tutorial>
+  <talentdescription.clownotrauma_clowntinkerer.pump>You can tinker with a pump, increasing its pumping rate by [speedincrease]%.</talentdescription.clownotrauma_clowntinkerer.pump>
+  <talentdescription.clownotrauma_clowntinkerer.engine>You can tinker with an engine, increasing its torque by [speedincrease]%.</talentdescription.clownotrauma_clowntinkerer.engine>
+  <talentdescription.clownotrauma_clowntinkerer.loader>You can tinker with a loader, increasing the connected turret's firing rate and damage by [damageincrease]%, while lowering its power usage by [powercostreduction]%.</talentdescription.clownotrauma_clowntinkerer.loader>
+  <talentdescription.clownotrauma_clowntinkerer.fab>You can tinker with Fabs and Deconstructors, increasing their speed by [speed]%.</talentdescription.clownotrauma_clowntinkerer.fab>
+  <talentdescription.clownotrauma_clowntinkerer.reminder>The device is only affected for as long as you keep tinkering with it.</talentdescription.clownotrauma_clowntinkerer.reminder>
+  <talentdescription.clownotrauma_clowntinkerer.duration>You can tinker for [duration] seconds. After you have tinkered with a device, you cannot tinker for [cooldown] seconds.</talentdescription.clownotrauma_clowntinkerer.duration>
+  <talentdescription.clownotrauma_clowntinkerer.overclocking>Tinkering with items damages them rapidly but also powers them.</talentdescription.clownotrauma_clowntinkerer.overclocking>
+  <!-- Clown Tinkerer End -->
+  <talentname.clownotrauma_skillboost>Master Class Act</talentname.clownotrauma_skillboost>
+  <talentdescription.clownotrauma_skillboostlore>Prepare yourself to method act in a play, to do so you will need to do some research on one of your crew members. They say imitation is the sincerest form of flattery.</talentdescription.clownotrauma_skillboostlore>
+  <talentdescription.clownotrauma_skillboostbase>Choose one job to act in a play and gain a relevant skill boost.</talentdescription.clownotrauma_skillboostbase>
+  <talentdescription.clownotrauma_skillboostjob>Choose [job] as your act and gain the following:</talentdescription.clownotrauma_skillboostjob>
+  <talentname.clownotrauma_derangedclown>Deranged Clown</talentname.clownotrauma_derangedclown>
+  <talentdescription.clownotrauma_derangedclownlore>What can you say? You just love hurting people. You find it funny and are tired of pretending it's not.</talentdescription.clownotrauma_derangedclownlore>
+  <talentdescription.clownotrauma_derangedclown>[afflictionname] allows you to attack faster and harder with melee weapons based on how much Psychosis and Clowncosis you have, up to [maxattackspeed]% Attack Speed for Psychosis and [maxattackspeed]% Melee Damage for Clowncosis.</talentdescription.clownotrauma_derangedclown>
+  <talentdescription.clownotrauma_derangedclowntip>Tip: You can get Psychosis from Artifacts and Clowncosis from items of the Honkmother and certain questionable drugs.</talentdescription.clownotrauma_derangedclowntip>
+  <!-- Afflictions -->
+  <afflictionname.clownotrauma_clowncosis>Clowncosis</afflictionname.clownotrauma_clowncosis>
+  <afflictiondescription.clownotrauma_clowncosis>Exposure to the Honk has left this person hearing strange sounds...</afflictiondescription.clownotrauma_clowncosis>
+  <afflictionname.clownotrauma_clownzombieinfection>Clown Zombie Infection</afflictionname.clownotrauma_clownzombieinfection>
+  <afflictiondescription.clownotrauma_clownzombieinfection>A dark blessing by the Honkmother, this person will soon achieve "Perfection".</afflictiondescription.clownotrauma_clownzombieinfection>
+  <afflictionname.clownotrauma_homerun>Home Run</afflictionname.clownotrauma_homerun>
+  <afflictiondescription.clownotrauma_homerun>Your next attack is a home run!</afflictiondescription.clownotrauma_homerun>
+  <afflictionname.clownotrauma_guarded>Guarded</afflictionname.clownotrauma_guarded>
+  <afflictiondescription.clownotrauma_guarded>The next Melee attack on you will stun your attacker.</afflictiondescription.clownotrauma_guarded>
+  <afflictionname.clownotrauma_arise>Arise</afflictionname.clownotrauma_arise>
+  <afflictiondescription.clownotrauma_arise>You are about to be revived by the Honkmother.</afflictiondescription.clownotrauma_arise>
+  <afflictionname.clownotrauma_beastmasterbuff>Cultist Minion Buff</afflictionname.clownotrauma_beastmasterbuff>
+  <afflictiondescription.clownotrauma_beastmasterbuff>Nearby friendly minions are buffed.</afflictiondescription.clownotrauma_beastmasterbuff>
+  <afflictionname.clownotrauma_inspiringtunes>Inspiring Tunes</afflictionname.clownotrauma_inspiringtunes>
+  <afflictiondescription.clownotrauma_inspiringtunes>The subject's skills are momentarily increased.</afflictiondescription.clownotrauma_inspiringtunes>
+  <afflictionname.clownotrauma_provocativeclown>Provocative Clown</afflictionname.clownotrauma_provocativeclown>
+  <afflictiondescription.clownotrauma_provocativeclown>Your very existence is provocative. Enemies are much more likely to target you.</afflictiondescription.clownotrauma_provocativeclown>
+  <!-- Items -->
+  <entityname.clownotrauma_superclownhorn>Super Clown Horn</entityname.clownotrauma_superclownhorn>
+  <entitydescription.clownotrauma_superclownhorn>The next evolution. Don't leave it laying around, someone might trip on it while sprinting...</entitydescription.clownotrauma_superclownhorn>
+  <entityname.clownotrauma_clowncosishammer>Honkmother's Herald of Clownery</entityname.clownotrauma_clowncosishammer>
+  <entitydescription.clownotrauma_clowncosishammer>Use this to spread the word of the Honkmother. Those blessed by the hammer may hear the Honkmother occasionally...</entitydescription.clownotrauma_clowncosishammer>
+  <entityname.clownotrauma_grenade_flashbang>Clown FlashBang Grenade</entityname.clownotrauma_grenade_flashbang>
+  <entitydescription.clownotrauma_grenade_flashbang>A Consussion Grenade. May contain excessive force.</entitydescription.clownotrauma_grenade_flashbang>
+  <entityname.clownotrauma_grenade_decoy>Clown Decoy Grenade</entityname.clownotrauma_grenade_decoy>
+  <entitydescription.clownotrauma_grenade_decoy>A Decoy Grenade. This one plays Circus music for 20 seconds. Harmless but annoying. HONK!</entitydescription.clownotrauma_grenade_decoy>
+  <entityname.clownotrauma_emergencysiren>Clown Alarm</entityname.clownotrauma_emergencysiren>
+  <entitydescription.clownotrauma_emergencysiren>For when the Circus needs to stop clowning around. HONK!</entitydescription.clownotrauma_emergencysiren>
+  <entityname.clownotrauma_clowncaptainscap3>Clown Captain Hat</entityname.clownotrauma_clowncaptainscap3>
+  <entitydescription.clownotrauma_clowncaptainscap3>For the leader of the Circus. Increases helm by 10.</entitydescription.clownotrauma_clowncaptainscap3>
+  <entityname.clowndepthdecoyshell>Clown Depth Charge</entityname.clowndepthdecoyshell>
+  <entitydescription.clowndepthdecoyshell>For when you want to roll the local wildlife.</entitydescription.clowndepthdecoyshell>
+  <entityname.clownotrauma_suicidevest>Clown Happy Vest</entityname.clownotrauma_suicidevest>
+  <entitydescription.clownotrauma_suicidevest>Takes explosives and triggers below 50 percent health. I'll let you think about what it does.</entitydescription.clownotrauma_suicidevest>
+  <entityname.clownotrauma_clownderbuss_gun>Clownderbuss - Trumpet of the Honkmother</entityname.clownotrauma_clownderbuss_gun>
+  <entitydescription.clownotrauma_clownderbuss_gun>Essentially a Clown-Portable Cannon, as awesome as it sounds. The Divine horn of the Honk Mother. Uses Clownderbuss Ammo Types. May contain side effects, see your medic if symptoms persist.</entitydescription.clownotrauma_clownderbuss_gun>
+  <entityname.clownotrauma_clownderbuss_shell>Clownderbuss Shell</entityname.clownotrauma_clownderbuss_shell>
+  <entitydescription.clownotrauma_clownderbuss_shell>A perfectly normal Shotgun Shell blessed by the Honk Mother's Faithful. Massive knockback.</entitydescription.clownotrauma_clownderbuss_shell>
+  <entityname.clownotrauma_clownderbuss_rocket>Clownderbuss Rocket</entityname.clownotrauma_clownderbuss_rocket>
+  <entitydescription.clownotrauma_clownderbuss_rocket>Has Clown science gone too far? No, it is only just beginning. Detonates on detecting a monster, even if not loaded.</entitydescription.clownotrauma_clownderbuss_rocket>
+  <entityname.clownotrauma_button>Button</entityname.clownotrauma_button>
+  <entitydescription.clownotrauma_button>A perfectly normal Button. HONK!</entitydescription.clownotrauma_button>
+  <entityname.clownotrauma_explosive_toolbox>Clown Happy Suitcase</entityname.clownotrauma_explosive_toolbox>
+  <entitydescription.clownotrauma_explosive_toolbox>A perfectly normal suitcase... or is it?</entitydescription.clownotrauma_explosive_toolbox>
+  <entityname.clownotrauma_jokerevolver>Joke Revolver</entityname.clownotrauma_jokerevolver>
+  <entitydescription.clownotrauma_jokerevolver>BANG!</entitydescription.clownotrauma_jokerevolver>
+  <entityname.clownotrauma_bowlingball>Bowling Ball</entityname.clownotrauma_bowlingball>
+  <entitydescription.clownotrauma_bowlingball>Because Bowling Pins don't stay upright on a sub try using people!</entitydescription.clownotrauma_bowlingball>
+  <entityname.clownotrauma_clownbaseballbat>Clown B.A.T</entityname.clownotrauma_clownbaseballbat>
+  <entitydescription.clownotrauma_clownbaseballbat>The Clown (B)rutality (A)dministration (T)ool is designed to bring those kill-joys into compliance. Stop resisting Fun!</entitydescription.clownotrauma_clownbaseballbat>
+  <entityname.clownotrauma_travellingcircus>Travelling Circus</entityname.clownotrauma_travellingcircus>
+  <entitydescription.clownotrauma_travellingcircus>A pranksters mobile HQ. Contains a built in Fab and storage crate. Can be picked up and moved with a wrench.</entitydescription.clownotrauma_travellingcircus>
+  <entityname.clownotrauma_crawlerclown_egg>Clown Crawler Egg</entityname.clownotrauma_crawlerclown_egg>
+  <entitydescription.clownotrauma_crawlerclown_egg>As fun as it sounds. Fill with Saline to hatch a little Clown buddy!</entitydescription.clownotrauma_crawlerclown_egg>
+  <entityname.clownotrauma_fakecigar>Cigar</entityname.clownotrauma_fakecigar>
+  <entitydescription.clownotrauma_fakecigar>A submariner's life is mentally taxing, but perhaps this exquisitely crafted cigar can help you soothe your nerves a bit.</entitydescription.clownotrauma_fakecigar>
+  <entityname.clownotrauma_cyanidecigar>Cigar</entityname.clownotrauma_cyanidecigar>
+  <entitydescription.clownotrauma_cyanidecigar>A submariner's life is mentally taxing, but perhaps this exquisitely crafted cigar can help you soothe your nerves a bit.</entitydescription.clownotrauma_cyanidecigar>
+  <entityname.clownotrauma_morbusinecigar>Cigar</entityname.clownotrauma_morbusinecigar>
+  <entitydescription.clownotrauma_morbusinecigar>A submariner's life is mentally taxing, but perhaps this exquisitely crafted cigar can help you soothe your nerves a bit.</entitydescription.clownotrauma_morbusinecigar>
+  <entityname.clownotrauma_huskcostume>Husk Costume</entityname.clownotrauma_huskcostume>
+  <entitydescription.clownotrauma_huskcostume>A great way to scare the crew.</entitydescription.clownotrauma_huskcostume>
+  <entityname.clownotrauma_clownhealthscanner>Clown Health Scanner</entityname.clownotrauma_clownhealthscanner>
+  <entitydescription.clownotrauma_clownhealthscanner>Clown Medicine has always been at the forefront of health.</entitydescription.clownotrauma_clownhealthscanner>
+  <entityname.clownotrauma_mimecordion>Mimecordian</entityname.clownotrauma_mimecordion>
+  <entitydescription.clownotrauma_mimecordion>Provides buffs for your nearby crewmates.</entitydescription.clownotrauma_mimecordion>
+  <entityname.clownotrauma_mimecordion_sheetmusic_drunkensailor>Sheet Music: Drunken Sailor</entityname.clownotrauma_mimecordion_sheetmusic_drunkensailor>
+  <entitydescription.clownotrauma_mimecordion_sheetmusic_drunkensailor>Mimecordian sheet music for: Drunken Sailor</entitydescription.clownotrauma_mimecordion_sheetmusic_drunkensailor>
+  <entityname.clownotrauma_mimecordion_sheetmusic_wellerman>Sheet Music: Wellerman</entityname.clownotrauma_mimecordion_sheetmusic_wellerman>
+  <entitydescription.clownotrauma_mimecordion_sheetmusic_wellerman>Mimecordian sheet music for: Wellerman</entitydescription.clownotrauma_mimecordion_sheetmusic_wellerman>
+  <entityname.clownotrauma_mimecordion_sheetmusic_leave_her_johnny>Sheet Music: Leave Her Johnny</entityname.clownotrauma_mimecordion_sheetmusic_leave_her_johnny>
+  <entitydescription.clownotrauma_mimecordion_sheetmusic_leave_her_johnny>Mimecordian sheet music for: Leave Her Johnny</entitydescription.clownotrauma_mimecordion_sheetmusic_leave_her_johnny>
+  <entityname.clownotrauma_mimecordion_sheetmusic_spanish_ladies>Sheet Music: Spanish Ladies</entityname.clownotrauma_mimecordion_sheetmusic_spanish_ladies>
+  <entitydescription.clownotrauma_mimecordion_sheetmusic_spanish_ladies>Mimecordian sheet music for: Spanish Ladies</entitydescription.clownotrauma_mimecordion_sheetmusic_spanish_ladies>
+  <entityname.clownotrauma_mimecordion_sheetmusic_the_barbery_coast>Sheet Music: The Barbery Coast</entityname.clownotrauma_mimecordion_sheetmusic_the_barbery_coast>
+  <entitydescription.clownotrauma_mimecordion_sheetmusic_the_barbery_coast>Mimecordian sheet music for: The Barbery Coast</entitydescription.clownotrauma_mimecordion_sheetmusic_the_barbery_coast>
+  <entityname.clownotrauma_clownexosuit>Funbringer: Avatar of the Honkmother</entityname.clownotrauma_clownexosuit>
+  <entitydescription.clownotrauma_clownexosuit>A modification to the standard clown exosuit that removes the banana cannon for two handed use. Cheaper but also less protection due to steel instead of titanium used in the construction. Battery powered but uses power quickly. Upgradable in Fabricators. Pressure resistent to 5000m.</entitydescription.clownotrauma_clownexosuit>
+  <entityname.clownotrauma_clownexosuit_armoured>Funbringer: Avatar of the Honkmother - Armoured</entityname.clownotrauma_clownexosuit_armoured>
+  <entitydescription.clownotrauma_clownexosuit_armoured>An upgrade to the clown exosuit that adds additional armour. Battery powered but uses power quickly. Further upgradable in Fabricators. Pressure resistent to 5000m.</entitydescription.clownotrauma_clownexosuit_armoured>
+  <entityname.clownotrauma_clownexosuit_armouredinventory>Funbringer: Avatar of the Honkmother - Armoured + Expanded Inventory</entityname.clownotrauma_clownexosuit_armouredinventory>
+  <entitydescription.clownotrauma_clownexosuit_armouredinventory>An upgrade to the clown exosuit that adds additional armour and inventory storage to the Exosuit. Battery powered but uses power quickly. Further upgradable in Fabricators. Pressure resistent to 5000m.</entitydescription.clownotrauma_clownexosuit_armouredinventory>
+  <entityname.clownotrauma_clownexosuit_armouredinventoryreactor>Funbringer: Avatar of the Honkmother - Armoured + Expanded Inventory + Reactor</entityname.clownotrauma_clownexosuit_armouredinventoryreactor>
+  <entitydescription.clownotrauma_clownexosuit_armouredinventoryreactor>An upgrade to the clown exosuit that swaps the battery for a Nuclear Reactor increasing power time. Comes with complementary built in Headset, Radio Jammer and Honk Lamps. By including a straw the Exosuit consumes Hull Oxygen first. This is the final upgrade. Pressure resistent to 7000m.</entitydescription.clownotrauma_clownexosuit_armouredinventoryreactor>
+  <entityname.clownotrauma_honkmothersbrew>Honkmother's Brew</entityname.clownotrauma_honkmothersbrew>
+  <entitydescription.clownotrauma_honkmothersbrew>A modification to the standard Deliriumine Syringe that causes Psychosis and Clowncosis in victims. Clowncosis falls off exponentially but lasts quite a while with reduced effects.</entitydescription.clownotrauma_honkmothersbrew>
+  <entityname.clownotrauma_radiojammer>Clown Radio Jammer</entityname.clownotrauma_radiojammer>
+  <entitydescription.clownotrauma_radiojammer>A battery powered device that Jams nearby Radio devices and headsets. Useful for when you don't want people calling for help.</entitydescription.clownotrauma_radiojammer>
+  <entityname.clownotrauma_universalfunpda>Clown Universal Fun PDA</entityname.clownotrauma_universalfunpda>
+  <entitydescription.clownotrauma_universalfunpda>To Use: Type the Item ID you want to control, this can be a Reactor, Fabricator or NavTerminal (or literally anything with a user interface). Once your done press enter and "Equip" the item by selecting the equip bar above the PDA on your hotbar. To reset it drop the PDA and pick it up again.</entitydescription.clownotrauma_universalfunpda>
+  <entityname.clownotrauma_clowncrate_normal>Metal Crate</entityname.clownotrauma_clowncrate_normal>
+  <entitydescription.clownotrauma_clowncrate_normal>A vessel in which items may be stored. This one seems different. Pressure resistant to 6500m.</entitydescription.clownotrauma_clowncrate_normal>
+  <!-- Honkmother Posters -->
+  <entityname.clownotrauma_honkmotherposter1>Honkmother Poster 1</entityname.clownotrauma_honkmotherposter1>
+  <entitydescription.clownotrauma_honkmotherposter1>Use this to pay homage to the Honkmother.</entitydescription.clownotrauma_honkmotherposter1>
+  <!-- Clown Items -->
+  <entityname.clownotrauma_ballistichelmet2>Honkmother's Helmet of Blunt Force Madness</entityname.clownotrauma_ballistichelmet2>
+  <entitydescription.clownotrauma_ballistichelmet2>A Knight's Helmet to carry out delivery of Honkmother's Honks to non believers. Contains an Oxygen Tank and Flashlight. Counts as Clown gear.</entitydescription.clownotrauma_ballistichelmet2>
+  <entityname.clownotrauma_clownbodyarmor>Honkmother's Body Armor of Blunt Force Madness</entityname.clownotrauma_clownbodyarmor>
+  <entitydescription.clownotrauma_clownbodyarmor>With Clown crew accidents so high these days Body Armor vests are standard issue for all Clowns in high risk roles.</entitydescription.clownotrauma_clownbodyarmor>
+  <entityname.clownotrauma_clowndivingmask>Honkmother's Clown Diving Mask</entityname.clownotrauma_clowndivingmask>
+  <entitydescription.clownotrauma_clowndivingmask>Powered by Meta-Physics only understood by Clowns. Counts as a Clown Mask.</entitydescription.clownotrauma_clowndivingmask>
+  <!-- Cultist Gear -->
+  <entityname.clownotrauma_cultistmask>Honkmother's Cultist Mask</entityname.clownotrauma_cultistmask>
+  <entitydescription.clownotrauma_cultistmask>Praise the honkmother. Counts as Clown Gear.</entitydescription.clownotrauma_cultistmask>
+  <entityname.clownotrauma_cultistcostume>Honkmother's Cultist Outfit</entityname.clownotrauma_cultistcostume>
+  <entitydescription.clownotrauma_cultistcostume>Praise the honkmother. Counts as Clown Gear.</entitydescription.clownotrauma_cultistcostume>
+  <entityname.clownotrauma_cultistbloodknife>Cultist Knife of Blood Sacrifice</entityname.clownotrauma_cultistbloodknife>
+  <entitydescription.clownotrauma_cultistbloodknife>Holds and Contains the Meta-Physical essence of beings, also known as Blood. Can be Deconstructed into a Blood Pack when full.</entitydescription.clownotrauma_cultistbloodknife>
+  <entityname.clownotrauma_bloodaltar>Cultist Altar of Blood Donation</entityname.clownotrauma_bloodaltar>
+  <entitydescription.clownotrauma_bloodaltar>Let the essence flow for the Honkmother! Allows you to turn collected blood into other knives.</entitydescription.clownotrauma_bloodaltar>
+  <entityname.clownotrauma_cultistknife_zombie>Cultist Knife of Undead Servitude</entityname.clownotrauma_cultistknife_zombie>
+  <entitydescription.clownotrauma_cultistknife_zombie>Using the dark magics of the Honkmother you can revive dead Humans to serve you destroying their sense of self in the process. They are simple in nature and lose their skills/talents as a zombie but will respawn with them next round. These zombies have slightly more health than a human but are only good for combat. Single use.</entitydescription.clownotrauma_cultistknife_zombie>
+  <entityname.clownotrauma_cultistknife_smartzombie>Cultist Knife of Indentured Intellect</entityname.clownotrauma_cultistknife_smartzombie>
+  <entitydescription.clownotrauma_cultistknife_smartzombie>Using the dark magics of the Honkmother you can revive dead Humans with their sense of self intact to serve you. They keep their skills/talents as a zombie and will respawn with them next round. Single use.</entitydescription.clownotrauma_cultistknife_smartzombie>
+  <entityname.clownotrauma_cultistknife_mudraptor>Cultist Knife of Testing</entityname.clownotrauma_cultistknife_mudraptor>
+  <entitydescription.clownotrauma_cultistknife_mudraptor>Test</entitydescription.clownotrauma_cultistknife_mudraptor>
+  <entityname.clownotrauma_pentagram>Cultist Pentagram</entityname.clownotrauma_pentagram>
+  <entitydescription.clownotrauma_pentagram>A pathway to abilities some consider to be... unnatural.</entitydescription.clownotrauma_pentagram>
+  <!-- Mime Items -->
+  <entityname.clownotrauma_mimemask>Honkmother's Mime Mask</entityname.clownotrauma_mimemask>
+  <entitydescription.clownotrauma_mimemask>Praise the honkmother. Counts as Clown Gear.</entitydescription.clownotrauma_mimemask>
+  <entityname.clownotrauma_mimecostume>Honkmother's Mime Outfit</entityname.clownotrauma_mimecostume>
+  <entitydescription.clownotrauma_mimecostume>Praise the honkmother. Counts as Clown Gear.</entitydescription.clownotrauma_mimecostume>
+  <entityname.clownotrauma_mimewall>Mime's Wall of Faith</entityname.clownotrauma_mimewall>
+  <entitydescription.clownotrauma_mimewall>A Mimes wall of faith can stop bullets and push enemies around. A great support item for the crew. Only usable by the Mime! (Works like a Moloch Shell but bigger)</entitydescription.clownotrauma_mimewall>
+  <!-- Books -->
+  <entityname.clownotrauma_handbook>Honkmother's Clownpendium</entityname.clownotrauma_handbook>
+  <entitydescription.clownotrauma_handbook>Everything you need to know about being a Clown.</entitydescription.clownotrauma_handbook>
+  <terminalwelcomemsg.handbook>
+
+Honkmother's Clownpendium
+
+Last updated: 03/07/2024 (AEST)
+
+Appendix
+
+ I.   Introduction
+ II.  Clowning Around
+
+
+0. Preface - A note about the mod
+
+Welcome to Clown-O-Trauma! This mod aims to expand greatly upon the Clown context in the base game by making the most fun of classes its own one.
+
+There is a lot of content painstakingly created just for this mod, it has also be Honkmother approved by the Children of the Honkmother.
+
+Finally thanks for trying my mod! If you have any feedback please leave a comment on steam.
+
+With this introduction done let's get started!
+
+
+I. Introduction
+
+Welcome to the cause!
+
+What makes a good Clown?
+
+It's an interesting question. Many people, including your crew, may think that your existence is simply to annoy or kill them. This usually results in a predisposition to beat or kill you.
+
+Nothing could be further from the truth! Your goal is to instill wonder, amusement and excitment on them! The matter of their mood is irrelevant. What matters is a good show!
+
+In simple terms a good Clown does:
+
+* Do some clever well thought out pranks, a stun grenade wired to a detonator on the bridge door is a good example.
+
+A bad Clown:
+
+* Wires C-4 to a door and kills someone, depriving them of fun themselves.
+
+It is important to ensure that whatever you do, it is something that the humor in it can be seen.
+
+---
+
+
+II. Clowning Around
+
+You have many tools to amuse yourself and the crew.
+
+These include, but are not limited to:
+
+* Expolsives
+* Horns
+* Weapons
+* Talents
+* Creatures like the Clown Crawler, Clown Zombies (Smart and Dumb versions).
+* Reviving dead crew members.
+
+III. Getting started.
+
+Some notes:
+
+* Keep your Clown clothes on at all times if you can, all your talents and some items are tied to the clothes being on.
+* Your clothes are also your weakness, if they are removed you wont be able to clown around as much.
+* Keep bikehorns, you need them for a lot of crafting and they cannot be crafted.
+* Experiment with Blood magic, its very useful.
+* The Clown Exosuit (Avatar of the Honkmother) is super awesome and is upgradable. It is designed for maximum shits and giggles.
+* Some talents have side objectives, like honking a bike horn. It is generally worth doing these ASAP as they have useful effects.
+* While the talent "Truest Potential" may not seem like it's worth it just wait till you get a fast melee weapon, it's a one hit kill (if it pops).
+* Be warned: you are not the only Child of the Honkmother in the Seas, there are others that have the same talents you do, including the above percent chance to kill on hit.
+* Wild Sea Clowns are known to board and steal large amounts of Clown cargo being transported, keep an eye out for boarders on such missions.
+
+ </terminalwelcomemsg.handbook>
+</infotexts>

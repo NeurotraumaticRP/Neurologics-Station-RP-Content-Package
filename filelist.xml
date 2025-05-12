@@ -1,11 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Neurologic station RP content package" modversion="1.15" corepackage="False" gameversion="1.7.7.0">
+<contentpackage name="Neurologic station RP content package" modversion="1.19" corepackage="False" gameversion="1.8.8.1">
   <Item file="%ModDir%/Xml/items.xml" />
   <Afflictions file="%ModDir%/Xml/Afflictions.xml" />
   <Talents file="%ModDir%/Xml/Talents.xml" />
   <TalentTrees file="%ModDir%/Xml/TalentTrees.xml" />
   <Jobs file="%ModDir%/Xml/Jobs.xml" />
   <Jobs file="%ModDir%/Overrides/JobOverrides.xml" />
+  <Text file="%ModDir%/Language/English.xml" />
   <Submarine file="%ModDir%/Subs/neurologics layout.sub" />
+  <Afflictions file="%ModDir%/Integrations/ClownOTrauma/clownotrauma_afflictions.xml" />
+  <Character file="%ModDir%/Integrations/ClownOTrauma/Characters/Clowncrawler/Clowncrawler.xml" />
+  <Character file="%ModDir%/Integrations/ClownOTrauma/Characters/Humanclownzombiedumb/Humanclownzombiedumb.xml" />
+  <Character file="%ModDir%/Integrations/ClownOTrauma/Characters/Humanclownzombiesmart/Humanclownzombiesmart.xml" />
+  <Character file="%ModDir%/Integrations/ClownOTrauma/Characters/SeaClown/SeaClown.xml" />
+  <Item file="%ModDir%/Integrations/ClownOTrauma/clownotrauma_items.xml" />
+  <Jobs file="%ModDir%/Integrations/ClownOTrauma/clownotrauma_jobs.xml" />
+  <Particles file="%ModDir%/Integrations/ClownOTrauma/clownotrauma_particles.xml" />
+  <Talents file="%ModDir%/Integrations/ClownOTrauma/clownotrauma_talents.xml" />
+  <TalentTrees file="%ModDir%/Integrations/ClownOTrauma/clownotrauma_talenttree.xml" />
+  <Text file="%ModDir%/Integrations/ClownOTrauma/texts/english.xml" />
+  <Submarine file="%ModDir%/Integrations/ClownOTrauma/subs/Clownsuk.sub" />
+  <Submarine file="%ModDir%/Integrations/ClownOTrauma/subs/Honkmother Testing Center.sub" />
   <Submarine file="%ModDir%/Subs/Avalon City Station.sub" />
 </contentpackage>

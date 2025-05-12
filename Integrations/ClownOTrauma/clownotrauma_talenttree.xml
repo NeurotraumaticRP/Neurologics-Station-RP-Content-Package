@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TalentTrees>
+  <TalentTree jobidentifier="clownotrauma_clown">
+    <SubTree identifier="clownotrauma_clown_primary" nameidentifier="clownotrauma_talenttree.primary" type="primary">
+      <TalentOptions requiredtalents="1" maxchosentalents="1">
+        <TalentOption identifier="clownotrauma_clownpower" />
+      </TalentOptions>
+      <TalentOptions requiredtalents="2" maxchosentalents="6">
+        <TalentOption identifier="clownotrauma_clownconnections" />
+        <TalentOption identifier="clownotrauma_onemanband" />
+        <TalentOption identifier="clownotrauma_funpolice" />
+        <TalentOption identifier="clownotrauma_explosiveentertainment" />
+        <TalentOption identifier="clownotrauma_drhappyvitamins" />
+        <TalentOption identifier="clownotrauma_passiveregenerate" />
+      </TalentOptions>
+      <TalentOptions requiredtalents="2" maxchosentalents="5">
+        <!-- <TalentOption identifier="clownotrauma_honkmothersflame" /> -->
+        <!-- <TalentOption identifier="clownotrauma_masterofthecircus" /> -->
+        <TalentOption identifier="clownotrauma_watercomedian" />
+        <TalentOption identifier="clownotrauma_chonkytunes" />
+        <TalentOption identifier="clownotrauma_beastmaster" />
+        <TalentOption identifier="clownotrauma_truestpotential" />
+        <TalentOption identifier="clownotrauma_humourfoundation" />
+      </TalentOptions>
+      <TalentOptions requiredtalents="2" maxchosentalents="6">
+        <TalentOption identifier="clownotrauma_skillmaxboost" />
+        <TalentOption identifier="clownotrauma_clowntinkerer" />
+        <TalentOption identifier="clownotrauma_inspiringtunes" />
+        <TalentOption identifier="clownotrauma_thelastlaugh" />
+        <TalentOption identifier="clownotrauma_derangedclown" />
+        <ShowCaseTalent identifier="clownotrauma_skillboost">
+          <TalentOption identifier="clownotrauma_skillboost_captain" />
+          <TalentOption identifier="clownotrauma_skillboost_doctor" />
+          <TalentOption identifier="clownotrauma_skillboost_security" />
+          <TalentOption identifier="clownotrauma_skillboost_mechanic" />
+          <TalentOption identifier="clownotrauma_skillboost_engineer" />
+          <TalentOption identifier="clownotrauma_skillboost_assistant" />
+        </ShowCaseTalent>
+      </TalentOptions>
+      <TalentOptions requiredtalents="1" maxchosentalents="1">
+        <TalentOption identifier="clownotrauma_reincarnation" />
+      </TalentOptions>
+    </SubTree>
+  </TalentTree>
+</TalentTrees>

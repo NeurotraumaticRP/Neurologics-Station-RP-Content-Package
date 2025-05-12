@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<huskappendage>
+  <limb name="Clown Zombie Smart appendage 1" id="15" height="10" width="15" ignorecollisions="True" flip="True">
+    <!-- strong protection, otherwise gaining a husk appendage is a liability as it cannot be protected with armor -->
+    <damagemodifier armorsector="0,360" afflictiontypes="damage" damagemultiplier="0.0" />
+    <damagemodifier armorsector="0,360" afflictiontypes="bleeding" damagemultiplier="0.0" />
+    <damagemodifier armorsector="0,360" afflictiontypes="burn" damagemultiplier="0.0" />
+    <sprite texture="Content/Characters/Humanhusk/Husk_Injector.png" sourcerect="0,0,1,1" depth="0.11" origin="0.5,0.5" ignoretint="true" />
+    <attack range="40" damagerange="25" duration="0.1" targetforce="0" structuresoundtype="StructureBlunt" force="6" applyforceonlimbs="0" torque="0" context="Any" targettype="Character" hitdetectiontype="Distance" structuredamage="0" itemdamage="0" stun="0" onlyhumans="False" applyforcesonlyonce="False" targetimpulse="3" targetimpulseworld="0,0" targetforceworld="0,0" severlimbsprobability="0" stickchance="0" priority="0" afterattack="FollowThrough" cooldown="1" secondarycooldown="0" cooldownrandomfactor="0">
+      <Affliction identifier="bitewounds" strength="2" />
+      <Affliction identifier="bleeding" strength="2" probability="0.5" />
+      <Affliction identifier="stun" strength="0.3" />
+    </attack>
+  </limb>
+  <joint name="Head to Huskappendage" limb1="1" limb2="15" limb1anchor="6.5,-8" limb2anchor="-3,0" upperlimit="0" lowerlimit="-10" canbesevered="False" limitenabled="True" />
+</huskappendage>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<prefabs>
+  <clownotrauma_smokescreen startsizemin="2,2" startsizemax="3.5,3.5" sizechangemin="0.1,0.1" sizechangemax="0.2,0.2" startrotationmin="0" startrotationmax="360" startcolor="0,0,0,255" endcolor="0,50,0,0" growtime="2" lifetime="38" velocitychange="0,-0.2" startdelaymin="0" startdelaymax="0" angularvelocitymin="-20" angularvelocitymax="10" rotatetodirection="False" drag="0.2" waterdrag="0.2" velocitychangewater="0,1" collisionradius="1" usecollision="True" deleteoncollision="False" friction="0.5" restitution="0.5" drawtarget="Air" blendstate="AlphaBlend" animduration="1" loopanim="True" drawontop="True" lifetimemin="0" middlecolor="255,255,255,255" usemiddlecolor="False" priority="0">
+    <sprite texture="Content/Particles/ParticleAtlas.png" sourcerect="384,254,128,128" />
+  </clownotrauma_smokescreen>
+</prefabs>

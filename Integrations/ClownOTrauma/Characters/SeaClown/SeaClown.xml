@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Character SpeciesName="SeaClown" Group="clowns" Humanoid="True" CanInteract="True" CanSpeak="True" Noise="150" Visibility="150" CanEat="False" UsePathFinding="True" HideInSonar="True" SoundInterval="10">
+  <ragdolls folder="default" />
+  <animations folder="default" />
+  <damageemitter drawontop="True" Particle="gib" AngleMax="360" ScaleMin="0.25" ScaleMax="0.5" VelocityMin="50" VelocityMax="300" ParticleAmount="10" />
+  <bloodemitter Particle="blood" ParticleAmount="10" />
+  <bloodemitter Particle="waterblood" ParticleAmount="1" />
+  <gibemitter Particle="blackgib" AngleMax="360" VelocityMin="200" VelocityMax="700" ParticleAmount="20" />
+  <gibemitter Particle="blackgib" AngleMax="360" VelocityMin="50" VelocityMax="500" ParticleAmount="10" />
+  <health Vitality="250" DoesBleed="True" CrushDepth="Infinity" UseHealthWindow="True" ApplyAfflictionColors="True" />
+  <ai CombatStrength="100" Sight="4" Hearing="4" AggressionHurt="300" AggressionGreed="20" FleeHealthAttackWhenProvoked="True" DamageAvoidTime="3" MinFleeTime="20" AggressiveBoarding="True" EnforceAggressiveBehaviorForMissions="True" TargetOuterWalls="False" RandomAttack="True" CanOpenDoors="True" UsePathFindingToGetInside="True" KeepDoorsClosed="True" AvoidAbyss="False" StayInAbyss="False" PatrolFlooded="False" PatrolDry="False" StartAggression="0" MaxAggression="100" AggressionCumulation="0" WallTargetingMethod="Target">
+    <target Tag="provocative" State="Attack" Priority="150" IgnoreIfNotInSameSub="True" />
+    <target Tag="stronger" State="Avoid" Priority="70" ReactDistance="5000" />
+    <target damageTag="weapon" State="Attack" Priority="100" />
+    <target Tag="human" State="Attack" Priority="100" IgnoreIncapacitated="True" />
+    <target Tag="tool" State="Aggressive" Priority="80" ReactDistance="1000" IgnoreIfNotInSameSub="True" />
+    <target Tag="weaker" State="Avoid" Priority="60" />
+    <target Tag="sonar" State="Attack" Priority="40" IgnoreInside="True" />
+    <target Tag="door" State="Attack" Priority="30" />
+    <target Tag="room" State="Attack" Priority="10" />
+    <target Tag="husk" State="Escape" Priority="100" ReactDistance="1000" IgnoreIfNotInSameSub="True" />
+  </ai>
+  <inventory arrowslot="9" Slots="Card, Headset, Head, InnerClothes, OuterClothes, LeftHand, RightHand, Bag, Any, Any, Any, Any, Any, Any, Any, Any, Any, Any, HealthInterface" AccessibleWhenAlive="True">
+    <Item Identifier="ethanol" />
+    <Item Identifier="meth" amount="2" />
+    <Item Identifier="antibleeding1" amount="2" />
+    <Item slot="Head" Identifier="clownotrauma_ballistichelmet2">
+      <Item identifier="mobilebattery" />
+      <Item identifier="oxygentank" />
+    </Item>
+    <Item slot="Card" Identifier="idcard" />
+    <Item slot="OuterClothes" Identifier="clownotrauma_clownbodyarmor" />
+    <Item slot="InnerClothes" Identifier="clowncostume" />
+    <Item slot="RightHand+LeftHand" Identifier="clownotrauma_clownbaseballbat" />
+  </inventory>
+  <StatusEffect type="OnActive" target="This" checkconditionalways="true" comparison="and">
+    <Conditional isdead="false" />
+    <Conditional AiState="Attack" />
+    <!-- <sound file="%ModDir%/Characters/NewCreatures/Clowns/SeaClown/Sawcrazy_idleloopaggressive.ogg" range="800" volume="1" /> -->
+  </StatusEffect>
+  <StatusEffect type="OnActive" target="This" checkconditionalways="true" comparison="and">
+    <Conditional isdead="false" />
+    <Conditional AiState="Idle" />
+    <!-- <sound file="%ModDir%/Characters/NewCreatures/Clowns/SeaClown/Sawcrazy_idleloopnonaggressive.ogg" range="800" volume="1" /> -->
+  </StatusEffect>
+  <StatusEffect type="OnSpawn" target="This" delay="0.2">
+    <!-- <sound file="%ModDir%/Characters/NewCreatures/Clowns/SeaClown/Sawcrazy_attack.ogg" range="2000" dontmuffle="true" volume="1" /> -->
+    <Affliction identifier="haste" amount="420" />
+  </StatusEffect>
+  <StatusEffect type="OnDeath" target="This" delay="3">
+    <DropContainedItems />
+    <RemoveCharacter />
+  </StatusEffect>
+</Character>

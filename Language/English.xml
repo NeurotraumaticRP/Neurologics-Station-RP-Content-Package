@@ -1,3 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="English" nowhitespace="false" translatedname="English">
+
+    <!-- Job Names (we arent doing clown because its already set up)-->
+    <jobname.warden>Warden</jobname.warden>
+    <jobdescription.warden>The warden of the station. In charge of the station's prisoners, and 2nd in command of the station.</jobdescription.warden>
+
+    <jobname.guard>Guard</jobname.guard>
+    <jobdescription.guard>A station security officer. Keeps the chaos of the station in check.</jobdescription.guard>
+
+    <jobname.doctor>Doctor</jobname.doctor>
+    <jobdescription.doctor>A station doctor/surgeon. Keeps crew members/staff and prisoners alive. (NEUROTRAUMA EXPERIENCE REQUIRED)</jobdescription.doctor>
+
+    <jobname.scientist>Scientist</jobname.scientist>
+    <jobdescription.scientist>A station scientist. does experiments on prisoners, builds exotic devices, and more.</jobdescription.scientist>
+
+    <jobname.staff>Staff</jobname.staff>
+    <jobdescription.staff>General station staff. while it mostly consists of electricians and mechanics, they can be tasked with a variety of jobs.</jobdescription.staff>
+
+    <jobname.janitor>Janitor</jobname.janitor>
+    <jobdescription.janitor>Keeps the station clean. and if it comes to it, they are the only personel who are tasked with preventing spread of radiological,biological,and chemical messes.</jobdescription.janitor>
+
+    <jobname.prisoner>Prisoner</jobname.prisoner>
+    <jobdescription.prisoner></jobdescription.prisoner>
+
+    <jobname.cmo>Chief Medical Officer</jobname.cmo>
+    <jobdescription.cmo>A member of the station's medical staff. Keep the prisoners healthy, and make sure they don't die.</jobdescription.cmo>
+
+    <jobname.crewmember>Crew Member</jobname.crewmember>
+    <jobdescription.crewmember>A member of the station's crew. Keep the station clean, and make sure the prisoners don't die.</jobdescription.crewmember>
+
+    <jobname.priest>Priest</jobname.priest>
+    <jobdescription.priest>A member of the station's religious staff. Keep the prisoners entertained, and make sure they don't die.</jobdescription.priest>
+
+
+
+
+
+
+
+
+
+
+
+
 </infotexts>

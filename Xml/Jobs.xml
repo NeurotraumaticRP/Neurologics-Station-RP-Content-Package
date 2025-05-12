@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Jobs>
 
-  <!-- Warden -->
-  <Job identifier="warden" minnumber="1" maxnumber="1" minkarma="45" initialcount="1" uicolor="0.65,0.73,0.84" vitalitymodifier="12" pricemultiplier="1.3" idlebehavior="StayInHull">
+  <Job identifier="warden" minnumber="1" maxnumber="1" minkarma="45" initialcount="1" uicolor="0.65,0.73,0.84" vitalitymodifier="12" pricemultiplier="1.3" idlebehavior="StayInHull" allowalways="true">
     <Jobicon>
       <sprite texture="%ModDir%/Images/NewIcons.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
     </Jobicon>
@@ -60,7 +59,7 @@
   </Job>
 
   <!-- Guard -->
-  <Job identifier="guard" MinNumber="1" MaxNumber="7" minkarma="40" uicolor="0.21,0.30,0.70" vitalitymodifier="15" pricemultiplier="1.15" idlebehavior="Patrol">
+  <Job name="Guard" identifier="guard" MinNumber="1" MaxNumber="7" minkarma="40" uicolor="0.21,0.30,0.70" vitalitymodifier="15" pricemultiplier="1.15" idlebehavior="Patrol" allowalways="true">
     <Jobicon>
       <sprite texture="Content/UI/MainIconsAtlas.png" sourcerect="256,256,128,128" origin="0.5,0.5" />
     </Jobicon>
@@ -153,7 +152,7 @@
   </Job>
 
   <!-- Doctor -->
-  <Job identifier="Doctor" MaxNumber="4" MinNumber="1" minkarma="30" uicolor="0.81,0.31,0.19" vitalitymodifier="10" pricemultiplier="1.15" idlebehavior="Active">
+  <Job name="Doctor" identifier="doctor" MaxNumber="4" MinNumber="1" minkarma="30" uicolor="0.81,0.31,0.19" vitalitymodifier="10" pricemultiplier="1.15" idlebehavior="Active" allowalways="true">
     <Jobicon>
       <sprite texture="Content/UI/MainIconsAtlas.png" sourcerect="512,256,128,128" origin="0.5,0.5" />
     </Jobicon>
@@ -318,7 +317,7 @@
   </Job>
 
   <!-- Staff -->
-  <Job identifier="staff" uicolor="0.965,0.82,0.333" minnumber="1" maxnumber="4" minkarma="40" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active">
+  <Job name="Staff" identifier="staff" uicolor="0.965,0.82,0.333" minnumber="1" maxnumber="4" minkarma="40" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
     <Jobicon>
       <sprite texture="%ModDir%/Images/NewIcons.png" sourcerect="770,-2,128,128" origin="0.5,0.5" />
     </Jobicon>
@@ -371,7 +370,7 @@
   </Job>
 
   <!-- Janitor -->
-  <Job identifier="janitor" maxnumber="3" minkarma="40" uicolor="0.35,0.15,0.35" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active">
+  <Job name="Janitor" identifier="janitor" maxnumber="3" minkarma="40" uicolor="0.35,0.15,0.35" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
     <Jobicon>
       <sprite texture="%ModDir%/Images/NewIcons.png" sourcerect="639,0,128,128" origin="0.5,0.5" />
     </Jobicon>
@@ -430,7 +429,7 @@
   </Job>
 
   <!-- Prisoner -->
-  <Job identifier="convict" maxnumber="6" minkarma="40" uicolor="0.93,0.25,0" vitalitymodifier="5" pricemultiplier="0.8" idlebehavior="Active">
+  <Job name="Prisoner" identifier="convict" maxnumber="6" minkarma="40" uicolor="0.93,0.25,0" vitalitymodifier="5" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
     <Jobicon>
       <sprite texture="%ModDir%/Images/NewIcons.png" sourcerect="115,134,128,128" origin="0.5,0.5" />
     </Jobicon>
@@ -466,7 +465,7 @@
   </Job>
 
   <!-- Chief Medical Officer -->
-  <Job identifier="chiefmedicalofficer" minnumber="1" maxnumber="1" minkarma="40" uicolor="0.93,0.25,0" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active">
+  <Job name="Chief Medical Officer" identifier="cmo" minnumber="1" maxnumber="1" minkarma="40" uicolor="0.93,0.25,0" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
     <Jobicon>
       <sprite texture="%ModDir%/Images/NewIcons.png" sourcerect="115,134,128,128" origin="0.5,0.5" />
     </Jobicon>
@@ -494,7 +493,7 @@
   </Job>
 
   <!-- Crew Member -->
-  <Job identifier="crewmember" minkarma="40" uicolor="0.93,0.25,0" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active">
+  <Job name="Crew Member" identifier="crewmember" minkarma="40" uicolor="0.93,0.25,0" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
     <Jobicon>
       <sprite texture="%ModDir%/Images/NewIcons.png" sourcerect="115,134,128,128" origin="0.5,0.5" />
     </Jobicon>
@@ -522,7 +521,7 @@
   </Job>
 
   <!-- Scientist -->
-  <Job identifier="scientist" maxnumber="2" minkarma="40" uicolor="0.93,0.25,0" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active">
+  <Job name="Scientist" identifier="scientist" maxnumber="2" minkarma="40" uicolor="0.93,0.25,0" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
     <Jobicon>
       <sprite texture="%ModDir%/Images/NewIcons.png" sourcerect="115,134,128,128" origin="0.5,0.5" />
     </Jobicon>
@@ -550,7 +549,7 @@
   </Job>
 
   <!-- priest -->
-  <Job identifier="priest" maxnumber="1" minkarma="40" uicolor="0.93,0.25,0" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active">
+  <Job name="Priest" identifier="priest" maxnumber="1" minkarma="40" uicolor="0.93,0.25,0" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
     <Jobicon>
       <sprite texture="%ModDir%/Images/NewIcons.png" sourcerect="115,134,128,128" origin="0.5,0.5" />
     </Jobicon>
@@ -577,39 +576,13 @@
     </AutonomousObjectives>
   </Job>
 
-  <!-- Clown -->
-  <Job identifier="clown" maxnumber="1" minkarma="40" uicolor="0.93,0.25,0" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active">
-    <Jobicon>
-      <sprite texture="%ModDir%/Images/NewIcons.png" sourcerect="115,134,128,128" origin="0.5,0.5" />
-    </Jobicon>
-    <JobiconSmall>
-      <sprite texture="%ModDir%/Images/NewIcons.png" sourcerect="115,134,128,128" origin="0.5,0.5" />
-    </JobiconSmall>
-    <Skills>
-      <Skill identifier="weapons" level="25,45" primary="true" />
-      <Skill identifier="mechanical" level="10,20" />
-      <Skill identifier="electrical" level="20,35" />
-      <Skill identifier="medical" level="20,50" />
-      <Skill identifier="helm" level="10,20" />
-      <Skill identifier="cooking" level="10,40" />
-      <Skill identifier="butchery" level="10,40" />
-    </Skills>
-    <ItemSet>
-      <Item identifier="idcard" equip="true" showpreview="false" />
-      <PreviewSprites dims="120,109">
-        <sprite texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
-        <sprite texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
-      </PreviewSprites>
-    </ItemSet>
-    <AutonomousObjectives>
-    </AutonomousObjectives>
-  </Job>
+  <!-- Clown Added from ClownOTrauma -->
 
   <!-- Overrides -->
   <Override>
 
     <!-- Chef -->
-    <Job identifier="chef" minnumber="1" maxnumber="3" minkarma="45" uicolor="0.90,0.45,0.0" vitalitymodifier="0" pricemultiplier="1" idlebehavior="StayInHull">
+    <Job identifier="he-chef" minkarma="45" uicolor="0.90,0.45,0.0" vitalitymodifier="0" maxnumber="1" pricemultiplier="1" idlebehavior="StayInHull">
       <Jobicon>
         <sprite texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,0,121,121" origin="0.5,0.5" />
       </Jobicon>
@@ -627,11 +600,11 @@
       </Skills>
       <ItemSet>
         <Item identifier="idcard" equip="true" showpreview="false" />
-        <Item identifier="he-chefscap1" equip="true" />
+        <!--<Item identifier="he-chefscap1" equip="true" />-->
         <Item identifier="he-chefsuniform1" equip="true" outfit="true" />
         <Item identifier="he-cleaver" equip="false" />
         <PreviewSprites dims="121,86">
-          <sprite texture="Content/Items/Jobgear/OutfitIcons.png" sourcerect="260,42,121,86" offset="0,0" />
+          <sprite texture="%ModDir:2954998725%/Content/Items/Jobgear/OutfitIcons.png" sourcerect="260,42,121,86" offset="0,0" />
         </PreviewSprites>
       </ItemSet>
       <ItemSet>
@@ -640,7 +613,7 @@
         <Item identifier="he-chefsuniform2" equip="true" outfit="true" />
         <Item identifier="he-cleaver" equip="false" />
         <PreviewSprites dims="120,109">
-          <sprite texture="Content/Items/Jobgear/OutfitIcons.png" sourcerect="131,42,123,86" offset="0,0" />
+          <sprite texture="%ModDir:2954998725%/Content/Items/Jobgear/OutfitIcons.png" sourcerect="131,42,123,86" offset="0,0" />
         </PreviewSprites>
       </ItemSet>
       <AutonomousObjectives>
@@ -662,27 +635,7 @@
 
     <!-- Security Officer -->
     <Job identifier="securityofficer" vitalitymodifier="8" onlyjobspecificdialog="false" minnumber="0" maxnumber="0" initialcount="0" hiddenjob="true">
-      <Skills>
-        <Skill identifier="weapons" level="50,75" primary="true" />
-        <Skill identifier="medical" level="1,2" />
-        <Skill identifier="mechanical" level="1,2" />
-        <Skill identifier="electrical" level="1,2" />
-        <Skill identifier="helm" level="1,2" />
-      </Skills>
-      <ItemSet>
-        <Item identifier="idcard" equip="true" showpreview="false" />
-      </ItemSet>
-      <AutonomousObjectives>
-        <Order identifier="fightintruders" prioritymodifier="1" />
-        <Order identifier="rescue" prioritymodifier="1" />
-        <Order identifier="extinguishfires" prioritymodifier="0.75" />
-        <Order identifier="operatereactor" option="powerup" prioritymodifier="0.2" />
-        <Order identifier="fixleaks" prioritymodifier="0.1" />
-      </AutonomousObjectives>
-      <AppropriateOrders>
-        <Order identifier="operateweapons" />
-        <Order identifier="fightintruders" />
-      </AppropriateOrders>
+      <ItemSet></ItemSet>
     </Job>
 
     <!-- Mechanic -->

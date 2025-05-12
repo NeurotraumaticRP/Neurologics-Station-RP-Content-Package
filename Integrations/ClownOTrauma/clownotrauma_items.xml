@@ -1,0 +1,1866 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <!-- Travelling Circus -->
+  <Item identifier="clownotrauma_travellingcircus" tags="mediumitem,clownitem" showcontentsintooltip="true" scale="0.4" pickdistance="150" impactsoundtag="impact_metal_heavy" DisableItemUsageWhenSelected="true" waterproof="true">
+    <Sprite texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="413,333,565,478" depth="0.55" origin="0.5,0.5" />
+    <Body width="150" height="76" density="25" />
+    <Price baseprice="70" canbespecial="true" sold="false">
+      <Price storeidentifier="merchantclown" minavailable="1" maxavailable="2" sold="true">
+        <Reputation faction="clowns" min="5" />
+      </Price>
+    </Price>
+    <Deconstruct time="15" />
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="20">
+      <RequiredItem identifier="redpaint" />
+      <RequiredItem identifier="plastic" amount="2" />
+    </Fabricate>
+    <Fabricator canbeselected="true" powerconsumption="0">
+      <Requireditem items="clowncostume,clownmask" type="Picked" msg="itemmsgunauthorizedaccess" ignoreineditor="true" />
+      <GuiFrame relativesize="0.4,0.45" anchor="Center" style="ItemUI" />
+      <sound file="%ModDir%/Integrations/ClownOTrauma/sounds/clownotrauma_travellingcircus_fabricationloop.ogg" type="OnActive" range="300.0" loop="true" />
+      <ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
+      <ItemContainer capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true" />
+    </Fabricator>
+    <Controller hidehud="false" UserPos="0,0" direction="Center" canbeselected="true" drawuserbehind="true" msg="Click to Enter" AllowSelectingWhenSelectedByOther="False">
+      <Requireditem items="clowncostume,clownmask" type="Picked" msg="itemmsgunauthorizedaccess" />
+      <limbposition limb="Head" position="74,-40" />
+      <limbposition limb="Torso" position="74,-40" />
+      <limbposition limb="Waist" position="74,-40" />
+      <limbposition limb="LeftHand" position="74,-40" />
+      <limbposition limb="RightHand" position="74,-40" />
+      <limbposition limb="RightLeg" position="74,-40" />
+      <limbposition limb="LeftLeg" position="74,-40" />
+      <limbposition limb="RightFoot" position="74,-40" />
+      <limbposition limb="LeftFoot" position="74,-40" />
+      <StatusEffect type="OnActive" targettype="Character" delay="0.25" stackable="true" indetectable="true" DisableFocusingOnEntities="true" invisibletimer="0.1" IgnoreMeleeWeapons="true" setvalue="true" />
+    </Controller>
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
+      <RequiredItem items="wrench" type="Equipped" />
+      <Requireditem items="clowncostume,clownmask" type="Picked" msg="itemmsgunauthorizedaccess" />
+    </Holdable>
+  </Item>
+  <!-- Clownderbuss Gun -->
+  <Item identifier="clownotrauma_clownderbuss_gun" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,mountableweapon,clownweapon" Scale="0.5" impactsoundtag="footstep_clown">
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="65">
+      <RequiredItem identifier="bikehorn" amount="3" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="406,0,432,200" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="406,0,432,200" depth="0.55" origin="0.5,0.5" />
+    <Body width="180" height="30" density="50" />
+    <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="55,5" aimpos="55,5" handle1="-20,-11" handle2="26,7" holdangle="-40" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon barrelpos="85,10" spread="1" unskilledspread="10" combatPriority="80" reload="1" drawhudwhenequipped="true" crosshairscale="0.3">
+      <RequiredItems items="clownderbussammo" type="Contained" msg="ItemMsgAmmoRequired" />
+      <RequiredSkill identifier="weapons" level="60" />
+      <Crosshair texture="content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <ParticleEmitter particle="muzzleflash" particleamount="1" />
+      <Sound file="%ModDir%/Integrations/ClownOTrauma/sounds/clownotrauma_toyhammerhit1_deep.ogg" type="OnUse" range="3000" />
+      <StatusEffect type="OnUse" target="Character" disabledeltatime="true">
+        <Affliction identifier="stun" amount="3" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" delay="1.0">
+        <Sound file="content/Items/Weapons/ShotgunLoad1.ogg" type="OnUse" range="3000" />
+      </StatusEffect>
+    </RangedWeapon>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="false" containedstateindicatorstyle="bullet" ShowTotalStackCapacityInContainedStateIndicator="true" containedstateindicatorslot="0" containedspritedepth="0.56">
+      <Containable items="clownderbussammo" hide="true" />
+      <SlotIcon slotindex="2" texture="Content/UI/CampaignUIAtlas2.png" sourcerect="896,536,128,64" origin="0.45,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="flashlight" hide="false" itempos="26,-2" setactive="true" />
+      </SubContainer>
+    </ItemContainer>
+    <aitarget sightrange="3000" soundrange="5000" fadeouttime="5" />
+    <Quality>
+      <QualityStat stattype="FirepowerMultiplier" value="0.1" />
+    </Quality>
+  </Item>
+  <!-- Clownderbuss Round/Bullet -->
+  <Item identifier="clownotrauma_clownderbuss_shell" category="Weapon" maxstacksize="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,clownderbussammo" Scale="0.5" impactsoundtag="footstep_clown">
+    <PreferredContainer primary="clownderbuss" amount="1" spawnprobability="1" />
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="20" amount="1">
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="titaniumaluminiumalloy" />
+    </Deconstruct>
+    <InventoryIcon texture="content/Items/InventoryIconAtlas.png" sourcerect="832,960,64,64" origin="0.5,0.5" />
+    <Sprite texture="content/Items/Weapons/weapons_new.png" sourcerect="189,299,23,11" depth="0.55" origin="0.5,0.5" />
+    <Body width="23" height="10" density="40" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+    <Projectile characterusable="false" hitscan="true" hitscancount="8" removeonhit="true" spread="20">
+      <ParticleEmitter particle="tracerfirearm" particleamount="1" colormultiplier="255,255,115,100" scalemultiplier="1,0.5" />
+      <Attack structuredamage="1" targetforce="20" itemdamage="0" severlimbsprobability="0">
+        <Affliction identifier="stun" strength="1" disabledeltatime="true" />
+      </Attack>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <!-- Clownderbuss Rocket Round/Bullet -->
+  <Item identifier="clownotrauma_clownderbuss_rocket" category="Weapon" maxstacksize="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,clownderbussammo" Scale="1" impactsoundtag="footstep_clown">
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="20" amount="1">
+      <RequiredItem identifier="uex" />
+      <RequiredItem identifier="steel" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="steel" />
+    </Deconstruct>
+    <Sprite texture="content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" />
+    <Body width="170" height="10" density="20" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
+    <Projectile characterusable="false" launchimpulse="30.0" damagedoors="true">
+      <Attack structuredamage="30" itemdamage="15" severlimbsprobability="1" penetration="0.1">
+        <Affliction identifier="explosiondamage" strength="70" />
+        <Affliction identifier="bleeding" strength="20" />
+        <Affliction identifier="stun" strength="4" />
+      </Attack>
+      <StatusEffect type="OnActive" target="This" lifetime="2">
+        <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="5" velocitymin="-10" velocitymax="-100" scalemin="0.9" scalemax="1.5" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <SpawnItem identifier="flakshrapnel" spawnposition="This" count="22" aimspread="120" rotationtype="Collider" rotation="0" />
+        <Explosion range="30.0" structuredamage="20" camerashake="25.0" camerashakerange="2000" force="10.0" itemdamage="15" severlimbsprobability="0.1" decal="explosion" decalsize="0.3">
+          <Affliction identifier="explosiondamage" strength="20" />
+        </Explosion>
+        <sound file="Content/Items/Weapons/ExplosionLarge1.ogg" volume="2" selectionmode="Random" range="20000" />
+        <sound file="Content/Items/Weapons/ExplosionLarge2.ogg" volume="2" selectionmode="Random" range="20000" />
+        <ParticleEmitter particle="shrapnel" anglemin="0" anglemax="360" particleamount="50" velocitymin="100" velocitymax="2000" scalemin="1" scalemax="2" />
+        <RemoveItem />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" Condition="-100" delay="0.25" stackable="false" />
+      <StatusEffect type="OnImpact" target="This" Condition="-100" stackable="false" />
+    </Projectile>
+    <MotionSensor range="100" canbeselected="false" IgnoreDead="True" minimumvelocity="0" updateinterval="0.025" target="Monster" DetectOwnMotion="false">
+      <StatusEffect type="Always" target="This" condition="-100" disabledeltatime="true" stackable="false" checkconditionalalways="true">
+        <Conditional targetitemcomponent="MotionSensor" MotionDetected="eq true" />
+      </StatusEffect>
+    </MotionSensor>
+  </Item>
+  <!-- Clowncosis Hammer -->
+  <Item identifier="clownotrauma_clowncosishammer" category="Weapon" Tags="smallitem,mountableweapon,clowns,clownweapon,toyhammer" Scale="1.0" cargocontaineridentifier="metalcrate" impactsoundtag="footstep_clown" RequireAimToUse="True">
+    <PreferredContainer primary="crewcab" secondary="armcab" />
+    <PreferredContainer secondary="wreckarmcab,abandonedarmcab" spawnprobability="0.05" />
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="20">
+      <RequiredItem identifier="bikehorn" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="steel" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <InventoryIcon texture="content/Items/InventoryIconAtlas.png" sourcerect="641,960,64,64" origin="0.5,0.5" />
+    <Sprite texture="content/Items/Weapons/weapons_new.png" sourcerect="0,311,121,55" depth="0.55" origin="0.5,0.5" />
+    <Body width="120" height="48" density="50" />
+    <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="-20,0" handle2="-10,5" holdangle="60" reload="1" range="100" combatpriority="40" msg="ItemMsgPickUpSelect">
+      <Attack stun="0.3" targetimpulse="2">
+        <Affliction identifier="clownotrauma_clowncosis" strength="10" />
+        <Sound file="%ModDir%/Integrations/ClownOTrauma/sounds/clownotrauma_toyhammerhit1_deep.ogg" range="800" />
+      </Attack>
+    </MeleeWeapon>
+    <aitarget sightrange="500" soundrange="1000" fadeouttime="3" />
+  </Item>
+  <!-- Clown FlashBang Grenade -->
+  <Item identifier="clownotrauma_grenade_flashbang" category="Weapon" maxstacksize="8" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive,demolitionsexpert,clownweapon" Scale="0.5" impactsoundtag="footstep_clown">
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="10">
+      <RequiredItem identifier="bikehorn" />
+      <RequiredItem identifier="phosphorus" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="790,247,40,56" depth="0.55" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="790,247,40,56" depth="0.55" origin="0.5,0.5" />
+    <Body radius="20" height="10" density="30" />
+    <ItemComponent characterusable="false">
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect type="OnBroken" target="This">
+        <sound file="Content/Items/Weapons/honk.ogg" />
+        <Explosion range="500" force="0.1" smoke="true">
+          <Affliction identifier="concussion" strength="25" />
+          <Affliction identifier="clownotrauma_clowncosis" strength="100" />
+        </Explosion>
+      </StatusEffect>
+    </ItemComponent>
+    <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="4.0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnSecondaryUse" target="This" Condition="-100.0" delay="3.0" disabledeltatime="true" checkconditionalalways="true" />
+    </Throwable>
+    <Quality>
+      <QualityStat stattype="ExplosionRadius" value="0.1" />
+      <QualityStat stattype="ExplosionDamage" value="0.1" />
+    </Quality>
+  </Item>
+  <!-- Clown Decoy Grenade -->
+  <Item identifier="clownotrauma_grenade_decoy" category="Weapon" maxstacksize="8" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive,demolitionsexpert,clownweapon" Scale="0.5" impactsoundtag="impact_metal_heavy">
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="10">
+      <RequiredItem identifier="bikehorn" />
+      <RequiredItem identifier="alarmbuzzer" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="790,247,40,56" depth="0.55" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="790,247,40,56" depth="0.55" origin="0.5,0.5" />
+    <Body radius="20" height="10" density="30" />
+    <ItemComponent characterusable="false">
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect type="OnBroken" target="This">
+        <sound file="%ModDir%/Integrations/ClownOTrauma/sounds/clownotrauma_clowncircustheme.ogg" range="2000" />
+        <Explosion range="500" force="0.1" smoke="true" />
+      </StatusEffect>
+    </ItemComponent>
+    <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="4.0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnSecondaryUse" target="This" Condition="-100.0" delay="3.0" disabledeltatime="true" checkconditionalalways="true" />
+    </Throwable>
+    <Quality>
+      <QualityStat stattype="ExplosionRadius" value="0.1" />
+      <QualityStat stattype="ExplosionDamage" value="0.1" />
+    </Quality>
+  </Item>
+  <!-- Clown "Happy" Vest -->
+  <Item identifier="clownotrauma_suicidevest" scale="0.5" category="Equipment" tags="mediumitem,clothing,clownitem" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="storagecab" secondary="crewcab" />
+    <InventoryIcon texture="content/Items/JobGear/TalentGear.png" sourcerect="202,304,48,61" origin="0.45,0.5" />
+    <Sprite texture="content/Items/JobGear/TalentGear.png" sourcerect="216,210,78,95" depth="0.6" origin="0.5,0.5" />
+    <Body radius="30" height="30" density="40" />
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="20">
+      <RequiredItem identifier="bikehorn" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="ballisticfiber" amount="2" />
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <ItemContainer capacity="1" maxstacksize="1" autoinject="true">
+      <Containable items="explosive" />
+    </ItemContainer>
+    <Wearable slots="Bag" msg="ItemMsgPickUpSelect" canbeselected="false" canbepicked="true" pickkey="Select">
+      <sprite name="Clown Happy Vest" texture="content/Items/JobGear/TalentGear.png" limb="Torso" hidelimb="false" sourcerect="215,209,79,97" inherittexturescale="true" origin="0.45,0.6" />
+      <SkillModifier skillidentifier="weapons" skillvalue="5" />
+    </Wearable>
+  </Item>
+  <!-- Clown "Happy" Toolbox/Storage Container -->
+  <Item identifier="clownotrauma_explosive_toolbox" category="Equipment" tags="mediumitem,detonator,clownitem" showcontentsintooltip="true" Scale="0.5" impactsoundtag="impact_metal_heavy" RequireAimToUse="True">
+    <InventoryIcon texture="content/Items/InventoryIconAtlas.png" sourcerect="640,256,64,64" origin="0.5,0.6" />
+    <Sprite texture="content/Items/Tools/tools.png" sourcerect="314,1,94,74" origin="0.5,0.5" depth="0.6" />
+    <Body width="90" height="60" density="20" />
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="20">
+      <RequiredItem identifier="steel" amount="2" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="bikehorn" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="steel" />
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+      <Attack itemdamage="5" targetimpulse="2">
+        <Affliction identifier="blunttrauma" strength="2" />
+        <Affliction identifier="stun" strength="0.6" />
+        <Sound file="content/Items/Weapons/Smack2.ogg" range="800" />
+      </Attack>
+    </MeleeWeapon>
+    <ItemContainer capacity="1" keepopenwhenequipped="true" movableframe="true">
+      <Containable items="explosive" />
+    </ItemContainer>
+    <ItemComponent characterusable="false">
+      <StatusEffect type="OnBroken" target="Contained">
+        <Use />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </ItemComponent>
+    <CustomInterface canbeselected="true" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.15,0.20" anchor="BottomCenter" absoluteoffset="20,20" style="ItemUI" />
+      <Button text="Start Timer">
+        <sound file="content\Items\Button\Switch1.ogg" type="OnActive" range="250.0" loop="true" volume="0.5" />
+        <StatusEffect type="OnUse" targettype="This" IsOn="true" disabledeltatime="true" />
+        <StatusEffect type="OnSecondaryUse" targettype="This" IsOn="false" disabledeltatime="true" />
+      </Button>
+    </CustomInterface>
+    <LightComponent LightColor="255,255,255,100" range="23" blinkfrequency="1" IsOn="false" canbeselected="false" AllowInGameEditing="false">
+      <sound file="content\Items\Button\Switch1.ogg" type="OnActive" range="350.0" loop="true" volume="0.3" />
+      <StatusEffect targettype="This" condition="-2.5" />
+    </LightComponent>
+  </Item>
+  <!-- Joke Revolver - Flag Originally from Thalassophobia -->
+  <Item identifier="clownotrauma_jokerevolver" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,weapon,gun,clownitem" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="10">
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="bikehorn" />
+    </Fabricate>
+    <Deconstruct time="20">
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <InventoryIcon texture="content/Items/InventoryIconAtlas.png" sourcerect="128,64,64,64" origin="0.5,0.5" />
+    <Sprite name="clownotrauma's joke revolver" texture="content/Items/Weapons/weapons_new.png" sourcerect="0,418,76,41" depth="0.55" origin="0.5,0.5" />
+    <Body width="72" height="40" density="50" />
+    <LightComponent lightcolor="255,255,255,255" castshadows="false" allowingameediting="false" range="0">
+      <sprite name="flag" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" depth="0.55" sourcerect="427,207,108,80" origin="-0.33,0.2" />
+    </LightComponent>
+    <Holdable slots="Any,RightHand,LeftHand" controlpose="true" aimpos="70,5" handle1="-25,-7" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon barrelpos="29,11" reload="5" drawhudwhenequipped="true" crosshairscale="0.2">
+      <Sound file="content/Items/Weapons/Revolver1.ogg" type="OnUse" range="3000" selectionmode="Random" />
+      <Sound file="content/Items/Weapons/Revolver2.ogg" type="OnUse" range="3000" />
+      <Sound file="content/Items/Weapons/Revolver3.ogg" type="OnUse" range="3000" />
+      <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" />
+      <StatusEffect type="OnUse" target="This" IsOn="true">
+        <sound file="Content/Items/Weapons/honk.ogg" type="OnUse" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" delay="4" IsOn="false" />
+    </RangedWeapon>
+  </Item>
+  <!-- Bowling Ball - All Credit to Thalassophobia including Assets and sounds for this -->
+  <Item identifier="clownotrauma_bowlingball" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clownitem" impactsoundtag="impact_soft" scale="0.25" interactdistance="150" impacttolerance="0.01">
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="10">
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="bikehorn" />
+    </Fabricate>
+    <Deconstruct time="20">
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <Sprite name="Bowling Ball" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="548,212,108,108" depth="0.6" origin="0.5,0.5" />
+    <Body radius="60" density="40" friction="0.1" />
+    <MotionSensor rangeY="25" rangeX="25" canbeselected="false" minimumvelocity="1" ignoredead="true">
+      <StatusEffect type="OnContained" target="This" setvalue="true" minimumvelocity="90000" spritecolor="255,255,255,255" />
+      <StatusEffect type="OnContained" target="Contained" delay="0.5">
+        <RequiredItem items="bikehorn" type="Contained" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" delay="0.5" minimumvelocity="1" spritecolor="255,255,255,255" />
+      <StatusEffect type="OnNotContained" target="NearbyCharacters,This" range="100" Comparison="And">
+        <Sound file="%ModDir%/Integrations/ClownOTrauma/sounds/clownotrauma_pins.ogg" range="6000" selectionmode="Random" />
+        <Conditional clownotrauma_fallen="gt 2" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" Comparison="And" minimumvelocity="90000">
+        <Conditional MotionDetected="false" />
+        <RequiredItem items="bikehorn" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" delay="0.6" setvalue="true">
+        <Conditional MotionDetected="false" />
+        <SpawnItem spawnposition="ThisInventory" identifier="bikehorn" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" delay="0.1" minimumvelocity="1" rangeX="30">
+        <Conditional MotionDetected="true" />
+        <Explosion range="40" stun="5" showeffects="false" camerashake="0">
+          <Affliction identifier="clownotrauma_fallen" strength="40" />
+        </Explosion>
+      </StatusEffect>
+    </MotionSensor>
+    <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" aimpos="-30,-40" throwpos="30,40" throwforce="1.5" msg="ItemMsgPickUpSelect">
+      <Sprite name="Bowling Ball Throwable" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="548,212,108,108" depth="0.6" origin="0.5,0.5" />
+    </Throwable>
+  </Item>
+  <!-- Clown Baseball Bat -->
+  <Item identifier="clownotrauma_clownbaseballbat" category="Weapon" Tags="mediumitem,weapon,gunsmith,mountableweapon,clowns,clownweapon" scale="0.25" requireaimtouse="true" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="secarmcab" secondary="armcab" />
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="25">
+      <RequiredItem identifier="organicfiber" amount="2" />
+      <RequiredItem identifier="bikehorn" />
+    </Fabricate>
+    <Deconstruct time="20">
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="123,912,496,74" depth="0.55" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="123,912,496,74" depth="0.55" origin="0.5,0.5" />
+    <Body width="153" height="8" density="25" />
+    <MeleeWeapon slots="Any,RightHand+LeftHand" aimable="true" aimpos="45,10" handle1="-40,0" handle2="-35,5" holdangle="30" reload="1.0" range="100" combatPriority="40" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true">
+      <Attack severlimbsprobability="0">
+        <Affliction identifier="blunttrauma" strength="5" />
+        <StatusEffect type="OnUse" target="Character">
+          <Sound file="content/Items/Weapons/Smack1.ogg" range="500" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="UseTarget">
+          <Affliction identifier="stun" strength="0.5" />
+          <StatusEffect type="OnUse" target="UseTarget">
+            <Conditional hasStatusTag="eq homerun" />
+            <Explosion range="220" stun="5" force="500" shockwave="true" flames="true" flash="true" smoke="true" underwaterbubble="true" sparks="true" camerashake="100" />
+          </StatusEffect>
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="UseTarget,This" disabledeltatime="true">
+          <Conditional hasStatusTag="eq homerun" />
+        </StatusEffect>
+      </Attack>
+    </MeleeWeapon>
+    <Quality>
+      <QualityStat stattype="StrikingPowerMultiplier" value="0.1" />
+    </Quality>
+    <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
+  </Item>
+  <!-- Clowntains Hat -->
+  <Item identifier="clownotrauma_clowncaptainscap3" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing,clownmask" scale="0.5">
+    <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.02" />
+    <PreferredContainer primary="crewcab" />
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="10">
+      <RequiredItem identifier="bikehorn" />
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <Sprite name="Clowntains Hat" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" depth="0.6" sourcerect="110,768,88,93" origin="0.5,0.5" scale="0.5" />
+    <Body width="40" radius="30" density="15" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Clown Mask Wearable" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.75" sourcerect="110,768,88,93" origin="0.45,0.65" />
+      <SkillModifier skillidentifier="helm" skillvalue="10" />
+      <StatusEffect tags="clown" type="OnWearing" target="Character" HideFace="true" duration="0.1" stackable="false" />
+    </Wearable>
+  </Item>
+  <!-- Super Clown Horn -->
+  <Item identifier="clownotrauma_superclownhorn" category="Misc" tags="smallitem,hornitem" scale="0.5" cargocontaineridentifier="metalcrate">
+    <PreferredContainer primary="crewcab" spawnprobability="0.05" notcampaign="true" />
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="10">
+      <RequiredItem identifier="bikehorn" />
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <InventoryIcon texture="content/Items/InventoryIconAtlas.png" sourcerect="769,385,64,64" depth="0.55" origin="0.5,0.5" />
+    <Sprite texture="content/Items/Misc/Misc.png" sourcerect="101,45,53,22" depth="0.55" />
+    <Body width="50" height="20" density="15" />
+    <Holdable slots="Any,RightHand,LeftHand" aimpos="100,0" handle1="-15,-3" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon reload="2">
+      <Sound file="Content/Items/Weapons/honk.ogg" type="OnUse" />
+    </RangedWeapon>
+    <aitarget soundrange="1000" fadeouttime="5" />
+    <MotionSensor rangeY="25" rangeX="20" canbeselected="false" minimumvelocity="6" ignoredead="true">
+      <StatusEffect type="OnContained" target="This" setvalue="true" minimumvelocity="6" spritecolor="255,255,255,255" />
+      <StatusEffect type="OnNotContained" target="This" Condition="-10" minimumvelocity="6" spritecolor="255,255,255,255">
+        <Conditional MotionDetected="true" />
+        <Explosion range="40" stun="5" force="30" shockwave="false" flames="false" flash="false" smoke="false" underwaterbubble="false" sparks="false" camerashake="30.0"></Explosion>
+        <Sound file="Content/Items/Weapons/honk.ogg" range="400" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This" setvalue="true" minimumvelocity="1" delay="1" spritecolor="100,100,100,255" />
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MotionSensor>
+  </Item>
+  <!-- Cultist Mask -->
+  <Item identifier="clownotrauma_cultistmask" category="Equipment" tags="smallitem,clothing,clownmask,clowns" scale="0.5" cargocontaineridentifier="metalcrate" allowasextracargo="true">
+    <PreferredContainer primary="crewcab" spawnprobability="0.05" notcampaign="true" />
+    <InventoryIcon texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" depth="0.6" sourcerect="840,831,104,80" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" depth="0.6" sourcerect="245,0,118,122" origin="0.5,0.5" />
+    <Body radius="40" width="20" density="30" />
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="20">
+      <RequiredItem identifier="bikehorn" />
+    </Fabricate>
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Cultist Mask" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" limb="Head" inheritlimbdepth="true" hidelimb="false" hideotherwearables="false" sourcerect="840,831,104,80" origin="0.25,0.45" scale="0.4" depth="0.6" />
+      <StatusEffect tags="clown" type="OnWearing" target="Character" HideFace="true" duration="0.1" stackable="false" />
+    </Wearable>
+  </Item>
+  <!-- Honkmother's Cultist Costume -->
+  <Item identifier="clownotrauma_cultistcostume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing,clowngear,clowns" impactsoundtag="impact_soft" scale="0.5">
+    <PreferredContainer primary="crewcab" spawnprobability="0.05" notcampaign="true" />
+    <InventoryIcon name="Cultist Costume Icon" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="552,1004,64,64" origin="0.5,0.5" />
+    <Sprite name="Cultist's Costume" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="240,1013,117,55" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="20">
+      <RequiredItem identifier="bikehorn" amount="3" />
+    </Fabricate>
+    <Deconstruct time="40">
+      <Item identifier="bikehorn" amount="3" />
+    </Deconstruct>
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Cultist Hood" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" limb="Head" hidelimb="true" sourcerect="943,818,114,131" origin="0.5150161,0.4612497" scale="0.35" depth="0.0" />
+      <sprite name="Cultist's Torso" texture="clownotrauma_cultist_outfit.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist's Right Hand" texture="clownotrauma_cultist_outfit.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist's Left Hand" texture="clownotrauma_cultist_outfit.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist's Right Lower Arm" texture="clownotrauma_cultist_outfit.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist's Left Lower Arm" texture="clownotrauma_cultist_outfit.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist's Right Upper Arm" texture="clownotrauma_cultist_outfit.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist's Left Upper Arm" texture="clownotrauma_cultist_outfit.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist's Waist" texture="clownotrauma_cultist_outfit.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist's Right Thigh" texture="clownotrauma_cultist_outfit.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist's Left Thigh" texture="clownotrauma_cultist_outfit.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist's Right Leg" texture="clownotrauma_cultist_outfit.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist's Left Leg" texture="clownotrauma_cultist_outfit.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist's Left Shoe" texture="clownotrauma_cultist_outfit.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" sourcerect="269,218,104,38" origin="0.37,0.50" sound="footstep_armor" />
+      <sprite name="Cultist's Right Shoe" texture="clownotrauma_cultist_outfit.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" sourcerect="374,218,104,38" origin="0.37,0.50" sound="footstep_armor" />
+      <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagesound="LimbClown" />
+      <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagesound="LimbClown" />
+      <StatusEffect tags="clown" type="OnWearing" target="Character" duration="0.1" stackable="false" />
+    </Wearable>
+  </Item>
+  <!-- Clown Mime Mask -->
+  <Item identifier="clownotrauma_mimemask" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing,clownmask,clowns" scale="0.5">
+    <PreferredContainer primary="crewcab" spawnprobability="0.05" notcampaign="true" />
+    <Sprite name="Mime Mask" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" depth="0.6" sourcerect="200,752,72,83" origin="0.5,0.5" scale="0.5" />
+    <Body width="40" radius="30" density="15" />
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="10">
+      <RequiredItem identifier="bikehorn" />
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Mime Mask Wearable" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.75" sourcerect="200,752,72,83" origin="0.5020648,0.6044496" />
+      <StatusEffect tags="clown" type="OnWearing" target="Character" HideFace="true" duration="0.1" stackable="false" />
+    </Wearable>
+  </Item>
+  <!-- Honkmother's Mime Costume -->
+  <Item identifier="clownotrauma_mimecostume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing,clowngear,clowns" impactsoundtag="impact_soft" scale="0.5">
+    <PreferredContainer primary="crewcab" spawnprobability="0.05" notcampaign="true" />
+    <InventoryIcon name="Mime Costume Icon" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="618,1004,64,64" origin="0.5,0.5" />
+    <Sprite name="Mime's Costume" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="358,1013,117,55" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="20">
+      <RequiredItem identifier="bikehorn" amount="3" />
+    </Fabricate>
+    <Deconstruct time="40">
+      <Item identifier="bikehorn" amount="3" />
+    </Deconstruct>
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Mime's Torso" texture="clownotrauma_mime_outfit.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mime's Right Hand" texture="clownotrauma_mime_outfit.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mime's Left Hand" texture="clownotrauma_mime_outfit.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mime's Right Lower Arm" texture="clownotrauma_mime_outfit.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mime's Left Lower Arm" texture="clownotrauma_mime_outfit.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mime's Right Upper Arm" texture="clownotrauma_mime_outfit.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mime's Left Upper Arm" texture="clownotrauma_mime_outfit.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mime's Waist" texture="clownotrauma_mime_outfit.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mime's Right Thigh" texture="clownotrauma_mime_outfit.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mime's Left Thigh" texture="clownotrauma_mime_outfit.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mime's Right Leg" texture="clownotrauma_mime_outfit.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mime's Left Leg" texture="clownotrauma_mime_outfit.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Mime's Left Shoe" texture="clownotrauma_mime_outfit.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sound="footstep_clown" />
+      <sprite name="Mime's Right Shoe" texture="clownotrauma_mime_outfit.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sound="footstep_clown" />
+      <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagesound="LimbClown" />
+      <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagesound="LimbClown" />
+      <StatusEffect tags="clown" type="OnWearing" target="Character" duration="0.1" stackable="false" />
+    </Wearable>
+  </Item>
+  <!-- Clown Ballistic Helmet 2 -->
+  <Item identifier="clownotrauma_ballistichelmet2" category="Equipment" tags="smallitem,clothing,clowns,clownmask" cargocontaineridentifier="metalcrate" impactsoundtag="footstep_clown" scale="0.325">
+    <PreferredContainer primary="secarmcab" amount="1" notcampaign="true" />
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="20">
+      <RequiredItem identifier="ballistichelmet2" />
+      <RequiredItem identifier="divingmask" />
+      <RequiredItem identifier="flashlight" />
+      <RequiredItem identifier="redpaint" />
+      <RequiredItem identifier="bikehorn" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="bikehorn" />
+      <Item identifier="divingmask" />
+      <Item identifier="ballistichelmet2" />
+    </Deconstruct>
+    <Sprite name="Clown Ballistic Helmet 2" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="0,768,92,96" depth="0.6" origin="0.5,0.5" />
+    <Body radius="30" density="50" />
+    <Wearable slots="Any,Head" armorvalue="20.0" msg="ItemMsgPickUpSelect">
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.4" damagesound="LimbClown" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="LimbClown" deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbClown" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.0" damagesound="" deflectprojectiles="true" />
+      <SkillModifier skillidentifier="weapons" skillvalue="5" />
+      <sprite name="Clown Ballistic Helmet 2 Wearable" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" limb="Head" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" sourcerect="0,768,92,96" origin="0.5,0.6">
+        <LightComponent range="200.0" lightcolor="250,0,0,255" powerconsumption="10" IsOn="true" allowingameediting="false">
+          <LightTexture texture="content/Lights/divinghelmetlight.png" origin="0.05, 0.5" size="1.0,1.0" />
+        </LightComponent>
+      </sprite>
+      <!-- O2 -->
+      <StatusEffect type="OnWearing" target="Contained,Character" UseHullOxygen="false" OxygenAvailable="1000.0" Condition="-0.3" comparison="And">
+        <Conditional IsDead="false" />
+        <Conditional HullOxygenPercentage="lt 50" />
+        <Conditional InWater="false" />
+        <RequiredItem items="oxygensource" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" UseHullOxygen="false" OxygenAvailable="1000.0" Condition="-0.3" comparison="And">
+        <Conditional InWater="true" />
+        <RequiredItem items="oxygensource" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" SpeedMultiplier="1.3" setvalue="true" comparison="And">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" />
+      </StatusEffect>
+      <!-- Batteries -->
+      <StatusEffect type="OnWearing" targettype="Contained" Condition="-0.1" targetslot="1">
+        <Conditional condition="gte 0.0" />
+        <RequiredItem items="mobilebattery" type="Contained" />
+      </StatusEffect>
+      <!-- Clown Tag -->
+      <StatusEffect tags="clown" type="OnWearing" target="Character" HideFace="true" duration="0.1" stackable="false" />
+    </Wearable>
+    <ItemContainer capacity="0" maxstacksize="0" hideitems="true" containedstateindicatorstyle="battery" containedstateindicatorslot="1">
+      <Containable items="none" />
+      <SlotIcon slotindex="0" texture="Content/UI/ContainerIndicators.png" sourcerect="1,93,120,29" origin="0.5,0.45" />
+      <SlotIcon slotindex="1" texture="content/UI/ContainerIndicators.png" sourcerect="2,186,120,29" origin="0.5,0.45" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="oxygensource,weldingtoolfuel" />
+        <StatusEffect type="OnWearing" target="Contained">
+          <RequiredItem items="oxygensource" type="Contained" />
+          <Conditional condition="lt 5.0" />
+          <Sound file="Content/Items/WarningBeepSlow.ogg" range="500" loop="true" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Contained" playsoundonrequireditemfailure="true">
+          <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
+          <Conditional condition="lte 0.0" />
+          <Sound file="Content/Items/WarningBeep.ogg" range="500" loop="true" />
+        </StatusEffect>
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="mobilebattery">
+          <StatusEffect type="OnContaining" targettype="This" Voltage="1.0" setvalue="true" />
+        </Containable>
+      </SubContainer>
+    </ItemContainer>
+  </Item>
+  <!-- Clown Security Vest -->
+  <Item identifier="clownotrauma_clownbodyarmor" category="Equipment" tags="smallitem,clothing,clowns,clownotrauma_clownarmor" scale="0.35" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft">
+    <PreferredContainer secondary="armcab" />
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="30">
+      <RequiredItem identifier="ballisticfiber" amount="2" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="bikehorn" />
+    </Fabricate>
+    <Deconstruct time="40">
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <InventoryIcon texture="content/Items/InventoryIconAtlas.png" sourcerect="960,256,64,64" origin="0.5,0.5" />
+    <Sprite name="Clown Body Armor Item" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="0,864,103,180" depth="0.6" origin="0.5,0.35" />
+    <Body width="85" height="90" density="40" />
+    <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true" />
+      <sprite name="Clown Body Armor Wearable" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" limb="Torso" hidelimb="false" inheritscale="true" scale="0.65" inheritorigin="false" origin="0.5,0.6" inheritsourcerect="false" sourcerect="0,864,103,180" />
+    </Wearable>
+    <ItemContainer capacity="2" hideitems="true" keepopenewhenequipped="true" movableframe="true" drawinventory="true">
+      <Containable items="toyhammer,hornitem,clowngear,clownmask,clownitem,clownweapon" />
+    </ItemContainer>
+  </Item>
+  <!-- Clown Button -->
+  <Item identifier="clownotrauma_button" category="Electrical" tags="smallitem,button,clownitem" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="footstep_clown" isshootable="true" maxstacksize="8">
+    <Sprite texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="674,245,34,46" depth="0.8" origin="0.5,0.5" />
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="5">
+      <RequiredItem identifier="button" />
+      <RequiredItem identifier="bikehorn" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <Body width="36" height="40" density="40" />
+    <Controller direction="None" canbepicked="true" msg="ItemMsgPressSelect">
+      <RequiredItem identifier="idcard" type="Picked" msg="ItemMsgUnauthorizedAccess" />
+      <sound file="Content/Items/Weapons/honk.ogg" type="OnUse" range="500.0" />
+    </Controller>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem identifier="screwdriver" type="Equipped" />
+      <output name="signal_out" displayname="connection.signalout" />
+    </ConnectionPanel>
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
+      <requireditem identifier="wrench" type="Equipped" />
+    </Holdable>
+  </Item>
+  <!-- Clown Emergency Siren -->
+  <Item identifier="clownotrauma_emergencysiren" category="Electrical" Tags="smallitem,sound,clownitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="footstep_clown" isshootable="true">
+    <PreferredContainer primary="engcab" />
+    <PreferredContainer secondary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" amount="1" spawnprobability="0.05" />
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="10">
+      <RequiredItem identifier="bikehorn" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="710,246,33,78" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" depth="0.8" sourcerect="710,246,33,78" origin="0.5,0.5" />
+    <Body radius="20" density="20" />
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true">
+      <RequiredItem items="wrench" type="Equipped" />
+    </Holdable>
+    <LightComponent canbeselected="false" lightcolor="255,0,0,100" castshadows="false" blinkfrequency="0.68" range="20">
+      <Sprite texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="710,246,33,78" origin="0.5,0.5" alpha="1.0" />
+      <sound file="%ModDir%/Integrations/ClownOTrauma/sounds/clownotrauma_carhorn.ogg" type="OnActive" range="1200.0" loop="true" volume="0.5" />
+      <StatusEffect type="OnContained" target="This" IsActive="false">
+        <Conditional targetitemcomponent="Holdable" IsActive="eq false" />
+      </StatusEffect>
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <!-- Clussy Honkmother Poster 1 -->
+  <Item identifier="clownotrauma_honkmotherposter1" category="Misc" tags="smallitem,clownitem" cargocontaineridentifier="metalcrate" scale="1" impactsoundtag="footstep_clown">
+    <Sprite name="sign" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="856,2,76,199" depth="0.55" origin="0.5,0.5"></Sprite>
+    <Body width="200" height="80" density="40" />
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="30">
+      <RequiredItem identifier="bikehorn" />
+    </Fabricate>
+    <Deconstruct time="20">
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetach" PickingTime="5.0" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true" />
+  </Item>
+  <!-- Clown Crawler Egg -->
+  <Item identifier="clownotrauma_crawlerclown_egg" health="100" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" category="Misc" tags="mediumitem" scale="0.5" impactsoundtag="impact_soft" spritecolor="200,200,255,255">
+    <Price baseprice="550" sold="false" />
+    <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.18" sourcerect="80,105,124,147" origin="0.5,0.5" />
+    <Fabricate suitablefabricators="medicalfabricator,clownotrauma_travellingcircus" requiredtime="10">
+      <Item identifier="alienblood" amount="2" />
+      <Item identifier="adrenalinegland" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="alienblood" amount="2" />
+    </Deconstruct>
+    <Body width="120" height="120" friction="1.0" restitution="0.01" angulardamping="1.0" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false">
+      <StatusEffect type="OnBroken" target="This">
+        <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+        <particleemitter particle="mudrapeggbrownchunks" particleamount="100" velocitymin="100" velocitymax="2000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        <Sound file="Content/Sounds/Damage/Gore6.ogg" range="800" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnDamaged" target="This">
+        <particleemitter particle="mudrapeggbrownchunks" particleamount="8" velocitymin="100" velocitymax="1000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-5.0" />
+    </Holdable>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="true" showcontainedstateindicator="false" canbeselected="true">
+      <GuiFrame relativesize="0.15,0.2" anchor="Center" style="ItemUI" />
+      <StatusEffect type="OnBroken" target="This">
+        <particleemitter particle="mudrapeggbrownchunks" particleamount="100" velocitymin="100" velocitymax="2000" anglemin="0" anglemax="360" scalemin="0.4" scalemax="0.6" />
+        <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+        <Sound file="Content/Sounds/Damage/Gore7.ogg" range="800" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnDamaged" target="This">
+        <particleemitter particle="mudrapeggbrownchunks" particleamount="8" velocitymin="100" velocitymax="1000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-5.0" />
+      <StatusEffect type="Always" target="This" Condition="0" setvalue="true">
+        <Conditional Scale="gte 0.75" />
+        <SpawnCharacter speciesname="Crawler_Clown" totalmaxcount="2" />
+        <Remove />
+      </StatusEffect>
+      <Containable items="antibloodloss1">
+        <StatusEffect type="OnContaining" target="This" Scale="0.005" />
+        <StatusEffect type="OnContaining" target="Contained" Condition="-1" />
+      </Containable>
+    </ItemContainer>
+    <LightComponent range="5" lightcolor="255,255,255,61" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false" pulsefrequency="1" pulseamount="0.30">
+      <sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.025" sourcerect="300,291,98,113" origin="0.5,0.6" alpha="1.0" />
+    </LightComponent>
+    <LightComponent range="40" lightcolor="255,255,255,70" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false">
+      <sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.025" sourcerect="410,301,88,95" origin="0.5,0.6" alpha="1.0" />
+    </LightComponent>
+  </Item>
+  <!-- Fake Cigar -->
+  <Item identifier="clownotrauma_fakecigar" category="Misc" Tags="smallitem,clownitem" scale="0.5" cargocontaineridentifier="metalcrate" allowasextracargo="true" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+    <PreferredContainer primary="crewcab" />
+    <Fabricate suitablefabricators="medicalfabricator,clownotrauma_travellingcircus" requiredtime="5">
+      <RequiredItem identifier="plastic" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="174,234,42,50" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="0,60,50,12" depth="0.55" origin="0.5,0.5" />
+    <Body width="45" height="10" />
+    <Holdable slots="Any,RightHand" aimable="false" aimpos="30,14" handle1="0,-10" swingamount="0,0" swingspeed="0.5" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnUse" target="Character" disabledeltatime="true">
+        <Affliction identifier="stun" amount="3" />
+        <Explosion range="150.0" force="30" shockwave="true" smoke="true" flash="true" sparks="true" flames="true" underwaterbubble="false" camerashake="6.0" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <!-- Cyanide Cigar -->
+  <Item identifier="clownotrauma_cyanidecigar" category="Misc" Tags="smallitem,clownitem" scale="0.5" cargocontaineridentifier="metalcrate" allowasextracargo="true" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+    <PreferredContainer primary="crewcab" />
+    <Fabricate suitablefabricators="medicalfabricator,clownotrauma_travellingcircus" requiredtime="5">
+      <RequiredItem identifier="cyanide" />
+      <RequiredItem identifier="plastic" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="174,234,42,50" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="0,60,50,12" depth="0.55" origin="0.5,0.5" />
+    <Body width="45" height="10" />
+    <Holdable slots="Any,RightHand" aimable="false" aimpos="30,14" handle1="0,-10" swingamount="0,0" swingspeed="0.5" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnUse" target="This" Condition="-4.0">
+        <ParticleEmitter particle="swirlysmoke" particlespersecond="2" scalemin="1" scalemax="2" anglemin="0" anglemax="360" velocitymin="0" velocitymax="10" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character">
+        <Affliction identifier="cyanidepoisoning" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <!-- Morbusine Cigar -->
+  <Item identifier="clownotrauma_morbusinecigar" category="Misc" Tags="smallitem,clownitem" scale="0.5" cargocontaineridentifier="metalcrate" allowasextracargo="true" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+    <PreferredContainer primary="crewcab" />
+    <Fabricate suitablefabricators="medicalfabricator,clownotrauma_travellingcircus" requiredtime="5">
+      <RequiredItem identifier="morbusine" />
+      <RequiredItem identifier="plastic" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="174,234,42,50" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="0,60,50,12" depth="0.55" origin="0.5,0.5" />
+    <Body width="45" height="10" />
+    <Holdable slots="Any,RightHand" aimable="false" aimpos="30,14" handle1="0,-10" swingamount="0,0" swingspeed="0.5" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnUse" target="This" Condition="-4.0">
+        <ParticleEmitter particle="swirlysmoke" particlespersecond="2" scalemin="1" scalemax="2" anglemin="0" anglemax="360" velocitymin="0" velocitymax="10" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character">
+        <Affliction identifier="morbusinepoisoning" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <!-- Clown Husk Costume -->
+  <Item identifier="clownotrauma_huskcostume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clownitem" impactsoundtag="impact_soft" scale="0.5">
+    <InventoryIcon name="Husk Costume Icon" texture="Content/Items/Jobgear/OutfitIcons.png" sourcerect="383,274,128,110" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="6,363,124,67" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="5">
+      <RequiredItem identifier="bikehorn" />
+    </Fabricate>
+    <Deconstruct time="40">
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" setvalue="true" disabledeltatime="true">
+        <!-- <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" /> -->
+        <!-- <TriggerAnimation Type="Walk" FileName="../Humanhusk/Animations/HumanhuskWalk" priority="1" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Run" FileName="../../Humanhusk/Animations/HumanhuskRun" priority="1" ExpectedSpecies="Human" /> -->
+      </StatusEffect>
+      <sprite name="Husk Costume Torso" texture="Content/Items/Diving/Broken_DivingSuit.png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Husk Costume Head" texture="Content/Items/Jobgear/headgears.png" sourcerect="104,4,96,96" depth="0.1" origin="0.5,0.45" hidelimb="true" hideotherwearables="true" inherittexturescale="false" scale="0.35" />
+      <sprite name="Husk Costume Right Hand" texture="Content/Items/Diving/Broken_DivingSuit.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Husk Costume Left Hand" texture="Content/Items/Diving/Broken_DivingSuit.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Husk Costume Right Lower Arm" texture="Content/Items/Diving/Broken_DivingSuit.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Husk Costume Left Lower Arm" texture="Content/Items/Diving/Broken_DivingSuit.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Husk Costume Right Upper Arm" texture="Content/Items/Diving/Broken_DivingSuit.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Husk Costume Left Upper Arm" texture="Content/Items/Diving/Broken_DivingSuit.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Husk Costume Waist" texture="Content/Items/Diving/Broken_DivingSuit.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Husk Costume Right Thigh" texture="Content/Items/Diving/Broken_DivingSuit.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Husk Costume Left Thigh" texture="Content/Items/Diving/Broken_DivingSuit.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Husk Costume Right Leg" texture="Content/Items/Diving/Broken_DivingSuit.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Husk Costume Left Leg" texture="Content/Items/Diving/Broken_DivingSuit.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Husk Costume Left Shoe" texture="Content/Items/Diving/Broken_DivingSuit.png" limb="LeftFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Husk Costume Right Shoe" texture="Content/Items/Diving/Broken_DivingSuit.png" limb="RightFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagesound="LimbClown" />
+      <StatusEffect tags="husk" type="OnWearing" target="Character" duration="0.1" stackable="false" />
+    </Wearable>
+  </Item>
+  <!-- Cultist Blood Knife Altar -->
+  <Item identifier="clownotrauma_bloodaltar" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" pickdistance="150" impactsoundtag="impact_soft" scale="0.35" showcontentsintooltip="true" waterproof="true">
+    <InventoryIcon name="Blood Altar" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="942,0,267,323" depth="0.6" origin="0.5,0.5" />
+    <Sprite name="Blood Altar Sprite" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="942,0,267,323" depth="0.6" origin="0.5,0.5" />
+    <Body width="150" height="76" density="25" />
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="20">
+      <RequiredItem identifier="antibloodloss2" />
+      <RequiredItem identifier="plastic" amount="2" />
+    </Fabricate>
+    <Fabricator canbeselected="true" powerconsumption="0" msg="ItemMsgInteractSelect">
+      <Requireditem items="clowncostume,clownsuitunique,clownotrauma_clowncostume,clownotrauma_cultistcostume,clownotrauma_mimecostume" type="Picked" msg="itemmsgunauthorizedaccess" />
+      <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Left" />
+      <sound file="%ModDir%/Integrations/ClownOTrauma/sounds/clownotrauma_ritualmusic.ogg" type="OnActive" range="300.0" loop="true" />
+      <ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
+      <ItemContainer capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true" />
+      <StatusEffect type="OnActive" target="This" Voltage="1.0" setvalue="true" />
+    </Fabricator>
+    <Deconstruct time="5" />
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
+      <RequiredItem items="wrench" type="Equipped" />
+    </Holdable>
+    <LightComponent range="250" lightcolor="255,100,100,200" IsOn="true" powerconsumption="5" pulseamount="0.6" pulsefrequency="0.4" allowingameediting="false">
+      <Sprite name="Blood Altar Active Light" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="1207,0,267,323" depth="0.8" origin="0.5,0.5" />
+      <StatusEffect type="OnActive" target="This" stackable="false" disabledeltatime="true"></StatusEffect>
+    </LightComponent>
+  </Item>
+  <!-- Cultist Blood Knife -->
+  <Item identifier="clownotrauma_cultistbloodknife" category="Weapon" Tags="smallitem,weapon,gunsmith,mountableweapon,clownitem" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" condition="0" RequireAimToUse="True">
+    <InventoryIcon name="Cultist Blood Knife" texture="Content/Items/InventoryIconAtlas.png" sourcerect="835,385,64,64" origin="0.5,0.5" />
+    <Sprite name="Cultist Blood Knife Sprite" texture="Content/Items/Weapons/weapons_new.png" sourcerect="183,203,66,16" depth="0.55" origin="0.5,0.5" />
+    <Body width="65" height="15" density="25" />
+    <Fabricate suitablefabricators="clownotrauma_bloodaltar" requiredtime="10" outcondition="0.0">
+      <RequiredItem identifier="iron" amount="2" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="antibloodloss2" mincondition="0.99" />
+      <Item identifier="iron" />
+    </Deconstruct>
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-10,0" holdangle="30" reload="0.75" range="50" combatPriority="25" msg="ItemMsgPickUpSelect">
+      <Attack targetimpulse="2" severlimbsprobability="0.1" itemdamage="2" structuredamage="2" structuresoundtype="StructureSlash">
+        <Affliction identifier="lacerations" strength="10" />
+        <Affliction identifier="bleeding" strength="10" />
+        <StatusEffect type="OnUse" target="Character">
+          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+        </StatusEffect>
+      </Attack>
+      <StatusEffect type="OnUse" target="This, Character" condition="10.0">
+        <Conditional IsDead="false" />
+        <ParticleEmitter particle="bloodtrail" particlespersecond="4" particleburstinterval="2" particleburstamount="20" velocitymin="190" velocitymax="250" anglemin="0" anglemax="360" scalemin="0.4" scalemax="0.7" />
+        <Sound file="Content/Sounds/Damage/Gore10.ogg" range="500" />
+      </StatusEffect>
+      <!-- Turns out if you go to 0 it becomes unusable -->
+      <StatusEffect type="OnContained" target="This" setvalue="true" condition="1.0">
+        <Conditional Condition="0" />
+      </StatusEffect>
+      <!-- Another interesting lesson, going to 100 removes the value bar -->
+      <StatusEffect type="OnContained" target="This" setvalue="true" condition="99">
+        <Conditional Condition="100" />
+      </StatusEffect>
+    </MeleeWeapon>
+    <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
+  </Item>
+  <!-- Cultist Zombie Knife -->
+  <Item identifier="clownotrauma_cultistknife_zombie" category="Equipment" Tags="smallitem,weapon,clownitem" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <InventoryIcon name="Cultist Knife Zombie" texture="Content/Items/InventoryIconAtlas.png" sourcerect="835,385,64,64" origin="0.5,0.5" />
+    <Sprite name="Cultist Knife Zombie Sprite" texture="Content/Items/Weapons/weapons_new.png" sourcerect="183,203,66,16" depth="0.55" origin="0.5,0.5" />
+    <Body width="110" height="25" density="50" />
+    <Fabricate suitablefabricators="clownotrauma_bloodaltar" requiredtime="40">
+      <RequiredItem identifier="clownotrauma_cultistbloodknife" mincondition="0.99" maxcondition="0.99" usecondition="true" />
+    </Fabricate>
+    <Deconstruct time="20" />
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-10,0" holdangle="30" reload="0.75" range="50" msg="ItemMsgPickUpSelect">
+      <Attack targetimpulse="10" severlimbsprobability="0.1" itemdamage="2">
+        <Affliction identifier="lacerations" strength="2" />
+        <Sound file="Content/Sounds/Damage/Gore1.ogg" range="500" />
+      </Attack>
+      <StatusEffect type="OnUse" target="This, UseTarget" condition="-100" comparison="and">
+        <Conditional IsDead="true" />
+        <Conditional ishuman="true" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="UseTarget" setvalue="true" Isdead="false" comparison="and">
+        <Conditional IsDead="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="clownotrauma_clownzombieinfection" strength="2" />
+        <ParticleEmitter particle="faradayfx" particlespersecond="4" particleburstinterval="2" particleburstamount="20" velocitymin="190" velocitymax="250" anglemin="0" anglemax="360" scalemin="0.4" scalemax="0.7" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  <!-- Cultist Smart Zombie Knife -->
+  <Item identifier="clownotrauma_cultistknife_smartzombie" category="Equipment" Tags="smallitem,weapon,clownitem" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <InventoryIcon name="Cultist Knife Smart Zombie" texture="Content/Items/InventoryIconAtlas.png" sourcerect="835,385,64,64" origin="0.5,0.5" />
+    <Sprite name="Cultist Knife Smart Zombie Sprite" texture="Content/Items/Weapons/weapons_new.png" sourcerect="183,203,66,16" depth="0.55" origin="0.5,0.5" />
+    <Body width="110" height="25" density="50" />
+    <Fabricate suitablefabricators="clownotrauma_bloodaltar" requiredtime="40">
+      <RequiredItem identifier="clownotrauma_cultistbloodknife" mincondition="0.99" maxcondition="0.99" usecondition="true" />
+      <RequiredItem identifier="dementonite" />
+    </Fabricate>
+    <Deconstruct time="20" />
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-10,0" holdangle="30" reload="0.75" range="50" msg="ItemMsgPickUpSelect">
+      <Attack targetimpulse="10" severlimbsprobability="0.1" itemdamage="2">
+        <Affliction identifier="lacerations" strength="2" />
+        <Sound file="Content/Sounds/Damage/Gore1.ogg" range="500" />
+      </Attack>
+      <StatusEffect type="OnUse" target="This, UseTarget" condition="-100" comparison="and">
+        <Conditional IsDead="true" />
+        <Conditional ishuman="true" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="UseTarget" setvalue="true" Isdead="false" comparison="and">
+        <Conditional IsDead="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="clownotrauma_resurrection" strength="100" />
+        <ParticleEmitter particle="faradayfx" particlespersecond="4" particleburstinterval="2" particleburstamount="20" velocitymin="190" velocitymax="250" anglemin="0" anglemax="360" scalemin="0.4" scalemax="0.7" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  <!-- Cultist Test Knife -->
+  <!-- <Item identifier="clownotrauma_cultistknife_mudraptor" category="Equipment" Tags="smallitem,weapon,clownitem" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <InventoryIcon name="Cultist Knife Mudraptor" texture="Content/Items/InventoryIconAtlas.png" sourcerect="835,385,64,64" origin="0.5,0.5" />
+    <Sprite name="Cultist Knife Mudraptor Sprite" texture="Content/Items/Weapons/weapons_new.png" sourcerect="183,203,66,16" depth="0.55" origin="0.5,0.5" />
+    <Body width="110" height="25" density="50" />
+    <Fabricate suitablefabricators="clownotrauma_bloodaltar" requiredtime="40">
+      <RequiredItem identifier="clownotrauma_cultistbloodknife" mincondition="0.99" maxcondition="0.99" usecondition="true" />
+    </Fabricate>
+    <Deconstruct time="20" />
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-10,0" holdangle="30" reload="0.75" range="50" msg="ItemMsgPickUpSelect">
+      <Attack targetimpulse="10" severlimbsprobability="0.1" itemdamage="2">
+        <Affliction identifier="lacerations" strength="2" />
+        <Sound file="Content/Sounds/Damage/Gore1.ogg" range="500" />
+      </Attack>
+      <StatusEffect type="OnUse" target="This, UseTarget" condition="-100" comparison="and">
+        <Conditional IsDead="true" />
+        <Conditional ishuman="true" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="UseTarget" setvalue="true" Isdead="false" comparison="and">
+        <Conditional IsDead="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="clownotrauma_clownzombieinfection" strength="2" />
+        <ParticleEmitter particle="faradayfx" particlespersecond="4" particleburstinterval="2" particleburstamount="20" velocitymin="190" velocitymax="250" anglemin="0" anglemax="360" scalemin="0.4" scalemax="0.7" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item> -->
+  <!-- Mime Wall -->
+  <!-- <Item identifier="clownotrauma_mimewall" category="Equipment" tags="smallitem,weapon,clownitem" health="200" damagedbyprojectiles="true" cargocontaineridentifier="metalcrate" scale="1">
+    <InventoryIcon texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="620,817,104,86" origin="0.5,0.5" />
+    <Sprite name="Mime Wall Sprite" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="962,322,61,61" origin="0.5,0.5" depth="0.55" />
+    <Body width="40" height="160" density="30" />
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="30"/>
+    <Holdable slots="Any,RightHand+LeftHand" aimpos="60,-30" holdpos="45,-30" handle1="-10,20" handle2="-10,-5" controlpose="true" blocksplayers="true" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnActive" target="UseTarget, This" condition="-2000" />
+      <StatusEffect type="OnActive" target="Character, This" condition="100" setvalue="true">
+        <Conditional HasStatusTag="mothersmimeblessing" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="Character" disabledeltatime="true">
+        <sound file="Content/Items/Weapons/honk.ogg" />
+        <Affliction identifier="stun" amount="3" />
+        <Explosion range="150.0" force="30" shockwave="true" smoke="true" flash="true" sparks="true" flames="true" underwaterbubble="false" camerashake="6.0" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item> -->
+  <!-- Clown Health Scanner -->
+  <Item identifier="clownotrauma_clownhealthscanner" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing,clownmask,clownitem" scale="0.5">
+    <PreferredContainer primary="crewcab" />
+    <Sprite name="Clown Health Scanner" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" depth="0.6" sourcerect="413,821,89,71" origin="0.5,0.5" scale="0.5" />
+    <Body width="40" radius="30" density="15" />
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="30">
+      <RequiredItem identifier="clownmask" />
+      <RequiredItem identifier="healthscanner" />
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="clownmask" />
+      <Item identifier="healthscanner" />
+    </Deconstruct>
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Clown Health Scanner Wearable" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.75" sourcerect="413,821,89,71" origin="0.5,0.6" />
+      <StatusEffect tags="clown" type="OnWearing" target="Character" HideFace="true" duration="0.1" stackable="false" />
+    </Wearable>
+    <StatusHUD drawhudwhenequipped="true" />
+  </Item>
+  <!-- Clown Diving Mask -->
+  <Item identifier="clownotrauma_clowndivingmask" scale="0.5" category="Diving,Equipment" Tags="smallitem,diving,lightdiving,clownmask,clownitem" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light">
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredItem identifier="clownmask" />
+      <RequiredItem identifier="divingmask" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="504,812,114,92" origin="0.5,0.6" />
+    <Sprite name="Clown Diving Mask" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" depth="0.55" sourcerect="504,812,114,92" origin="0.5,0.6" />
+    <Body width="40" height="35" density="15" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect" displaycontainedstatus="true">
+      <sprite name="Clown Diving Mask Wearable" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hidelimb="false" hideotherwearables="false" sourcerect="504,812,114,92" origin="0.65,0.6" hidewearablesoftype="moustache,beard" />
+      <StatusEffect tags="clown" type="OnWearing" target="Character" HideFace="true" duration="0.1" stackable="false" />
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.5" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygentank" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100.0" Oxygen="-5.0" Condition="-5.0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="weldingfueltank" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" targetlimbs="Torso" OxygenAvailable="-100.0" Oxygen="-7.0" Condition="-5.0">
+        <RequiredItem items="incendiumfueltank" type="Contained" />
+        <Affliction identifier="burn" amount="3.0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" Condition="-0.1" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" SpeedMultiplier="1.2" setvalue="true" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" />
+      </StatusEffect>
+    </Wearable>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="tank">
+      <Containable items="oxygensource,weldingtoolfuel" />
+    </ItemContainer>
+  </Item>
+  <!-- Mimecordian/Accordion -->
+  <Item identifier="clownotrauma_mimecordion" category="Misc" Tags="smallitem,accordion,instrument,clownitem" scale="0.5" impactsoundtag="impact_metal_light" isshootable="true">
+    <PreferredContainer primary="crewcab" />
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="15">
+      <RequiredItem identifier="accordion" />
+      <RequiredItem identifier="bikehorn" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="accordion" />
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <RangedWeapon reload="1" />
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="576,956,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Misc/Misc.png" sourcerect="164,5,92,110" depth="0.55" origin="0.5,0.5" />
+    <Body width="92" height="110" density="12" />
+    <Holdable slots="RightHand+LeftHand,Any" type="OnUse" controlpose="true" aimable="false" aimpos="50,-20" handle1="-20,0" handle2="-10,0" swingamount="50,0" swingspeed="0.5" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnUse" target="Contained, This">
+        <RequiredItem items="mimecordion_sheetmusic" type="Contained" />
+        <Use />
+      </StatusEffect>
+    </Holdable>
+    <ItemContainer capacity="1" canbeselected="true" hideitems="true">
+      <GuiFrame relativesize="0.2,0.25" anchor="TopCenter" minsize="140,170" maxsize="280,280" style="ItemUI" />
+      <Containable items="mimecordion_sheetmusic" />
+    </ItemContainer>
+  </Item>
+  <!-- Mimecordian - Drunken Sailor -->
+  <Item identifier="clownotrauma_mimecordion_sheetmusic_drunkensailor" category="Misc" Tags="smallitem,mimecordion_sheetmusic,clownitem" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_metal_light" spritecolor="220,220,255,255" inventoryiconcolor="220,220,255,255">
+    <InventoryIcon texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="735,818,81,106" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="735,818,81,106" depth="0.55" origin="0.5,0.5" />
+    <Body width="73" height="96" density="30" />
+    <Price baseprice="50" canbespecial="true" sold="false">
+      <Price storeidentifier="merchantclown" minavailable="1" maxavailable="2" sold="true">
+        <Reputation faction="clowns" min="5" />
+      </Price>
+    </Price>
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="10">
+      <RequiredItem identifier="organicfiber" amount="2" />
+      <RequiredItem identifier="bikehorn" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" CharacterUsable="false">
+      <StatusEffect type="OnUse" target="This, Parent">
+        <Conditional HasTag="accordion" />
+        <sound file="%ModDir%/Integrations/ClownOTrauma/sounds/clownotrauma_accordion_drunken_sailor.ogg" range="600" loop="true" />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <!-- Mimecordian - Wellerman -->
+  <Item identifier="clownotrauma_mimecordion_sheetmusic_wellerman" category="Misc" Tags="smallitem,mimecordion_sheetmusic,clownitem" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_metal_light" spritecolor="220,220,255,255" inventoryiconcolor="220,220,255,255">
+    <InventoryIcon texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="735,818,81,106" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="735,818,81,106" depth="0.55" origin="0.5,0.5" />
+    <Body width="73" height="96" density="30" />
+    <Price baseprice="20" canbespecial="false" sold="false">
+      <Price storeidentifier="merchantclown" minavailable="1" maxavailable="2" sold="true">
+        <Reputation faction="clowns" min="5" />
+      </Price>
+    </Price>
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="10">
+      <RequiredItem identifier="organicfiber" amount="2" />
+      <RequiredItem identifier="bikehorn" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" CharacterUsable="false">
+      <StatusEffect type="OnUse" target="This, Parent">
+        <Conditional HasTag="accordion" />
+        <sound file="%ModDir%/Integrations/ClownOTrauma/sounds/clownotrauma_accordion_wellerman.ogg" range="600" loop="true" />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <!-- Mimecordian - Leave Her Jonny -->
+  <Item identifier="clownotrauma_mimecordion_sheetmusic_leave_her_johnny" category="Misc" Tags="smallitem,mimecordion_sheetmusic,clownitem" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_metal_light" spritecolor="220,220,255,255" inventoryiconcolor="220,220,255,255">
+    <InventoryIcon texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="735,818,81,106" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="735,818,81,106" depth="0.55" origin="0.5,0.5" />
+    <Body width="73" height="96" density="30" />
+    <Price baseprice="20" canbespecial="false" sold="false">
+      <Price storeidentifier="merchantclown" minavailable="1" maxavailable="2" sold="true">
+        <Reputation faction="clowns" min="5" />
+      </Price>
+    </Price>
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="10">
+      <RequiredItem identifier="organicfiber" amount="2" />
+      <RequiredItem identifier="bikehorn" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" CharacterUsable="false">
+      <StatusEffect type="OnUse" target="This, Parent">
+        <Conditional HasTag="accordion" />
+        <sound file="%ModDir%/Integrations/ClownOTrauma/sounds/clownotrauma_accordion_leave_her_johnny.ogg" range="600" loop="true" />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <!-- Mimecordian - Spanish Ladies -->
+  <Item identifier="clownotrauma_mimecordion_sheetmusic_spanish_ladies" category="Misc" Tags="smallitem,mimecordion_sheetmusic,clownitem" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_metal_light" spritecolor="220,220,255,255" inventoryiconcolor="220,220,255,255">
+    <InventoryIcon texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="735,818,81,106" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="735,818,81,106" depth="0.55" origin="0.5,0.5" />
+    <Body width="73" height="96" density="30" />
+    <Price baseprice="20" canbespecial="false" sold="false">
+      <Price storeidentifier="merchantclown" minavailable="1" maxavailable="2" sold="true">
+        <Reputation faction="clowns" min="5" />
+      </Price>
+    </Price>
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="10">
+      <RequiredItem identifier="organicfiber" amount="2" />
+      <RequiredItem identifier="bikehorn" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" CharacterUsable="false">
+      <StatusEffect type="OnUse" target="This, Parent">
+        <Conditional HasTag="accordion" />
+        <sound file="%ModDir%/Integrations/ClownOTrauma/sounds/clownotrauma_accordion_spanish_ladies.ogg" range="600" loop="true" />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <!-- Mimecordian - The Barbery Coast -->
+  <Item identifier="clownotrauma_mimecordion_sheetmusic_the_barbery_coast" category="Misc" Tags="smallitem,mimecordion_sheetmusic,clownitem" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_metal_light" spritecolor="220,220,255,255" inventoryiconcolor="220,220,255,255">
+    <InventoryIcon texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="735,818,81,106" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="735,818,81,106" depth="0.55" origin="0.5,0.5" />
+    <Body width="73" height="96" density="30" />
+    <Price baseprice="20" canbespecial="false" sold="false">
+      <Price storeidentifier="merchantclown" minavailable="1" maxavailable="2" sold="true">
+        <Reputation faction="clowns" min="5" />
+      </Price>
+    </Price>
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="10">
+      <RequiredItem identifier="organicfiber" amount="2" />
+      <RequiredItem identifier="bikehorn" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" CharacterUsable="false">
+      <StatusEffect type="OnUse" target="This, Parent">
+        <Conditional HasTag="accordion" />
+        <sound file="%ModDir%/Integrations/ClownOTrauma/sounds/clownotrauma_accordion_the_barbery_coast.ogg" range="600" loop="true" />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <!-- Super Clown Exosuit -->
+  <Item identifier="clownotrauma_clownexosuit" category="Diving,Equipment" tags="clowngear,deepdiving,deepdivinglarge,human,clowns,provocative,containradiation" scale="0.5" fireproof="true" isshootable="true" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy" botpriority="0.01">
+    <Price baseprice="80" canbespecial="false" sold="false" />
+    <Deconstruct time="30">
+      <Item identifier="steel" />
+      <Item identifier="steel" />
+      <Item identifier="steel" />
+      <Item identifier="rubber" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="45">
+      <RequiredSkill identifier="mechanical" level="30" />
+      <RequiredItem identifier="clowncostume" />
+      <RequiredItem identifier="steel" amount="4" />
+      <RequiredItem identifier="rubber" amount="3" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="382,895,128,128" origin="0.5,0.5" />
+    <Sprite name="Clown Exosuit Item" texture="Content/Items/JobGear/Clown/ClownExosuit.png" sourcerect="2,277,287,235" depth="0.55" origin="0.5,0.5" />
+    <Body width="150" height="230" density="15" />
+    <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select" allowusewhenworn="true">
+      <sprite name="Clown Exosuit Helmet Wearable" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="Head" hidelimb="true" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" hideotherwearables="true" hidewearablesoftype="" sourcerect="0,0,1,1" origin="0.5,0.5" />
+      <sprite name="Clown Exosuit Torso" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.5,0.7" inheritlimbdepth="true" depth="0.061" inheritsourcerect="false" sourcerect="167,1,203,193">
+        <LightComponent range="100" lightcolor="250,224,165,100" castshadows="false" depth="0.6" powerconsumption="10" IsOn="true" allowingameediting="false">
+          <Sprite texture="Content/Items/JobGear/Clown/ClownExosuit.png" origin="0.5,0.7" sourcerect="304,271,203,193" alpha="1.0" />
+        </LightComponent>
+      </sprite>
+      <sprite name="Clown Exosuit Right Hand" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" depth="0.02" SourceRect="383,160,64,48" />
+      <sprite name="Clown Exosuit Left Hand" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" SourceRect="447,160,64,48" />
+      <sprite name="Clown Exosuit Right Upper Arm" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" depth="0.05" SourceRect="383,0,64,96" />
+      <sprite name="Clown Exosuit Left Upper Arm" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" SourceRect="447,0,64,96" />
+      <sprite name="Clown Exosuit Right Forearm" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" depth="0.049" SourceRect="383,96,64,64" />
+      <sprite name="Clown Exosuit Left Forearm" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" SourceRect="447,96,64,64" />
+      <sprite name="Clown Exosuit Waist" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.5,0.5" inheritsourcerect="false" inheritlimbdepth="true" depth="0.06" sourcerect="182,196,178,53" />
+      <sprite name="Clown Exosuit Right Thigh" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.5,0.5" inheritsourcerect="false" inheritlimbdepth="true" depth="0.058" sourcerect="0,0,96,112" />
+      <sprite name="Clown Exosuit Left Thigh" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.5,0.5" inheritsourcerect="false" sourcerect="0,0,96,112" />
+      <sprite name="Clown Exosuit Right Leg" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritlimbdepth="true" depth="0.059" inheritsourcerect="true" />
+      <sprite name="Clown Exosuit Left Leg" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown Exosuit Left Shoe" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="LeftFoot" sound="footstep_clown" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.2,0.5" inheritsourcerect="false" sourcerect="371,211,133,37" />
+      <sprite name="Clown Exosuit Right Shoe" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="RightFoot" sound="footstep_clown" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.2,0.5" inheritsourcerect="false" sourcerect="371,211,133,37" />
+      <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
+      <StatusEffect tags="clown" type="OnWearing" target="Character" HideFace="true" duration="0.1" stackable="false" />
+      <StatusEffect type="OnWearing" target="Character" LowPassMultiplier="0.2" HideFace="true" ObstructVisionAmount="0.5" PressureProtection="5000.0" setvalue="true" disabledeltatime="true">
+        <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="250" loop="true" />
+        <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="250" loop="true" />
+        <TriggerAnimation Type="Walk" FileName="HumanWalkExosuit" priority="1" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Run" FileName="HumanRunExosuit" priority="1" ExpectedSpecies="Human" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" interval="0.9" disabledeltatime="true">
+        <Affliction identifier="recoilstabilized" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="This,Character" SpeedMultiplier="-10.0" setvalue="true" disabledeltatime="true">
+        <Conditional Voltage="lte 0.5" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" Condition="-1" interval="1" disabledeltatime="true" targetslot="1" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="mobilebattery" targetslot="1" type="Contained" />
+      </StatusEffect>
+      <sound file="Content/Items/Weapons/WEAPONS_chargeUp.ogg" type="OnWearing" range="500.0" volumeproperty="Speed" volume="0.2" loop="true" frequencymultiplier="0.5" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,lacerations,explosiondamage" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds, bleeding" damagemultiplier="0.5" probabilitymultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="stun" damagemultiplier="0.5" probabilitymultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.5" damagesound="" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.75" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" probabilitymultiplier="0.3" damagesound="LimbArmor" />
+      <StatValue stattype="FlowResistance" value="0.9" />
+    </Wearable>
+    <ItemContainer capacity="0" hideitems="true" containedstateindicatorstyle="tank" containedstateindicatorslot="0">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+      <StatusEffect type="OnWearing" target="Contained" targetslot="0" playsoundonrequireditemfailure="true">
+        <RequiredItem items="oxygensource" type="Contained" targetslot="0" matchonempty="true" />
+        <Conditional condition="lte 0.0" />
+        <Sound file="Content/Items/WarningBeep.ogg" range="500" loop="true" />
+      </StatusEffect>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="oxygensource,weldingtoolfuel" />
+        <Containable items="oxygensource">
+          <StatusEffect type="OnWearing" target="Character" OxygenAvailable="1000.0" />
+          <StatusEffect type="OnWearing" target="Contained" Condition="-0.2" comparison="And">
+            <Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+            <Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+            <Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+          </StatusEffect>
+          <StatusEffect type="OnWearing" target="Contained">
+            <Conditional condition="lt 5.0" />
+            <Sound file="Content/Items/WarningBeepSlow.ogg" range="250" loop="true" />
+          </StatusEffect>
+        </Containable>
+        <Containable items="oxygenitetank">
+          <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="1.2" setvalue="true" targetslot="0" comparison="And">
+            <Conditional IsDead="false" />
+            <Conditional DecreasedOxygenConsumption="lt 99" />
+            <Conditional NeedsAir="true" />
+          </StatusEffect>
+        </Containable>
+        <Containable items="weldingfueltank" blameequipperfordeath="true">
+          <StatusEffect type="OnWearing" target="Contained" Condition="-0.5" comparison="And">
+            <Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+            <Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+            <Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+          </StatusEffect>
+          <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" Oxygen="-5.0" comparison="And">
+            <Conditional IsDead="false" />
+            <Conditional DecreasedOxygenConsumption="lt 99" />
+            <Conditional NeedsAir="true" />
+          </StatusEffect>
+        </Containable>
+        <Containable items="incendiumfueltank" blameequipperfordeath="true">
+          <StatusEffect type="OnWearing" target="Contained" Condition="-0.5" comparison="And">
+            <Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+            <Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+            <Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+          </StatusEffect>
+          <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" comparison="And" targetlimb="Torso">
+            <Affliction identifier="burn" amount="20.0" />
+            <Conditional IsDead="false" />
+            <Conditional DecreasedOxygenConsumption="lt 99" />
+            <Conditional NeedsAir="true" />
+          </StatusEffect>
+        </Containable>
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="mobilebattery">
+          <StatusEffect type="OnContaining" target="This,Character" Voltage="1.0" setvalue="true">
+            <Conditional IsDead="false" />
+          </StatusEffect>
+        </Containable>
+      </SubContainer>
+    </ItemContainer>
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+      <GuiFrame relativesize="0.15,0.1" anchor="BottomCenter" pivot="BottomCenter" relativeoffset="0,0.1" style="ItemUI" />
+      <Button text="clownexosuitweapon" connection="signal_out1">
+        <StatusEffect type="OnUse" duration="5" target="NearbyCharacters" range="500" camerashake="50" setvalue="true" stackable="false">
+          <RequiredItem items="mobilebattery" type="Contained" />
+          <!-- <Affliction identifier="hallucinatingshortduration" strength="3" /> -->
+          <sound file="Content/Items/JobGear/Clown/ClownExosuitHorn.ogg" type="OnUse" range="5000.0" loop="true" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" duration="5" target="NearbyCharacters" targetidentifiers="human" range="500" setvalue="true" stackable="false" conditionalcomparison="And" CheckConditionalAlways="true">
+          <RequiredItem items="mobilebattery" type="Contained" />
+          <Conditional HasStatusTag="!equals clown" />
+          <Conditional TeamID="FriendlyNPC" />
+          <TriggerEvent identifier="clownhaven_progress" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" duration="5" target="Limb,This" targetlimbs="Torso" range="500" camerashake="5" setvalue="true" stackable="false" CheckConditionalAlways="true">
+          <RequiredItem items="mobilebattery" type="Contained" />
+          <Conditional ParentInventory="! null" />
+          <ParticleEmitter particle="steamspray" copytargetangle="true" particlespersecond="30" velocitymin="500" velocitymax="1000" anglemin="140" anglemax="140" distancemin="50" distancemax="55" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Contained" Condition="-1" duration="5" targetslot="1" stackable="false">
+          <RequiredItem items="mobilebattery" type="Contained" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <aitarget maxsightrange="1500" />
+  </Item>
+  <!-- Super Clown Exosuit Upgraded Armor -->
+  <Item identifier="clownotrauma_clownexosuit_armoured" variantof="clownotrauma_clownexosuit" category="Equipment">
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="clownotrauma_clownexosuit" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="45">
+      <RequiredSkill identifier="mechanical" level="40" />
+      <RequiredItem identifier="clownotrauma_clownexosuit" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="4" />
+      <RequiredItem identifier="bikehorn" amount="1" />
+    </Fabricate>
+    <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select" allowusewhenworn="true">
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,lacerations,explosiondamage" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds, bleeding" damagemultiplier="0.25" probabilitymultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="stun" damagemultiplier="0.5" probabilitymultiplier="0.25" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.5" damagesound="" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.75" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" probabilitymultiplier="0.1" damagesound="LimbArmor" />
+    </Wearable>
+  </Item>
+  <!-- Super Clown Exosuit Upgraded Armor + Inventory -->
+  <Item identifier="clownotrauma_clownexosuit_armouredinventory" variantof="clownotrauma_clownexosuit_armoured" category="Equipment">
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="clownotrauma_clownexosuit_armoured" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="45">
+      <RequiredSkill identifier="mechanical" level="50" />
+      <RequiredItem identifier="clownotrauma_clownexosuit_armoured" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="4" />
+      <RequiredItem identifier="bikehorn" amount="2" />
+    </Fabricate>
+    <ItemContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="oxygensource,weldingtoolfuel" />
+        <Containable items="oxygensource">
+          <StatusEffect type="OnWearing" target="Character" OxygenAvailable="1000.0" />
+          <StatusEffect type="OnWearing" target="Contained" Condition="-0.2" comparison="And">
+            <Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+            <Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+            <Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+          </StatusEffect>
+          <StatusEffect type="OnWearing" target="Contained">
+            <Conditional condition="lt 5.0" />
+            <Sound file="Content/Items/WarningBeepSlow.ogg" range="250" loop="true" />
+          </StatusEffect>
+        </Containable>
+        <Containable items="oxygenitetank">
+          <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="1.2" setvalue="true" targetslot="0" comparison="And">
+            <Conditional IsDead="false" />
+            <Conditional DecreasedOxygenConsumption="lt 99" />
+            <Conditional NeedsAir="true" />
+          </StatusEffect>
+        </Containable>
+        <Containable items="weldingfueltank" blameequipperfordeath="true">
+          <StatusEffect type="OnWearing" target="Contained" Condition="-0.5" comparison="And">
+            <Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+            <Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+            <Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+          </StatusEffect>
+          <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" Oxygen="-5.0" comparison="And">
+            <Conditional IsDead="false" />
+            <Conditional DecreasedOxygenConsumption="lt 99" />
+            <Conditional NeedsAir="true" />
+          </StatusEffect>
+        </Containable>
+        <Containable items="incendiumfueltank" blameequipperfordeath="true">
+          <StatusEffect type="OnWearing" target="Contained" Condition="-0.5" comparison="And">
+            <Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+            <Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+            <Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+          </StatusEffect>
+          <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" comparison="And" targetlimb="Torso">
+            <Affliction identifier="burn" amount="20.0" />
+            <Conditional IsDead="false" />
+            <Conditional DecreasedOxygenConsumption="lt 99" />
+            <Conditional NeedsAir="true" />
+          </StatusEffect>
+        </Containable>
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="mobilebattery">
+          <StatusEffect type="OnContaining" target="This,Character" Voltage="1.0" setvalue="true">
+            <Conditional IsDead="false" />
+          </StatusEffect>
+        </Containable>
+      </SubContainer>
+      <SubContainer capacity="10" maxstacksize="32">
+        <Containable items="smallitem" />
+      </SubContainer>
+    </ItemContainer>
+  </Item>
+  <!-- Super Clown Exosuit Upgraded Armor + Inventory + Reactor -->
+  <Item identifier="clownotrauma_clownexosuit_armouredinventoryreactor" category="Diving,Equipment" tags="clowngear,deepdiving,deepdivinglarge,human,clowns,provocative,mobileradio,containradiation" scale="0.5" fireproof="true" isshootable="true" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy" botpriority="0.01">
+    <Price baseprice="80" canbespecial="false" sold="false" />
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="clownotrauma_clownexosuit_armouredinventory" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="45">
+      <RequiredSkill identifier="mechanical" level="60" />
+      <RequiredItem identifier="clownotrauma_clownexosuit_armouredinventory" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="4" />
+      <RequiredItem identifier="bikehorn" amount="3" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="382,895,128,128" origin="0.5,0.5" />
+    <Sprite name="Clown Exosuit Item" texture="Content/Items/JobGear/Clown/ClownExosuit.png" sourcerect="2,277,287,235" depth="0.55" origin="0.5,0.5" />
+    <Body width="150" height="230" density="15" />
+    <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select" allowusewhenworn="true">
+      <sprite name="Clown Exosuit Helmet Wearable" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="Head" hidelimb="true" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" hideotherwearables="true" hidewearablesoftype="" sourcerect="0,0,1,1" origin="0.5,0.5">
+        <LightComponent range="500" lightcolor="250,0,0,255" powerconsumption="10" IsOn="true" allowingameediting="false">
+          <LightTexture texture="content/Lights/divinghelmetlight.png" origin="0.05, 0.5" size="1.0,1.0" />
+        </LightComponent>
+      </sprite>
+      <sprite name="Clown Exosuit Torso" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.5,0.7" inheritlimbdepth="true" depth="0.061" inheritsourcerect="false" sourcerect="167,1,203,193">
+        <LightComponent range="100" lightcolor="250,224,165,100" castshadows="false" depth="0.6" powerconsumption="10" IsOn="true" allowingameediting="false">
+          <Sprite texture="Content/Items/JobGear/Clown/ClownExosuit.png" origin="0.5,0.7" sourcerect="304,271,203,193" alpha="1.0" />
+        </LightComponent>
+      </sprite>
+      <sprite name="Clown Exosuit Right Hand" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" depth="0.02" SourceRect="383,160,64,48" />
+      <sprite name="Clown Exosuit Left Hand" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" SourceRect="447,160,64,48" />
+      <sprite name="Clown Exosuit Right Upper Arm" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" depth="0.05" SourceRect="383,0,64,96" />
+      <sprite name="Clown Exosuit Left Upper Arm" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" SourceRect="447,0,64,96" />
+      <sprite name="Clown Exosuit Right Forearm" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" depth="0.049" SourceRect="383,96,64,64" />
+      <sprite name="Clown Exosuit Left Forearm" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" SourceRect="447,96,64,64" />
+      <sprite name="Clown Exosuit Waist" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.5,0.5" inheritsourcerect="false" inheritlimbdepth="true" depth="0.06" sourcerect="182,196,178,53" />
+      <sprite name="Clown Exosuit Right Thigh" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.5,0.5" inheritsourcerect="false" inheritlimbdepth="true" depth="0.058" sourcerect="0,0,96,112" />
+      <sprite name="Clown Exosuit Left Thigh" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.5,0.5" inheritsourcerect="false" sourcerect="0,0,96,112" />
+      <sprite name="Clown Exosuit Right Leg" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritlimbdepth="true" depth="0.059" inheritsourcerect="true" />
+      <sprite name="Clown Exosuit Left Leg" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown Exosuit Left Shoe" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="LeftFoot" sound="footstep_clown" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.2,0.5" inheritsourcerect="false" sourcerect="371,211,133,37" />
+      <sprite name="Clown Exosuit Right Shoe" texture="Content/Items/JobGear/Clown/ClownExosuit.png" limb="RightFoot" sound="footstep_clown" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.2,0.5" inheritsourcerect="false" sourcerect="371,211,133,37" />
+      <StatusEffect tags="clown" type="OnWearing" target="Character" HideFace="true" duration="0.1" stackable="false" />
+      <StatusEffect type="OnWearing" target="Character" LowPassMultiplier="0.2" HideFace="true" ObstructVisionAmount="0.5" PressureProtection="7000.0" setvalue="true" disabledeltatime="true" UseHullOxygen="true">
+        <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="250" loop="true" />
+        <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="250" loop="true" />
+        <TriggerAnimation Type="Walk" FileName="HumanWalkExosuit" priority="1" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Run" FileName="HumanRunExosuit" priority="1" ExpectedSpecies="Human" />
+      </StatusEffect>
+      <!-- consume oxygen if not in water and there's not enough oxygen in the hull -->
+      <StatusEffect type="OnWearing" target="Contained" UseHullOxygen="false" Condition="-0.3" comparison="And" targetslot="0">
+        <Conditional targetcontainer="true" targetgrandparent="true" IsDead="false" />
+        <Conditional targetcontainer="true" targetgrandparent="true" DecreasedOxygenConsumption="lt 99" />
+        <Conditional targetcontainer="true" targetgrandparent="true" HullOxygenPercentage="lt 50" />
+        <Conditional targetcontainer="true" targetgrandparent="true" NeedsAir="true" />
+        <Conditional InWater="false" />
+        <RequiredItem items="oxygensource" type="Contained" />
+      </StatusEffect>
+      <!-- consume oxygen if in water -->
+      <StatusEffect type="OnWearing" target="Contained" UseHullOxygen="false" Condition="-0.3" comparison="And" targetslot="0">
+        <Conditional targetcontainer="true" targetgrandparent="true" IsDead="false" />
+        <Conditional targetcontainer="true" targetgrandparent="true" DecreasedOxygenConsumption="lt 99" />
+        <Conditional targetcontainer="true" targetgrandparent="true" NeedsAir="true" />
+        <Conditional InWater="true" />
+        <RequiredItem items="oxygensource" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="This,Character" SpeedMultiplier="-10.0" setvalue="true" disabledeltatime="true">
+        <Conditional Voltage="lte 0.5" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" Condition="-0.1" interval="1" disabledeltatime="true" targetslot="1" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="reactorfuel" targetslot="1" type="Contained" />
+      </StatusEffect>
+      <!-- HMG Stuff -->
+      <StatusEffect type="OnWearing" target="Character" interval="0.9" disabledeltatime="true">
+        <Affliction identifier="recoilstabilized" amount="1" />
+      </StatusEffect>
+      <ItemComponent IsActiveConditionalComparison="Or">
+        <IsActive HullOxygenPercentage="lt 50" />
+        <IsActive InWater="eq true" />
+        <StatusEffect type="OnActive" target="Contained,Character" comparison="And">
+          <RequiredItem items="oxygensource" type="Contained" />
+          <Conditional condition="lt 5.0" />
+          <Sound file="Content/Items/WarningBeepSlow.ogg" range="250" loop="true" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="Contained" playsoundonrequireditemfailure="true">
+          <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
+          <Conditional condition="lte 0.0" />
+          <Sound file="Content/Items/WarningBeep.ogg" range="250" loop="true" />
+        </StatusEffect>
+      </ItemComponent>
+      <sound file="Content/Items/Weapons/WEAPONS_chargeUp.ogg" type="OnWearing" range="500.0" volumeproperty="Speed" volume="0.2" loop="true" frequencymultiplier="0.5" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,lacerations,explosiondamage" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds, bleeding" damagemultiplier="0.25" probabilitymultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="stun" damagemultiplier="0.5" probabilitymultiplier="0.25" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.5" damagesound="" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.75" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" probabilitymultiplier="0.1" damagesound="LimbArmor" />
+      <StatValue stattype="FlowResistance" value="0.9" />
+    </Wearable>
+    <ItemContainer capacity="0" hideitems="true" containedstateindicatorslot="0">
+      <Containable items="none" />
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="192,448,64,64" origin="0.5,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="oxygensource">
+          <StatusEffect type="OnWearing" target="Character" OxygenAvailable="1000.0" />
+          <StatusEffect type="OnWearing" target="Contained" Condition="-0.2" comparison="And">
+            <Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+            <Conditional HullOxygenPercentage="lt 50" />
+            <Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+            <Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+          </StatusEffect>
+          <StatusEffect type="OnWearing" target="Contained">
+            <Conditional condition="lt 5.0" />
+            <Sound file="Content/Items/WarningBeepSlow.ogg" range="250" loop="true" />
+          </StatusEffect>
+        </Containable>
+        <Containable items="oxygenitetank">
+          <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="1.2" setvalue="true" targetslot="0" comparison="And">
+            <Conditional IsDead="false" />
+            <Conditional HullOxygenPercentage="lt 50" />
+            <Conditional DecreasedOxygenConsumption="lt 99" />
+            <Conditional NeedsAir="true" />
+          </StatusEffect>
+        </Containable>
+        <Containable items="weldingfueltank" blameequipperfordeath="true">
+          <StatusEffect type="OnWearing" target="Contained" Condition="-0.5" comparison="And">
+            <Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+            <Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+            <Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+          </StatusEffect>
+          <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" Oxygen="-5.0" comparison="And">
+            <Conditional IsDead="false" />
+            <Conditional DecreasedOxygenConsumption="lt 99" />
+            <Conditional NeedsAir="true" />
+          </StatusEffect>
+        </Containable>
+        <Containable items="incendiumfueltank" blameequipperfordeath="true">
+          <StatusEffect type="OnWearing" target="Contained" Condition="-0.5" comparison="And">
+            <Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+            <Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+            <Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+          </StatusEffect>
+          <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" comparison="And" targetlimb="Torso">
+            <Affliction identifier="burn" amount="20.0" />
+            <Conditional IsDead="false" />
+            <Conditional DecreasedOxygenConsumption="lt 99" />
+            <Conditional NeedsAir="true" />
+          </StatusEffect>
+        </Containable>
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="reactorfuel,emptyfuelrod">
+          <StatusEffect type="OnContaining" target="This,Character" Voltage="1.0" setvalue="true">
+            <Conditional IsDead="false" />
+          </StatusEffect>
+        </Containable>
+      </SubContainer>
+      <SubContainer capacity="10" maxstacksize="32">
+        <Containable items="smallitem" />
+      </SubContainer>
+    </ItemContainer>
+    <WifiComponent range="35000.0" LinkToChat="true" MinChatMessageInterval="0.0">
+      <RequiredItems items="reactorfuel" type="Contained" mincondition="0.01" />
+    </WifiComponent>
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+      <GuiFrame relativesize="0.15,0.1" anchor="BottomCenter" pivot="BottomCenter" relativeoffset="0,0.1" style="ItemUI" />
+      <Button text="clownexosuitweapon" connection="signal_out1">
+        <StatusEffect type="OnUse" duration="5" target="NearbyCharacters" range="500" camerashake="50" setvalue="true" stackable="false">
+          <RequiredItem items="reactorfuel" type="Contained" />
+          <!-- <Affliction identifier="hallucinatingshortduration" strength="3" /> -->
+          <sound file="Content/Items/JobGear/Clown/ClownExosuitHorn.ogg" type="OnUse" range="1000.0" loop="true" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" duration="5" target="NearbyCharacters" targetidentifiers="human" range="500" setvalue="true" stackable="false" conditionalcomparison="And" CheckConditionalAlways="true">
+          <RequiredItem items="reactorfuel" type="Contained" />
+          <Conditional HasStatusTag="!equals clown" />
+          <Conditional TeamID="FriendlyNPC" />
+          <TriggerEvent identifier="clownhaven_progress" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" duration="5" target="Limb,This" targetlimbs="Torso" range="500" camerashake="5" setvalue="true" stackable="false" CheckConditionalAlways="true">
+          <RequiredItem items="reactorfuel" type="Contained" />
+          <Conditional ParentInventory="! null" />
+          <ParticleEmitter particle="steamspray" copytargetangle="true" particlespersecond="30" velocitymin="500" velocitymax="1000" anglemin="140" anglemax="140" distancemin="50" distancemax="55" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Contained" Condition="-0.1" duration="5" targetslot="1" stackable="false">
+          <RequiredItem items="reactorfuel" type="Contained" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+      <GuiFrame relativesize="0.16,0.075" anchor="CenterLeft" pivot="BottomLeft" relativeoffset="0.006,-0.05" style="ItemUI" />
+      <TickBox text="Honk Lights">
+        <StatusEffect type="OnUse" targettype="This" IsOn="true" />
+        <StatusEffect type="OnSecondaryUse" targettype="This" IsOn="false" />
+      </TickBox>
+    </CustomInterface>
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+      <GuiFrame relativesize="0.16,0.075" anchor="CenterRight" pivot="BottomRight" relativeoffset="0.006,-0.05" style="ItemUI" />
+      <TickBox text="Radio Jammer">
+        <StatusEffect type="OnUse" target="NearbyItems" Interval="1" Range="2000" targetidentifiers="mobileradio" JamTimer="1.5" setvalue="true" />
+      </TickBox>
+    </CustomInterface>
+    <aitarget maxsightrange="1500" />
+  </Item>
+  <!-- Honkmother's Brew Syringe -->
+  <Item identifier="clownotrauma_honkmothersbrew" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,poison,syringe,clownitem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+    <PreferredContainer primary="toxcab" secondary="toxcontainer" />
+    <PreferredContainer primary="wrecktoxcab,abandonedtoxcab" spawnprobability="0.05" />
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="60" amount="2">
+      <RequiredSkill identifier="medical" level="50" />
+      <RequiredItem identifier="dementonite" />
+      <RequiredItem identifier="ethanol" />
+    </Fabricate>
+    <Deconstruct time="5" />
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="448,704,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="225,139,38,70" depth="0.6" origin="0.5,0.5" />
+    <Body width="35" height="65" density="10.2" waterdragcoefficient="1" />
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true">
+      <RequiredSkill identifier="medical" level="35" />
+      <StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true" />
+      <StatusEffect type="OnFailure" target="This" Condition="-100.0" setvalue="true" />
+      <StatusEffect type="OnSuccess" target="UseTarget" multiplyafflictionsbymaxvitality="true">
+        <Affliction identifier="clownotrauma_clowncosis" amount="100" />
+        <Affliction identifier="psychosis" amount="100" />
+      </StatusEffect>
+      <StatusEffect type="OnFailure" target="UseTarget" multiplyafflictionsbymaxvitality="true">
+        <Affliction identifier="clownotrauma_clowncosis" amount="80" />
+        <Affliction identifier="psychosis" amount="80" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MeleeWeapon>
+    <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="true" launchrotation="-90" inheritStatusEffectsFrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon" />
+    <SkillRequirementHint identifier="medical" level="35" />
+  </Item>
+  <!-- Clowns's Guide -->
+  <Item identifier="clownotrauma_handbook" category="misc" Tags="smallitem,logic" cargocontaineridentifier="metalcrate" scale="0.25" impactsoundtag="impact_metal_light" isshootable="true">
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="10">
+      <RequiredItem identifier="bikehorn" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <Deconstruct time="5" />
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="323,193,60,61" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Electricity/detectors.png" sourcerect="177,108,69,93" depth="0.55" origin="0.5,0.5" />
+    <Body width="60" height="90" density="8" />
+    <Holdable slots="Any,RightHand,LeftHand" holdangle="30" handle1="-10,0" msg="ItemMsgPickUpSelect" allowingameediting="False" />
+    <Terminal canbeselected="true" msg="ItemMsgInteractSelect" AllowInGameEditing="false" drawhudwhenequipped="true" welcomemessage="terminalwelcomemsg.handbook" autoscrolltobottom="False" readonly="True">
+      <GuiFrame relativesize="0.5,0.5" anchor="Center" style="ItemUI" />
+    </Terminal>
+  </Item>
+  <!-- Radio Jammer -->
+  <Item identifier="clownotrauma_radiojammer" category="Equipment" Tags="smallitem" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="128,960,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="231,102,25,54" depth="0.55" origin="0.5,0.5" />
+    <Body width="23" height="50" density="12" />
+    <Holdable slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-15" msg="ItemMsgPickUpSelect" />
+    <PreferredContainer primary="engcab" />
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="10">
+      <RequiredItem identifier="bikehorn" />
+      <RequiredItem identifier="copper" amount="2" />
+    </Fabricate>
+    <Deconstruct time="15">
+      <Item identifier="copper" amount="2" />
+      <Item identifier="bikehorn" amount="1" />
+    </Deconstruct>
+    <LightComponent LightColor="0,255,0,255" range="25" powerconsumption="10" flicker="1" blinkfrequency="2" castshadows="false" IsOn="false" canbeselected="false">
+      <StatusEffect type="OnActive" targettype="Contained" Condition="-1.66" Interval="1" disabledeltatime="true">
+        <RequiredItem items="mobilebattery" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" targettype="This" SoundRange="50000" setvalue="true">
+        <Conditional Voltage="gt 0.5" targetitemcomponent="LightComponent" />
+        <sound file="Content/Items/AlarmBuzzerLoop.ogg" range="150.0" frequencymultiplier="0.7" loop="true" volume="0.3" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="NearbyItems" Interval="1" Range="1000" targetidentifiers="mobileradio" JamTimer="1.5" setvalue="true" />
+    </LightComponent>
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+      <GuiFrame relativesize="0.16,0.075" anchor="CenterLeft" pivot="BottomLeft" relativeoffset="0.006,-0.05" style="ItemUI" />
+      <TickBox text="radiojammer.transmit">
+        <StatusEffect type="OnUse" targettype="This" IsOn="true" />
+        <StatusEffect type="OnSecondaryUse" targettype="This" IsOn="false" />
+      </TickBox>
+    </CustomInterface>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+      <Containable items="mobilebattery">
+        <StatusEffect type="OnContaining" targettype="This" Voltage="1.0" setvalue="true" />
+      </Containable>
+    </ItemContainer>
+  </Item>
+  <!-- Universal Fun PDA -->
+  <Item identifier="clownotrauma_universalfunpda" category="Equipment" Tags="smallitem" cargocontaineridentifier="metalcrate" allowasextracargo="true" scale="0.5" impactsoundtag="impact_metal_light">
+    <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="160,1,40,58" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="64,32,29,39" depth="0.55" origin="0.5,0.5" />
+    <Body width="30" height="40" density="15" />
+    <Holdable slots="Any,RightHand,LeftHand" holdangle="30" handle1="-10,0" msg="ItemMsgPickUpSelect" />
+    <PreferredContainer primary="engcab" />
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="25" requiresrecipe="true">
+      <RequiredSkill identifier="electrical" level="30" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="dementonite" />
+      <RequiredItem identifier="bikehorn" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="plastic" />
+      <RequiredItem identifier="dementonite" />
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <RemoteController target="medicalfabricator" onlyinownsub="true" msg="ItemMsgInteractSelect" AllowInGameEditing="false" drawhudwhenequipped="true" />
+    <CustomInterface selectkey="Select" canbeselected="true" drawhudwhenequipped="false" allowuioverlap="false">
+      <GuiFrame style="ItemUI" absoluteoffset="100,0" anchor="BottomCenter" relativesize="0.18,0.08" />
+      <TextBox text="Set Item ID to Control" propertyname="target" maxtextlength="64" />
+    </CustomInterface>
+  </Item>
+  <!-- Perfectly Normal Crate -->
+  <Item identifier="clownotrauma_clowncrate_normal" tags="crate,allowcleanup,clowns,clownderbussammo" scale="0.5" linkable="true" pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy" DisableItemUsageWhenSelected="true" waterproof="true">
+    <Price baseprice="170" sold="false" canbespecial="false" />
+    <Deconstruct time="5" />
+    <Fabricate suitablefabricators="fabricator,clownotrauma_travellingcircus" requiredtime="20" requiresrecipe="true">
+      <RequiredItem identifier="metalcrate" />
+    </Fabricate>
+    <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="407,376,152,89" origin="0.5,0.5" />
+    <Body width="150" height="75" density="25" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-20,14" handle2="20,14" aimable="false" msg="ItemMsgPickUpSelect" />
+    <ItemContainer capacity="12" canbeselected="false" hideitems="true" keepopenwhenequipped="true" movableframe="true">
+      <Containable items="smallitem" excludeditems="toolbox,cargoscooter" />
+    </ItemContainer>
+    <Controller UserPos="0,-20" direction="Right" canbeselected="true" AllowSelectingWhenSelectedByOther="false" selectkey="Use" drawuserbehind="true" forceusertostayattached="true" msg="itemmsggoinside">
+      <limbposition limb="Head" position="74,-40" />
+      <limbposition limb="Torso" position="74,-40" />
+      <limbposition limb="Waist" position="74,-40" />
+      <limbposition limb="LeftHand" position="74,-40" />
+      <limbposition limb="RightHand" position="74,-40" />
+      <limbposition limb="RightLeg" position="74,-40" />
+      <limbposition limb="LeftLeg" position="74,-40" />
+      <limbposition limb="RightFoot" position="74,-40" />
+      <limbposition limb="LeftFoot" position="74,-40" />
+      <StatusEffect type="OnActive" targettype="Character" delay="0.25" stackable="true" indetectable="true" DisableFocusingOnEntities="true" invisibletimer="0.1" IgnoreMeleeWeapons="true" PressureProtection="6500.0" setvalue="true" />
+    </Controller>
+    <Projectile characterusable="false" launchimpulse="30.0" damagedoors="true">
+      <Attack structuredamage="30" itemdamage="15" severlimbsprobability="1" penetration="0.1">
+        <Affliction identifier="internaldamage" strength="20" />
+        <Affliction identifier="bleeding" strength="20" />
+        <Affliction identifier="stun" strength="4" />
+      </Attack>
+      <StatusEffect type="OnActive" target="This" lifetime="2">
+        <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="5" velocitymin="-10" velocitymax="-100" scalemin="0.9" scalemax="1.5" />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <!-- TEST ITEMS -->
+  <Item identifier="clownotrauma_pentagram" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.5" interactdistance="50" hideconditionbar="true" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbyrepairtools="true" damagedbymeleeweapons="true" isshootable="true">
+    <InventoryIcon name="Pentagram Inventory Icon" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="977,322,424,428" depth="0.6" origin="0.5,0.5" />
+    <Sprite name="Pentagram Sprite" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="977,322,424,428" depth="0.6" origin="0.5,0.5" />
+    <LightComponent range="900.0" lightcolor="255,0,0,100" IsOn="false" powerconsumption="0" blinkFrequency="10" allowingameediting="false" castshadows="true">
+      <Sprite name="Pentagram Light Sprite" texture="%ModDir%/Integrations/ClownOTrauma/clownotrauma_spritesheet.png" sourcerect="1400,322,424,428" depth="0.6" origin="0.5,0.5" />
+      <!-- <StatusEffect type="OnActive" target="This" stackable="false" disabledeltatime="true">
+        <ParticleEmitter particle="thal_rune" particlespersecond="4" particleburstinterval="2" particleburstamount="5" velocitymin="190" velocitymax="250" anglemin="0" anglemax="360" scalemin="0.7" scalemax="1.0" />
+        <ParticleEmitter particle="thal_pentacircle" burstamount="3" particlespersecond="2" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" scalemin="1.0" scalemax="1.0" />
+      </StatusEffect> -->
+    </LightComponent>
+  </Item>
+</Items>
