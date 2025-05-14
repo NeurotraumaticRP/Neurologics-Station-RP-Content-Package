@@ -1,0 +1,21 @@
+ModName:
+    CreatorSteamURL
+    SteamName
+    whatwasused
+
+ClownOTrauma:
+    https://steamcommunity.com/profiles/76561198035244730
+    Iron_Phildo69
+    Integrated whole mod for clown role.
+
+Hungry Europans:
+    https://steamcommunity.com/id/big_m_
+    _]|M|[_
+    overrided chef role to be used as part of the content package.
+
+Avalon City Station:
+    https://steamcommunity.com/profiles/76561198288993526
+    Galaxies
+    Made avalon city station for neurologics, very big thank you!!
+
+
