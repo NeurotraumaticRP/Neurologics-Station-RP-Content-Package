@@ -31,7 +31,10 @@
 
     <jobname.priest>Priest</jobname.priest>
     <jobdescription.priest>A member of the station's religious staff. Keep the prisoners entertained, and make sure they don't die.</jobdescription.priest>
-
+    
+    <jobname.convict>Prisoner</jobname.convict>
+    <jobdescription.convict>[ADD DESCRIPTION HERE]</jobdescription.convict>
+        <!-- MAKE SURE TO ADD A DESCRIPTION FOR THE PRISONER JOB HERE -->
 
 
 
