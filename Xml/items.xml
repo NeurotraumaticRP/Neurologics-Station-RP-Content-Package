@@ -37,4 +37,44 @@
           <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations, bitewounds, gunshotwound" damagemultiplier="0.85" deflectprojectiles="false" />
         </Wearable>
       </Item>
+      <Item name="Doctor's Outfit" description="'I have no clue what I'm doing.'" identifier="doctorclothes" nameidentifier="doctorclothes" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.2" />
+    <PreferredContainer primary="crewcab" />
+    <Price baseprice="75">
+      <Price storeidentifier="merchantoutpost" minavailable="1" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="1" />
+      <Price storeidentifier="merchantresearch" minavailable="1" />
+      <Price storeidentifier="merchantmilitary" minavailable="1" />
+      <Price storeidentifier="merchantmine" minavailable="1" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sheetindex="7,9" sheetelementsize="64,64" />
+    <Sprite name="researcher" texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="376,147,118,57" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="15" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Researcher Torso" texture="Content/Items/Jobgear/Commoner/researcher.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Researcher Right Hand" texture="Content/Items/Jobgear/Commoner/researcher.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Researcher Left Hand" texture="Content/Items/Jobgear/Commoner/researcher.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Researcher Right Lower Arm" texture="Content/Items/Jobgear/Commoner/researcher.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Researcher Left Lower Arm" texture="Content/Items/Jobgear/Commoner/researcher.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Researcher Right Upper Arm" texture="Content/Items/Jobgear/Commoner/researcher.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Researcher Left Upper Arm" texture="Content/Items/Jobgear/Commoner/researcher.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Researcher Waist" texture="Content/Items/Jobgear/Commoner/researcher.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Researcher Right Thigh" texture="Content/Items/Jobgear/Commoner/researcher.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Researcher Left Thigh" texture="Content/Items/Jobgear/Commoner/researcher.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Researcher Right Leg" texture="Content/Items/Jobgear/Commoner/researcher.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Researcher Left Leg" texture="Content/Items/Jobgear/Commoner/researcher.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Researcher Left Shoe" texture="Content/Items/Jobgear/Commoner/researcher.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Researcher Right Shoe" texture="Content/Items/Jobgear/Commoner/researcher.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <SkillModifier skillidentifier="electrical" skillvalue="5" />
+      <SkillModifier skillidentifier="mechanical" skillvalue="5" />
+      <SkillModifier skillidentifier="medical" skillvalue="15" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations, bitewounds" damagemultiplier="0.95" />
+    </Wearable>
+    <ItemContainer capacity="1">
+      <Containable items="chem,medical" />
+    </ItemContainer>
+  </Item>
 </Items>

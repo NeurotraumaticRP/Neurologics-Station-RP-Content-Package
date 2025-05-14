@@ -157,7 +157,7 @@
       <sprite texture="Content/UI/MainIconsAtlas.png" sourcerect="512,256,128,128" origin="0.5,0.5" />
     </Jobicon>
     <JobiconSmall>
-      <sprite texture="Content/UI/CommandUIAtlas.png" sourcerect="612,698,28,28" origin="0.5,0.5" />
+      <sprite texture="Content/UI/MainIconsAtlas.png" sourcerect="512,256,128,128" origin="0.5,0.5" />
     </JobiconSmall>
     <Skills>
       <Skill identifier="medical" level="35,65" primary="true" />
@@ -170,7 +170,7 @@
     </Skills>
     <ItemSet>
       <Item identifier="idcard" equip="true" showpreview="false" />
-      <Item identifier="prisondoctorclothes" equip="true" outfit="true" />
+      <Item identifier="doctorclothes" equip="true" outfit="true" />
       <Item identifier="headset" equip="true" showpreview="false" />
       <Item identifier="batterycell" />
       <Item identifier="batterycell" />
@@ -203,7 +203,6 @@
         <Item identifier="tourniquet" />
         <Item identifier="needle" />
       </Item>
-
       <Item identifier="medtoolbox">
         <Item identifier="surgicaldrill" />
         <Item identifier="surgerysaw" />
@@ -212,7 +211,6 @@
         <Item identifier="immunosuppressant" />
         <Item identifier="immunosuppressant" />
       </Item>
-
       <Item identifier="surgerytoolbox" showpreview="false">
         <Item identifier="advscalpel" showpreview="false" />
         <Item identifier="advhemostat" showpreview="false" />
@@ -238,7 +236,7 @@
     </ItemSet>
     <ItemSet>
       <Item identifier="idcard" equip="true" showpreview="false" />
-      <Item identifier="prisondoctorclothes" equip="true" outfit="true" />
+      <Item identifier="doctorclothes" equip="true" outfit="true" />
       <Item identifier="headset" equip="true" showpreview="false">
         <Item identifier="batterycell" showpreview="false" />
       </Item>
@@ -431,10 +429,10 @@
   <!-- Prisoner -->
   <Job name="Prisoner" identifier="convict" maxnumber="6" minkarma="40" uicolor="0.93,0.25,0" vitalitymodifier="5" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
     <Jobicon>
-      <sprite texture="%ModDir%/Images/NewIcons.png" sourcerect="115,134,128,128" origin="0.5,0.5" />
+      <sprite texture="%ModDir%/Images/PrisonerIcon.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
     </Jobicon>
     <JobiconSmall>
-      <sprite texture="%ModDir%/Images/NewIcons.png" sourcerect="115,134,128,128" origin="0.5,0.5" />
+      <sprite texture="%ModDir%/Images/PrisonerIcon.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
     </JobiconSmall>
     <Skills>
       <Skill identifier="weapons" level="1,75" primary="true" />
@@ -465,12 +463,12 @@
   </Job>
 
   <!-- Chief Medical Officer -->
-  <Job name="Chief Medical Officer" identifier="cmo" minnumber="1" maxnumber="1" minkarma="40" uicolor="0.93,0.25,0" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
+  <Job name="Chief Medical Officer" identifier="cmo" minnumber="1" maxnumber="1" minkarma="40" uicolor="0.7,0,0" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
     <Jobicon>
-      <sprite texture="%ModDir%/Images/NewIcons.png" sourcerect="115,134,128,128" origin="0.5,0.5" />
+      <sprite texture="%ModDir%/Images/cmo.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
     </Jobicon>
     <JobiconSmall>
-      <sprite texture="%ModDir%/Images/NewIcons.png" sourcerect="115,134,128,128" origin="0.5,0.5" />
+      <sprite texture="%ModDir%/Images/cmo.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
     </JobiconSmall>
     <Skills>
       <Skill identifier="weapons" level="15,35" />
@@ -483,6 +481,7 @@
     </Skills>
     <ItemSet>
       <Item identifier="idcard" equip="true" showpreview="false" />
+      <Item identifier="doctorsuniform1" equip="true" showpreview="false" outfit="true" />
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
         <sprite texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
@@ -493,12 +492,12 @@
   </Job>
 
   <!-- Crew Member -->
-  <Job name="Crew Member" identifier="crewmember" minkarma="40" uicolor="0.93,0.25,0" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
+  <Job name="Crew Member" identifier="crewmember" minkarma="40" uicolor="1,1,1" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
     <Jobicon>
-      <sprite texture="%ModDir%/Images/NewIcons.png" sourcerect="115,134,128,128" origin="0.5,0.5" />
+      <sprite texture="Content/UI/MainIconsAtlas.png" sourcerect="128,256,128,128" origin="0.5,0.5" />
     </Jobicon>
     <JobiconSmall>
-      <sprite texture="%ModDir%/Images/NewIcons.png" sourcerect="115,134,128,128" origin="0.5,0.5" />
+      <sprite texture="Content/UI/MainIconsAtlas.png" sourcerect="128,256,128,128" origin="0.5,0.5" />
     </JobiconSmall>
     <Skills>
       <Skill identifier="weapons" level="10,40" primary="true" />
@@ -521,12 +520,12 @@
   </Job>
 
   <!-- Scientist -->
-  <Job name="Scientist" identifier="scientist" maxnumber="2" minkarma="40" uicolor="0.93,0.25,0" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
+  <Job name="Scientist" identifier="scientist" maxnumber="2" minkarma="40" uicolor="0.70,0.75,0.95" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
     <Jobicon>
-      <sprite texture="%ModDir%/Images/NewIcons.png" sourcerect="115,134,128,128" origin="0.5,0.5" />
+      <sprite texture="%ModDir%/Images/scientist.png" sourcerect="115,134,128,128" origin="0.5,0.5" />
     </Jobicon>
     <JobiconSmall>
-      <sprite texture="%ModDir%/Images/NewIcons.png" sourcerect="115,134,128,128" origin="0.5,0.5" />
+      <sprite texture="%ModDir%/Images/scientist.png" sourcerect="115,134,128,128" origin="0.5,0.5" />
     </JobiconSmall>
     <Skills>
       <Skill identifier="weapons" level="25,45" primary="true" />
@@ -539,6 +538,7 @@
     </Skills>
     <ItemSet>
       <Item identifier="idcard" equip="true" showpreview="false" />
+      <Item identifier="researcherclothes" equip="true" outfit="true" />
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
         <sprite texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
@@ -548,13 +548,13 @@
     </AutonomousObjectives>
   </Job>
 
-  <!-- priest -->
-  <Job name="Priest" identifier="priest" maxnumber="1" minkarma="40" uicolor="0.93,0.25,0" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
+  <!-- Priest -->
+  <Job name="Priest" identifier="priest" maxnumber="1" minkarma="40" uicolor="1,1,0.8" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
     <Jobicon>
-      <sprite texture="%ModDir%/Images/NewIcons.png" sourcerect="115,134,128,128" origin="0.5,0.5" />
+      <sprite texture="%ModDir%/Images/Priest.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
     </Jobicon>
     <JobiconSmall>
-      <sprite texture="%ModDir%/Images/NewIcons.png" sourcerect="115,134,128,128" origin="0.5,0.5" />
+      <sprite texture="%ModDir%/Images/Priest.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
     </JobiconSmall>
     <Skills>
       <Skill identifier="weapons" level="25,45" primary="true" />
@@ -630,27 +630,37 @@
 
     <!-- Assistant -->
     <Job identifier="assistant" onlyjobspecificdialog="false" minnumber="0" maxnumber="0" initialcount="0" hiddenjob="true">
-      <ItemSet></ItemSet>
+      <ItemSet>
+        <Item identifier="idcard" equip="true" showpreview="false" />
+      </ItemSet>
     </Job>
 
     <!-- Security Officer -->
-    <Job identifier="securityofficer" vitalitymodifier="8" onlyjobspecificdialog="false" minnumber="0" maxnumber="0" initialcount="0" hiddenjob="true">
-      <ItemSet></ItemSet>
+    <Job identifier="securityofficer" vitalitymodifier="8" onlyjobspecificdialog="false" minnumber="0" maxnumber="0" initialcount="0" hiddenjob="true" uicolor="0.57,0.48,0.43">
+      <ItemSet>
+        <Item identifier="idcard" equip="true" showpreview="false" />
+      </ItemSet>
     </Job>
 
     <!-- Mechanic -->
-    <Job identifier="mechanic" onlyjobspecificdialog="false" minnumber="0" maxnumber="0" initialcount="0" hiddenjob="true">
-      <ItemSet></ItemSet>
+    <Job identifier="mechanic" onlyjobspecificdialog="false" minnumber="0" maxnumber="0" initialcount="0" hiddenjob="true" uicolor="0.5,0.86,0.9">
+      <ItemSet>
+        <Item identifier="idcard" equip="true" showpreview="false" />
+      </ItemSet>
     </Job>
 
     <!-- Engineer -->
-    <Job identifier="engineer" onlyjobspecificdialog="false" minnumber="0" maxnumber="0" initialcount="0" hiddenjob="true">
-      <ItemSet></ItemSet>
+    <Job identifier="engineer" onlyjobspecificdialog="false" minnumber="0" maxnumber="0" initialcount="0" hiddenjob="true" uicolor="0.88,0.72,0.43">
+      <ItemSet>
+        <Item identifier="idcard" equip="true" showpreview="false" />
+      </ItemSet>
     </Job>
 
     <!-- Medical Doctor -->
-    <Job identifier="medicaldoctor" onlyjobspecificdialog="false" minnumber="0" maxnumber="0" initialcount="0" hiddenjob="true">
-      <ItemSet></ItemSet>
+    <Job identifier="medicaldoctor" onlyjobspecificdialog="false" minnumber="0" maxnumber="0" initialcount="0" hiddenjob="true" uicolor="0.81,0.31,0.19">
+      <ItemSet>
+        <Item identifier="idcard" equip="true" showpreview="false" />
+      </ItemSet>
     </Job>
   </Override>
 </Jobs>
