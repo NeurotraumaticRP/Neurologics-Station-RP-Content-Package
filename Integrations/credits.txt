@@ -18,4 +18,9 @@ Avalon City Station:
     Galaxies
     Made avalon city station for neurologics, very big thank you!!
 
+People:
+    Television - Developer of convict station and original neurologics
+    Evil factory - Developer of lua for barotrauma and traitor mod, of which the server mod is based off of.
+    Dr. Javier - Developer of neurologics remake.
+
 
