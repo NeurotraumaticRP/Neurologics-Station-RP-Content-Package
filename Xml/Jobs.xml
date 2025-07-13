@@ -510,10 +510,7 @@
     </Skills>
     <ItemSet>
       <Item identifier="idcard" equip="true" showpreview="false" />
-      <PreviewSprites dims="120,109">
-        <sprite texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
-        <sprite texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
-      </PreviewSprites>
+      <Item identifier="commonerclothes3" equip="true" outfit="true" />
     </ItemSet>
     <AutonomousObjectives>
     </AutonomousObjectives>
@@ -522,10 +519,10 @@
   <!-- Scientist -->
   <Job name="Scientist" identifier="scientist" maxnumber="2" minkarma="40" uicolor="0.70,0.75,0.95" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
     <Jobicon>
-      <sprite texture="%ModDir%/Images/scientist.png" sourcerect="115,134,128,128" origin="0.5,0.5" />
+      <sprite texture="%ModDir%/Images/scientist.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
     </Jobicon>
     <JobiconSmall>
-      <sprite texture="%ModDir%/Images/scientist.png" sourcerect="115,134,128,128" origin="0.5,0.5" />
+      <sprite texture="%ModDir%/Images/scientist.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
     </JobiconSmall>
     <Skills>
       <Skill identifier="weapons" level="25,45" primary="true" />
@@ -567,10 +564,7 @@
     </Skills>
     <ItemSet>
       <Item identifier="idcard" equip="true" showpreview="false" />
-      <PreviewSprites dims="120,109">
-        <sprite texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
-        <sprite texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
-      </PreviewSprites>
+      <Item identifier="vipclothes2" equip="true" outfit="true" />
     </ItemSet>
     <AutonomousObjectives>
     </AutonomousObjectives>
