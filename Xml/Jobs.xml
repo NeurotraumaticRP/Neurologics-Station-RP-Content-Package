@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Jobs>
 
-  <Job identifier="warden" minnumber="1" maxnumber="1" minkarma="45" initialcount="1" uicolor="0.65,0.73,0.84" vitalitymodifier="12" pricemultiplier="1.3" idlebehavior="StayInHull" allowalways="true">
+  <Job identifier="warden" minkarma="45" initialcount="1" uicolor="0.65,0.73,0.84" vitalitymodifier="12" pricemultiplier="1.3" idlebehavior="StayInHull" allowalways="true">
     <Jobicon>
       <sprite texture="%ModDir%/Images/NewIcons.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
     </Jobicon>
@@ -59,7 +59,7 @@
   </Job>
 
   <!-- Guard -->
-  <Job name="Guard" identifier="guard" MinNumber="1" MaxNumber="7" minkarma="40" uicolor="0.21,0.30,0.70" vitalitymodifier="15" pricemultiplier="1.15" idlebehavior="Patrol" allowalways="true">
+  <Job name="Guard" identifier="guard" minkarma="40" uicolor="0.21,0.30,0.70" vitalitymodifier="15" pricemultiplier="1.15" idlebehavior="Patrol" allowalways="true">
     <Jobicon>
       <sprite texture="Content/UI/MainIconsAtlas.png" sourcerect="256,256,128,128" origin="0.5,0.5" />
     </Jobicon>
@@ -152,7 +152,7 @@
   </Job>
 
   <!-- Doctor -->
-  <Job name="Doctor" identifier="doctor" MaxNumber="4" MinNumber="1" minkarma="30" uicolor="0.81,0.31,0.19" vitalitymodifier="10" pricemultiplier="1.15" idlebehavior="Active" allowalways="true">
+  <Job name="Doctor" identifier="doctor" minkarma="30" uicolor="0.81,0.31,0.19" vitalitymodifier="10" pricemultiplier="1.15" idlebehavior="Active" allowalways="true">
     <Jobicon>
       <sprite texture="Content/UI/MainIconsAtlas.png" sourcerect="512,256,128,128" origin="0.5,0.5" />
     </Jobicon>
@@ -315,7 +315,7 @@
   </Job>
 
   <!-- Staff -->
-  <Job name="Staff" identifier="staff" uicolor="0.965,0.82,0.333" minnumber="1" maxnumber="4" minkarma="40" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
+  <Job name="Staff" identifier="staff" uicolor="0.965,0.82,0.333" minkarma="40" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
     <Jobicon>
       <sprite texture="%ModDir%/Images/NewIcons.png" sourcerect="770,-2,128,128" origin="0.5,0.5" />
     </Jobicon>
@@ -368,7 +368,7 @@
   </Job>
 
   <!-- Janitor -->
-  <Job name="Janitor" identifier="janitor" maxnumber="3" minkarma="40" uicolor="0.35,0.15,0.35" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
+  <Job name="Janitor" identifier="janitor" minkarma="40" uicolor="0.35,0.15,0.35" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
     <Jobicon>
       <sprite texture="%ModDir%/Images/NewIcons.png" sourcerect="639,0,128,128" origin="0.5,0.5" />
     </Jobicon>
@@ -427,7 +427,7 @@
   </Job>
 
   <!-- Prisoner -->
-  <Job name="Prisoner" identifier="convict" maxnumber="6" minkarma="40" uicolor="0.93,0.25,0" vitalitymodifier="5" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
+  <Job name="Prisoner" identifier="convict" minkarma="40" uicolor="0.93,0.25,0" vitalitymodifier="5" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
     <Jobicon>
       <sprite texture="%ModDir%/Images/PrisonerIcon.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
     </Jobicon>
@@ -463,7 +463,7 @@
   </Job>
 
   <!-- Chief Medical Officer -->
-  <Job name="Chief Medical Officer" identifier="cmo" minnumber="1" maxnumber="1" minkarma="40" uicolor="0.7,0,0" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
+  <Job name="Chief Medical Officer" identifier="cmo" minkarma="40" uicolor="0.7,0,0" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
     <Jobicon>
       <sprite texture="%ModDir%/Images/cmo.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
     </Jobicon>
@@ -517,7 +517,7 @@
   </Job>
 
   <!-- Scientist -->
-  <Job name="Scientist" identifier="scientist" maxnumber="2" minkarma="40" uicolor="0.70,0.75,0.95" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
+  <Job name="Scientist" identifier="scientist" minkarma="40" uicolor="0.70,0.75,0.95" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
     <Jobicon>
       <sprite texture="%ModDir%/Images/scientist.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
     </Jobicon>
@@ -546,7 +546,7 @@
   </Job>
 
   <!-- Priest -->
-  <Job name="Priest" identifier="priest" maxnumber="1" minkarma="40" uicolor="1,1,0.8" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
+  <Job name="Priest" identifier="priest" minkarma="40" uicolor="1,1,0.8" vitalitymodifier="0" pricemultiplier="0.8" idlebehavior="Active" allowalways="true">
     <Jobicon>
       <sprite texture="%ModDir%/Images/Priest.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
     </Jobicon>
@@ -576,7 +576,7 @@
   <Override>
 
     <!-- Chef -->
-    <Job identifier="he-chef" minkarma="45" uicolor="0.90,0.45,0.0" vitalitymodifier="0" maxnumber="1" pricemultiplier="1" idlebehavior="StayInHull">
+    <Job identifier="he-chef" minkarma="45" uicolor="0.90,0.45,0.0" vitalitymodifier="0" pricemultiplier="1" idlebehavior="StayInHull">
       <Jobicon>
         <sprite texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,0,121,121" origin="0.5,0.5" />
       </Jobicon>
@@ -623,35 +623,35 @@
     </Job>
 
     <!-- Assistant -->
-    <Job identifier="assistant" onlyjobspecificdialog="false" minnumber="0" maxnumber="0" initialcount="0" hiddenjob="true">
+    <Job identifier="assistant" onlyjobspecificdialog="false" initialcount="0" hiddenjob="true">
       <ItemSet>
         <Item identifier="idcard" equip="true" showpreview="false" />
       </ItemSet>
     </Job>
 
     <!-- Security Officer -->
-    <Job identifier="securityofficer" vitalitymodifier="8" onlyjobspecificdialog="false" minnumber="0" maxnumber="0" initialcount="0" hiddenjob="true" uicolor="0.57,0.48,0.43">
+    <Job identifier="securityofficer" vitalitymodifier="8" onlyjobspecificdialog="false" initialcount="0" hiddenjob="true" uicolor="0.57,0.48,0.43">
       <ItemSet>
         <Item identifier="idcard" equip="true" showpreview="false" />
       </ItemSet>
     </Job>
 
     <!-- Mechanic -->
-    <Job identifier="mechanic" onlyjobspecificdialog="false" minnumber="0" maxnumber="0" initialcount="0" hiddenjob="true" uicolor="0.5,0.86,0.9">
+    <Job identifier="mechanic" onlyjobspecificdialog="false" initialcount="0" hiddenjob="true" uicolor="0.5,0.86,0.9">
       <ItemSet>
         <Item identifier="idcard" equip="true" showpreview="false" />
       </ItemSet>
     </Job>
 
     <!-- Engineer -->
-    <Job identifier="engineer" onlyjobspecificdialog="false" minnumber="0" maxnumber="0" initialcount="0" hiddenjob="true" uicolor="0.88,0.72,0.43">
+    <Job identifier="engineer" onlyjobspecificdialog="false" initialcount="0" hiddenjob="true" uicolor="0.88,0.72,0.43">
       <ItemSet>
         <Item identifier="idcard" equip="true" showpreview="false" />
       </ItemSet>
     </Job>
 
     <!-- Medical Doctor -->
-    <Job identifier="medicaldoctor" onlyjobspecificdialog="false" minnumber="0" maxnumber="0" initialcount="0" hiddenjob="true" uicolor="0.81,0.31,0.19">
+    <Job identifier="medicaldoctor" onlyjobspecificdialog="false" initialcount="0" hiddenjob="true" uicolor="0.81,0.31,0.19">
       <ItemSet>
         <Item identifier="idcard" equip="true" showpreview="false" />
       </ItemSet>
