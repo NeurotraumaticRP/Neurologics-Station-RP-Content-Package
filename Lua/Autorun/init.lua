@@ -1,11 +1,11 @@
-Neurologics = {}
+NeurologicsContent = {}
 
-Neurologics.Name="Neurologics"
-Neurologics.Version = "1.0"
-Neurologics.VersionNum = 1
+NeurologicsContent.Name="Neurologics"
+NeurologicsContent.Version = "1.0"
+NeurologicsContent.VersionNum = 1
 
 
-print("\n/// Running Neurologics V "..Neurologics.Version.." ///\n")
+print("\n/// Running Neurologics V "..NeurologicsContent.Version.." ///\n")
 print("Neurologics Content Package Loaded")
 print("credits - Evilfactory for traitormod")
 print("Television - Owner/Developer")

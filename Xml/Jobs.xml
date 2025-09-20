@@ -482,6 +482,132 @@
     <ItemSet>
       <Item identifier="idcard" equip="true" showpreview="false" />
       <Item identifier="doctorsuniform1" equip="true" showpreview="false" outfit="true" />
+      <Item identifier="headset" equip="true" showpreview="false" />
+      <Item identifier="batterycell" />
+      <Item identifier="batterycell" />
+      <item identifier="skillbookeuropanmedicine" />
+      <Item identifier="healthscanner" />
+      <Item identifier="bloodanalyzer" />
+      <Item identifier="syringegun" />
+      <Item identifier="medtoolbox">
+        <Item identifier="antibleeding1" />
+        <Item identifier="antibleeding1" />
+        <Item identifier="antibleeding1" />
+        <Item identifier="antibleeding1" />
+        <Item identifier="antibleeding2" />
+        <Item identifier="antibleeding2" />
+        <Item identifier="antibleeding2" />
+        <Item identifier="antibleeding2" />
+        <Item identifier="antinarc" />
+        <Item identifier="antinarc" />
+        <Item identifier="calyxanide" />
+        <Item identifier="calyxanide" />
+        <Item identifier="antiparalysis" />
+        <Item identifier="antiparalysis" />
+      </Item>
+      <Item identifier="medtoolbox">
+        <Item identifier="defibrillator" showpreview="false" />
+        <Item identifier="bvm" showpreview="false" />
+        <Item identifier="autocpr" />
+        <Item identifier="traumashears" showpreview="false" />
+        <Item identifier="tourniquet" />
+        <Item identifier="tourniquet" />
+        <Item identifier="needle" />
+      </Item>
+      <Item identifier="medtoolbox">
+        <Item identifier="surgicaldrill" />
+        <Item identifier="surgerysaw" />
+        <Item identifier="osteosynthesisimplants" />
+        <Item identifier="spinalimplant" />
+        <Item identifier="immunosuppressant" />
+        <Item identifier="immunosuppressant" />
+      </Item>
+      <Item identifier="surgerytoolbox" showpreview="false">
+        <Item identifier="advscalpel" showpreview="false" />
+        <Item identifier="advhemostat" showpreview="false" />
+        <Item identifier="advretractors" showpreview="false" />
+        <Item identifier="tweezers" showpreview="false" />
+        <Item identifier="suture" showpreview="false" />
+        <Item identifier="suture" showpreview="false" />
+        <Item identifier="suture" showpreview="false" />
+        <Item identifier="suture" showpreview="false" />
+        <Item identifier="suture" showpreview="false" />
+        <Item identifier="suture" showpreview="false" />
+        <Item identifier="suture" showpreview="false" />
+        <Item identifier="suture" showpreview="false" />
+        <Item identifier="drainage" showpreview="false" />
+        <Item identifier="endovascballoon" showpreview="false" />
+        <Item identifier="medstent" showpreview="false" />
+      </Item>
+      <Item identifier="Manual_Start_Page" />
+      <PreviewSprites dims="120,109">
+        <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
+        <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
+      </PreviewSprites>
+    </ItemSet>
+    <ItemSet>
+      <Item identifier="idcard" equip="true" showpreview="false" />
+      <Item identifier="doctorclothes" equip="true" outfit="true" />
+      <Item identifier="headset" equip="true" showpreview="false">
+        <Item identifier="batterycell" showpreview="false" />
+      </Item>
+      <Item identifier="batterycell" />
+      <Item identifier="batterycell" />
+      <Item identifier="healthscanner" />
+      <Item identifier="bloodanalyzer" />
+      <Item identifier="syringegun" />
+      <Item identifier="medtoolbox">
+        <Item identifier="antibleeding1" />
+        <Item identifier="antibleeding1" />
+        <Item identifier="antibleeding1" />
+        <Item identifier="antibleeding1" />
+        <Item identifier="opium" />
+        <Item identifier="opium" />
+        <Item identifier="wrench" />
+        <Item identifier="bloodpackominus" />
+        <Item identifier="bloodpackominus" />
+        <Item identifier="ointment" />
+        <Item identifier="ointment" />
+        <Item identifier="ointment" />
+        <Item identifier="ointment" />
+      </Item>
+      <Item identifier="medtoolbox">
+        <Item identifier="defibrillator" showpreview="false" />
+        <Item identifier="bvm" showpreview="false" />
+        <Item identifier="autocpr" />
+        <Item identifier="traumashears" showpreview="false" />
+        <Item identifier="tourniquet" />
+        <Item identifier="tourniquet" />
+        <Item identifier="needle" />
+      </Item>
+
+      <Item identifier="medtoolbox">
+        <Item identifier="surgicaldrill" />
+        <Item identifier="surgerysaw" />
+        <Item identifier="osteosynthesisimplants" />
+        <Item identifier="spinalimplant" />
+        <Item identifier="immunosuppressant" />
+        <Item identifier="immunosuppressant" />
+      </Item>
+
+      <Item identifier="surgerytoolbox" showpreview="false">
+        <Item identifier="advscalpel" showpreview="false" />
+        <Item identifier="advhemostat" showpreview="false" />
+        <Item identifier="advretractors" showpreview="false" />
+        <Item identifier="tweezers" showpreview="false" />
+        <Item identifier="suture" showpreview="false" />
+        <Item identifier="suture" showpreview="false" />
+        <Item identifier="suture" showpreview="false" />
+        <Item identifier="suture" showpreview="false" />
+        <Item identifier="suture" showpreview="false" />
+        <Item identifier="suture" showpreview="false" />
+        <Item identifier="suture" showpreview="false" />
+        <Item identifier="suture" showpreview="false" />
+        <Item identifier="drainage" showpreview="false" />
+        <Item identifier="endovascballoon" showpreview="false" />
+        <Item identifier="medstent" showpreview="false" />
+      </Item>
+      <Item identifier="Manual_Start_Page" />
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
         <sprite texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
