@@ -1,3 +1,70 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Afflictions>
+    <Affliction
+    name="Cleansing Flame"
+    identifier="cleansingflame"
+    description="cleansing your soul with fire"
+    type="poison"
+    causeofdeathdescription="Cleansed"
+    selfcauseofdeathdescription="You were cleansed"
+    limbspecific="false"
+    indicatorlimb="Torso"
+    showiconthreshold="50"
+    showinhealthscannerthreshold="0"
+    treatmentthreshold="75"
+    karmachangeonapplied="-100"
+    maxstrength="100"
+    affectmachines="false"
+    healcostmultiplier="0"
+    basehealcost="500"
+    MedicalSkillGain="4.0">
+    <Description
+      textidentifier="afflictiondescription.cyanidepoisoning.medium.self"
+      target="Self"
+      minstrength="0"
+      maxstrength="50"/>
+    <Description
+      textidentifier="afflictiondescription.cyanidepoisoning.high.self"
+      target="Self"
+      minstrength="50"
+      maxstrength="100"/>
+    <Description
+      textidentifier="afflictiondescription.cyanidepoisoning.low"
+      target="OtherCharacter"
+      minstrength="0"
+      maxstrength="30"/>
+    <Description
+      textidentifier="afflictiondescription.cyanidepoisoning"
+      target="OtherCharacter"
+      minstrength="30"
+      maxstrength="60"/>
+    <Description
+      textidentifier="afflictiondescription.cyanidepoisoning.high"
+      target="OtherCharacter"
+      minstrength="60"
+      maxstrength="100"/>
+    <Effect minstrength="0" maxstrength="100"
+      strengthchange="2.5"
+      minscreendistort="1.0"
+      maxscreendistort="1.0"
+      minscreenblur="1.0"
+      maxscreenblur="1.0"
+      minfacetint="255,0,0,100"
+      maxfacetint="255,0,0,100"
+      minbodytint="255,0,0,80"
+      maxbodytint="255,0,0,80"
+      minspeedmultiplier="0.2"
+      maxspeedmultiplier="0.1"
+      tag="poisoned">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
+        <Affliction identifier="heartdamage" amount="6" />
+        <Affliction identifier="lungdamage" amount="6" />
+        <Affliction identifier="kidneydamage" amount="6" />
+        <Affliction identifier="liverdamage" amount="6" />
+        <Affliction identifier="onfire" amount="100" />
+        <Affliction identifier="severepainlite" amount="10" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128" color="106,106,106,255" origin="0,0"/>
+  </Affliction>
 </Afflictions>

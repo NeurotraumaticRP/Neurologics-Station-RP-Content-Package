@@ -691,6 +691,8 @@
     <ItemSet>
       <Item identifier="idcard" equip="true" showpreview="false" />
       <Item identifier="vipclothes2" equip="true" outfit="true" />
+      <Item identifier="priestsyringe" />
+      <Item identifier="priestsyringe" />
     </ItemSet>
     <AutonomousObjectives>
     </AutonomousObjectives>
