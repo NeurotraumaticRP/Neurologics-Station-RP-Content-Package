@@ -129,8 +129,7 @@
     <InventoryIcon texture="%ModDir%/Images/fists2.png" sourcerect="0,0,961,220" origin="0.5,0.5" />
     <Sprite texture="%ModDir%/Images/fists.png" sourcerect="183,203,66,16" depth="0.55" origin="0.5,0.5" />
     <Body width="65" height="15" density="25" />
-    <MeleeWeapon slots="RightHand,LeftHand" aimpos="40,0" handle1="-5,0" holdangle="40" reload="0.75" range="50" combatPriority="25" msg="ItemMsgPickUpSelect">
-      <StatusEffect type="Always" target="Character" lockhands="false" setvalue="true" /> <!-- this works at making the hands ungrabbable but also works exactly the same as handcuffs, which is bad-->
+    <MeleeWeapon slots="RightHand,LeftHand" aimpos="40,0" handle1="-5,0" holdangle="40" reload="0.75" range="50">
       <Attack targetimpulse="2" severlimbsprobability="0" itemdamage="1">
         <Affliction identifier="blunttrauma" strength="2" />
         <Affliction identifier="stun" strength="0.1" />

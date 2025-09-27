@@ -1,0 +1,102 @@
+<Override>
+    <Items>
+        <!-- Disables crafting of the handbomb -->
+        <Item name="Handbomb" identifier="thgpowderbomb" category="Equipment" maxstacksize="12" cargocontaineridentifier="metalcrate" impacttolerance="5" Scale="0.5" tags="smallitem,light,provocative,separatists" impactsoundtag="impact_metal_light" isshootable="true" description="A small, yet heavy iron round bomb with an explosive powder charge. Rather cheap and easy to make, but it won't go off underwater due to its fuse.">
+            <InventoryIcon texture="%ModDir%/handgrenade.png" sourcerect="0,0,50,64" origin="0.5,0.5" />
+            <sprite texture="%ModDir%/handgrenade.png" sourcerect="0,0,50,64" depth="0.55" origin="0.5,0.5" />
+            <Body radius="25" density="20" />
+            <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect" />
+            <LightComponent LightColor="255,100,50,255" Flicker="0.5" range="600" IsOn="false">
+              <StatusEffect type="OnUse" targettype="This" IsOn="true">
+                <Conditional IsOn="eq False" targetitemcomponent="LightComponent" />
+                <sound file="Content/Items/Tools/FlareIgnite.ogg" range="800.0" />
+              </StatusEffect>
+              <StatusEffect type="OnActive" targettype="This" Condition="-0.25">
+                <Conditional Condition="gt 1" />
+              </StatusEffect>
+              <StatusEffect type="OnActive" targettype="This" conditionalcomparison="And">
+                <Conditional PhysicsBodyActive="eq true" />
+                <Conditional Condition="gt 1" />
+                <ParticleEmitter particle="flame" particlespersecond="15" velocitymin="0" scalemin="0.2" scalemax="0.3" anglemin="0" anglemax="360" lifetimemultiplier="0.5" />
+              </StatusEffect>
+              <StatusEffect type="InWater" targettype="This" IsOn="false" />
+              <StatusEffect type="OnBroken" targettype="This" IsOn="false">
+                <sound file="Content/Items/Weapons/ExplosionMedium1.ogg" range="5000" />
+                <sound file="Content/Items/Weapons/ExplosionMedium2.ogg" range="5000" />
+                <sound file="Content/Items/Weapons/ExplosionMedium3.ogg" range="5000" />
+                <Explosion range="500.0" ballastfloradamage="50" structuredamage="10" levelwalldamage="50" itemdamage="100" force="5" severlimbsprobability="0.6" decal="explosion" decalsize="0.38">
+                  <Affliction identifier="explosiondamage" strength="45" />
+                  <Affliction identifier="bleeding" strength="150" />
+                  <Affliction identifier="bleeding" strength="30" probability="0.35" dividebylimbcount="false" />
+                  <Affliction identifier="stun" strength="8.5" />
+                </Explosion>
+                <Remove />
+              </StatusEffect>
+              <StatusEffect type="OnBroken" target="This">
+                <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="2000" />
+                <sound file="Content/Items/Weapons/ExplosionDebris2.ogg" range="2000" />
+              </StatusEffect>
+              <StatusEffect type="OnImpact" target="This" Condition="-100.0" conditionalcomparison="And">
+                <Conditional IsOn="eq True" />
+                <Conditional Condition="gt 1" />
+                <sound file="Content/Items/Weapons/ExplosionDebris3.ogg" selectionmode="All" range="2000" />
+                <ParticleEmitter particle="smoke" anglemin="0" anglemax="360" particleamount="20" velocitymin="500" velocitymax="800" scalemin="0.5" scalemax="0.5" />
+                <Explosion range="350.0" ballastfloradamage="50" structuredamage="0" itemdamage="0" force="1.0" severlimbsprobability="0" underwaterbubble="false">
+                  <Affliction identifier="burn" strength="25" />
+                  <Affliction identifier="stun" strength="0.5" />
+                </Explosion>
+                <Remove />
+              </StatusEffect>
+            </LightComponent>
+          </Item>
+          <!-- Makes crafting more expensive (time and materials),stops the use of phosphorus in the weapon and increases the required skill level -->
+          <Item name="Flintlock" identifier="thgflintlock" category="Weapon" cargocontaineridentifier="metalcrate" tags="smallitem,weapon,gun,mountableweapon" Scale="0.55" impactsoundtag="impact_metal_heavy" description="An incredibly archaic weapon, essentially a short barrel with a hammer and a trigger designed to spark stored volatile powder, be it magnesium or flash powder, in order to project loaded shot. It may be a bit dangerous to use from time to time, however...">
+            <Deconstruct time="10">
+              <Item identifier="iron" />
+            </Deconstruct>
+            <Fabricate suitablefabricators="fabricator" requiredtime="90" requiresrecipe="false">
+                <RequiredSkill identifier="weapons" level="30" />
+              <RequiredItem identifier="iron" amount="8" />
+            </Fabricate>
+            <Sprite texture="%ModDir%/flintlock.png" sourcerect="0,0,76,40" depth="0.55" origin=".52,0.4" />
+            <BrokenSprite texture="%ModDir%/flintlock_shoot.png" sourcerect="0,0,76,40" depth="0.55" origin=".52,0.4" />
+            <Body width="76" height="40" density="20" />
+            <Holdable slots="Any,RightHand,LeftHand" controlpose="true" aimpos="62,3" handle1="-25,-9" msg="ItemMsgPickUpSelect" />
+            <RangedWeapon reload="3.2" barrelpos="30,20" spread="3" unskilledspread="10" combatPriority="80" drawhudwhenequipped="true" crosshairscale="0.2">
+              <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+              <StatusEffect type="OnUse" delay="0" target="This" condition="-100000"></StatusEffect>
+              <StatusEffect type="OnUse" delay=".85" target="This" condition="100000"></StatusEffect>
+              <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+              <ParticleEmitter particle="explosionsmoke" particleamount="1" velocitymin="0" velocitymax="0" scalemin="0.2" scalemax="0.4" />
+              <ParticleEmitter particle="spark" particleamount="20" velocitymin="500" velocitymax="1500" anglemin="-30" anglemax="30" scalemin="0.25" scalemax="1.0" />
+              <Sound file="Content/Items/Jobgear/Mechanic/WEAPON_scrapCannonShot1.ogg" range="3000" type="OnUse" selectionmode="Random" volume="1.6" />
+              <Sound file="Content/Items/Jobgear/Mechanic/WEAPON_scrapCannonShot2.ogg" range="3000" type="OnUse" volume="1.6" />
+              <Sound file="Content/Items/Jobgear/Mechanic/WEAPON_scrapCannonShot3.ogg" range="3000" type="OnUse" volume="1.6" />
+              <StatusEffect type="OnUse">
+                <Explosion range="200.0" force="3" shockwave="false" smoke="true" flash="true" sparks="false" flames="false" underwaterbubble="false" camerashake="12.0" />
+                <Fire size="10.0" />
+              </StatusEffect>
+              <StatusEffect type="OnUse" delay="2" target="Character">
+                <Sound file="Content/Items/Weapons/WEAPON_rifleReload50-_1.ogg" type="OnUse" range="500" selectionmode="Random" />
+                <Sound file="Content/Items/Weapons/WEAPON_rifleReload50-_2.ogg" type="OnUse" range="500" />
+              </StatusEffect>
+              <StatusEffect type="OnUse" target="Contained" Condition="-10" targetslot="1" disabledeltatime="true" />
+              <RequiredItems items="blunderbussammo" type="Contained" msg="itemmsgammorequired" />
+              <RequiredItems items="magnesium,flashpowder" type="Contained" msg="itemmsgammorequired" />
+              <RequiredSkill identifier="weapons" level="45" />
+            </RangedWeapon>
+            <ItemContainer capacity="1" maxstacksize="1" slotsperrow="3" hideitems="true" containedstateindicatorslot="1" containedstateindicatorstyle="battery">
+              <Containable items="blunderbussammo" />
+              <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+              <SubContainer capacity="1" maxstacksize="1">
+                <Containable items="magnesium,flashpowder" />
+              </SubContainer>
+            </ItemContainer>
+            <aitarget sightrange="1000" soundrange="5000" fadeouttime="5" />
+            <Quality>
+              <QualityStat stattype="FirepowerMultiplier" value="0.1" />
+            </Quality>
+            <SkillRequirementHint identifier="weapons" level="35" />
+          </Item>
+    </Items>
+</Override>

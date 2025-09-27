@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Neurologic station RP content package" modversion="1.3" corepackage="False" steamworkshopid="3571137843" gameversion="1.10.5.0">
+<contentpackage name="Neurologic station RP content package" modversion="1.4" corepackage="False" steamworkshopid="3571137843" gameversion="1.10.6.0">
   <Item file="%ModDir%/Xml/items.xml" />
   <Afflictions file="%ModDir%/Xml/Afflictions.xml" />
   <Talents file="%ModDir%/Xml/Talents.xml" />
