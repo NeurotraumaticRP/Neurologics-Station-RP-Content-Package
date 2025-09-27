@@ -2,7 +2,7 @@
 
 Hook.Add("keyUpdate", "fistsKeybindListener", function()
 
-    if PlayerInput.KeyHit(Keys.K) then -- we wont write a message at the moment since all we need is the client from the sent packet.
+    if PlayerInput.KeyHit(Keys.K) and GUI.KeyboardDispatcher.Subscriber == nil then -- we wont write a message at the moment since all we need is the client from the sent packet.
         local message = Networking.Start("attemptActivateFists")
         Networking.Send(message)
     end
