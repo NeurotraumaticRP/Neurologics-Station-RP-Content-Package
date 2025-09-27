@@ -20,5 +20,6 @@ end
 -- client side
 if CLIENT then
     dofile(FilePath.."/Lua/Scripts/Client/gui.lua")
+    dofile(FilePath.."/Lua/Scripts/Client/fists.lua")
 end
 -- shared
