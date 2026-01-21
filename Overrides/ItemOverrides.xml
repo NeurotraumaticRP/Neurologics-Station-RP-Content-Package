@@ -54,10 +54,6 @@
             <Deconstruct time="10">
               <Item identifier="iron" />
             </Deconstruct>
-            <Fabricate suitablefabricators="fabricator" requiredtime="90" requiresrecipe="false">
-                <RequiredSkill identifier="weapons" level="30" />
-              <RequiredItem identifier="iron" amount="8" />
-            </Fabricate>
             <Sprite texture="%ModDir%/flintlock.png" sourcerect="0,0,76,40" depth="0.55" origin=".52,0.4" />
             <BrokenSprite texture="%ModDir%/flintlock_shoot.png" sourcerect="0,0,76,40" depth="0.55" origin=".52,0.4" />
             <Body width="76" height="40" density="20" />
@@ -97,6 +93,54 @@
               <QualityStat stattype="FirepowerMultiplier" value="0.1" />
             </Quality>
             <SkillRequirementHint identifier="weapons" level="35" />
+          </Item>
+          <!--blunderbuss-->
+          <Item name="Blunderbuss" identifier="blunderbussy" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_heavy" description="An incredibly archaic weapon, essentially a barrel with a hammer and a trigger designed to spark stored volatile powder, be it magnesium, phospherous or flash powder, in order to project a cluster of loaded shot. It may be a bit dangerous to use from time to time, however...">
+            <Deconstruct time="10">
+              <Item identifier="iron" />
+              <Item identifier="iron" />
+            </Deconstruct>
+            <Sprite texture="%ModDir%/blunderbuss.png" sourcerect="0,0,150,50" depth="0.55" origin=".52,0.4" />
+            <BrokenSprite texture="%ModDir%/blunderbuss_shoot.png" sourcerect="0,0,150,50" depth="0.55" origin=".52,0.4" />
+            <Body width="150" height="50" density="25" />
+            <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="27,-15" aimpos="70,4" handle1="-50,-10" handle2="10,-3" holdangle="-25" />
+            <Wearable slots="Bag" msg="ItemMsgEquipSelect" canbeselected="false" canbepicked="true" pickkey="Select">
+              <sprite name="Blunderbuss Worn" texture="%ModDir%/blunderbuss.png" canbehiddenbyotherwearables="false" rotation="90" inheritlimbdepth="false" depth="0.6" sourcerect="0,0,150,50" limb="Torso" scale="0.5" origin="0.5,1.0" />
+            </Wearable>
+            <RangedWeapon reload="4.2" barrelpos="70,25" spread="2.2" unskilledspread="6" combatPriority="80" drawhudwhenequipped="true" crosshairscale="0.2">
+              <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+              <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+              <ParticleEmitter particle="explosionsmoke" particleamount="1" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="0.6" />
+              <ParticleEmitter particle="spark" particleamount="50" velocitymin="500" velocitymax="1500" anglemin="-30" anglemax="30" scalemin="0.5" scalemax="1.0" />
+              <Sound file="Content/Items/Jobgear/Mechanic/WEAPON_scrapCannonShot1.ogg" range="3000" type="OnUse" selectionmode="Random" volume="2" />
+              <Sound file="Content/Items/Jobgear/Mechanic/WEAPON_scrapCannonShot2.ogg" range="3000" type="OnUse" volume="2" />
+              <Sound file="Content/Items/Jobgear/Mechanic/WEAPON_scrapCannonShot3.ogg" range="3000" type="OnUse" volume="2" />
+              <StatusEffect type="OnUse" delay="0" target="This" condition="-100000"></StatusEffect>
+              <StatusEffect type="OnUse" delay=".85" target="This" condition="100000"></StatusEffect>
+              <StatusEffect type="OnUse">
+                <Explosion range="250.0" force="3.5" shockwave="false" smoke="true" flash="true" sparks="false" flames="false" underwaterbubble="false" camerashake="15.0" />
+              </StatusEffect>
+              <StatusEffect type="OnUse" delay="2.66" target="Character">
+                <Sound file="Content/Items/Weapons/WEAPON_rifleReload50-_1.ogg" type="OnUse" range="500" selectionmode="Random" />
+                <Sound file="Content/Items/Weapons/WEAPON_rifleReload50-_2.ogg" type="OnUse" range="500" />
+              </StatusEffect>
+              <StatusEffect type="OnUse" target="Contained" Condition="-10" targetslot="1" disabledeltatime="true" />
+              <RequiredItems items="blunderbussammo" type="Contained" msg="itemmsgammorequired" />
+              <RequiredItems items="magnesium,flashpowder,Phosphorus" type="Contained" msg="itemmsgammorequired" />
+              <RequiredSkill identifier="weapons" level="25" />
+            </RangedWeapon>
+            <ItemContainer capacity="1" maxstacksize="1" slotsperrow="3" hideitems="true" containedstateindicatorslot="1" containedstateindicatorstyle="battery">
+              <Containable items="blunderbussammo" />
+              <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+              <SubContainer capacity="1" maxstacksize="1">
+                <Containable items="magnesium,flashpowder,Phosphorus" />
+              </SubContainer>
+            </ItemContainer>
+            <aitarget sightrange="1000" soundrange="5000" fadeouttime="5" />
+            <Quality>
+              <QualityStat stattype="FirepowerMultiplier" value="0.1" />
+            </Quality>
+            <SkillRequirementHint identifier="weapons" level="25" />
           </Item>
     </Items>
 </Override>

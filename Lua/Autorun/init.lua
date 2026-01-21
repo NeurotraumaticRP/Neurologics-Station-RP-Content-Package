@@ -1,11 +1,11 @@
-NeurologicsContent = {}
+NeuroContent = {}
 
-NeurologicsContent.Name="Neurologics"
-NeurologicsContent.Version = "1.0"
-NeurologicsContent.VersionNum = 1
+NeuroContent.Name="Neuro"
+NeuroContent.Version = "1.0"
+NeuroContent.VersionNum = 1
 
 
-print("\n/// Running Neurologics V "..NeurologicsContent.Version.." ///\n")
+print("\n/// Running Neurologics V "..NeuroContent.Version.." ///\n")
 print("Neurologics Content Package Loaded")
 print("credits - Evilfactory for traitormod")
 print("Television - Owner/Developer")
@@ -20,7 +20,7 @@ end
 -- client side
 if CLIENT then
     dofile(FilePath.."/Lua/Scripts/Client/gui.lua")
-    dofile(FilePath.."/Lua/Scripts/Client/fists.lua")
+    dofile(FilePath.."/Lua/Scripts/Client/NeuroImplants.lua")
     dofile(FilePath.."/Lua/Scripts/Client/cl_enforced.lua")
 end
 -- shared

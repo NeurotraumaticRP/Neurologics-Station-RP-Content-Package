@@ -1,5 +1,5 @@
 -- client side config for neurologics, free to be modified by the user.
 
-NeurologicsContent.Config = {}
+NeuroContent.Config = {}
 
-NeurologicsContent.Config.Fists = Keys.N
+NeuroContent.Config.Fists = Keys.N

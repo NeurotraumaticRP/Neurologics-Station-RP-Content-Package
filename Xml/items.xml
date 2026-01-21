@@ -77,7 +77,7 @@
       <Containable items="chem,medical" />
     </ItemContainer>
   </Item>
-  <Item name="The blood of Christ" identifier="priestsyringe" category="Material" maxstacksize="8"
+  <Item name="The blood of The Lord" identifier="priestsyringe" category="Material" maxstacksize="8"
     cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,poison,syringe" description="Burns the sins from your soul"
     useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light"
     RequireAimToUse="True">
@@ -141,6 +141,37 @@
       </Attack>
     </MeleeWeapon>
     <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
+    <Quality>
+      <QualityStat stattype="StrikingPowerMultiplier" value="0.1" />
+    </Quality>
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+  <Item name="Truncheon" identifier="thgtruncheon" category="Weapon" Tags="mediumitem,weapon,gunsmith,mountableweapon" cargocontaineridentifier="metalcrate" Scale="0.6" impactsoundtag="impact_metal_light" RequireAimToUse="True" description="A simple, heavy club with a hard iron core and head. At one point in time, this was considered a less-than-lethal weapon. Nowadays, people just kind of accept it for the skull-splitter that it is.">
+    <PreferredContainer primary="secarmcab" amount="1" spawnprobability="0" notcampaign="true" />
+    <PreferredContainer secondary="outpostsecarmcab" amount="1" spawnprobability="0.01" />
+    <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" amount="1" spawnprobability="0.01" />
+    <PreferredContainer secondary="armcab,weaponholder" />
+    <Price baseprice="85" sold="false"></Price>
+    <Deconstruct time="10">
+      <Item identifier="iron" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="15">
+      <RequiredItem identifier="iron" amount="2" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir%/truncheonicon.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/truncheon.png" sourcerect="0,0,120,30" depth="0.55" origin="0.5,0.5" />
+    <Body width="120" height="18" density="30" />
+    <MeleeWeapon slots="RightHand,LeftHand,Any" controlpose="true" Scale="0.6" aimpos="45,10" handle1="-20,4" holdangle="40" reload="1.4" range="110" combatpriority="20" msg="ItemMsgPickUpSelect">
+      <Attack structuredamage="2" itemdamage="2" targetimpulse="16">
+        <Affliction identifier="blunttrauma" strength="5" />
+        <Affliction identifier="stun" strength="1.15" />
+        <StatusEffect type="OnUse" target="UseTarget">
+          <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500" />
+          <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+        </StatusEffect>
+      </Attack>
+    </MeleeWeapon>
+    <aitarget sightrange="1000" soundrange="500" fadeouttime="1" />
     <Quality>
       <QualityStat stattype="StrikingPowerMultiplier" value="0.1" />
     </Quality>
