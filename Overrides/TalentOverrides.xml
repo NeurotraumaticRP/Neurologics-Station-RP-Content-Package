@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Talents>
+  <!--COMMON TALENTS-->
+  <Override>
+    <Talent identifier="he-hungryeuropan">
+      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5" />
+      <Description tag="talentdescription.he-hungryeuropan" />
+      <AbilityGroupInterval interval="1.0">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Conditional IsBot="false" />
+                <Affliction identifier="hunger" strength="0.03" />
+                <!-- <Affliction identifier="hungerfoodbuffresistance" strength="0.01"/> -->
+              </StatusEffect>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Conditional IsBot="false" />
+                <Affliction identifier="thirst" strength="0.06" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupInterval>
+    </Talent>
+    <Talent identifier="he-filthyeuropan">
+        <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="119,385,119,119" origin="0.5,0.5" />
+        <Description tag="talentdescription.he-filthyeuropan" />
+        <AbilityGroupInterval interval="1.0">
+          <Abilities>
+            <CharacterAbilityApplyStatusEffects>
+              <StatusEffects>
+                <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                  <Conditional IsBot="false" />
+                  <Affliction identifier="bladder" strength="0.03" />
+                </StatusEffect>
+                <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                  <Conditional IsBot="false" />
+                  <Affliction identifier="defecate" strength="0.03" />
+                </StatusEffect>
+                <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                  <Conditional IsBot="false" />
+                  <Affliction identifier="hygiene" strength="0.015" />
+                </StatusEffect>
+              </StatusEffects>
+            </CharacterAbilityApplyStatusEffects>
+          </Abilities>
+        </AbilityGroupInterval>
+    </Talent>
+  </Override>
+</Talents>
