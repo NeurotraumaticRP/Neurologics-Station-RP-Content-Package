@@ -11,12 +11,12 @@
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
                 <Conditional IsBot="false" />
-                <Affliction identifier="hunger" strength="0.3" />
+                <Affliction identifier="hunger" strength="0.045" />
                 <!-- <Affliction identifier="hungerfoodbuffresistance" strength="0.01"/> -->
               </StatusEffect>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
                 <Conditional IsBot="false" />
-                <Affliction identifier="thirst" strength="0.6" />
+                <Affliction identifier="thirst" strength="0.09" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
@@ -32,15 +32,15 @@
               <StatusEffects>
                 <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
                   <Conditional IsBot="false" />
-                  <Affliction identifier="bladder" strength="0.3" />
+                  <Affliction identifier="bladder" strength="0.045" />
                 </StatusEffect>
                 <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
                   <Conditional IsBot="false" />
-                  <Affliction identifier="defecate" strength="0.3" />
+                  <Affliction identifier="defecate" strength="0.045" />
                 </StatusEffect>
                 <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
                   <Conditional IsBot="false" />
-                  <Affliction identifier="hygiene" strength="0.15" />
+                  <Affliction identifier="hygiene" strength="0.001" />
                 </StatusEffect>
               </StatusEffects>
             </CharacterAbilityApplyStatusEffects>

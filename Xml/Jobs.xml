@@ -471,7 +471,7 @@
       <sprite texture="%ModDir%/Images/cmo.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
     </JobiconSmall>
     <Skills>
-      <Skill identifier="weapons" level="15,35" />
+      <Skill identifier="weapons" level="37,55" />
       <Skill identifier="mechanical" level="10,15" />
       <Skill identifier="electrical" level="10,15" />
       <Skill identifier="medical" level="60,75" primary="true" />
@@ -482,7 +482,9 @@
     <ItemSet>
       <Item identifier="idcard" equip="true" showpreview="false" />
       <Item identifier="doctorsuniform1" equip="true" showpreview="false" outfit="true" />
-      <Item identifier="headset" equip="true" showpreview="false" />
+      <Item identifier="autoinjectorheadset" equip="true" showpreview="false">
+        <Item identifier="scp_diamorphine" showpreview="false" />
+      </Item>
       <Item identifier="batterycell" />
       <Item identifier="batterycell" />
       <item identifier="skillbookeuropanmedicine" />
