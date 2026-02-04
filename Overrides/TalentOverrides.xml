@@ -47,5 +47,13 @@
           </Abilities>
         </AbilityGroupInterval>
     </Talent>
+    <Talent identifier="ntsp_properfol">
+      <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="6,2" sheetelementsize="128,128" />
+      <Description tag="talentdescription.miracleworker" />
+      <Description tag="talentdescription.miracleworkerreminder" />
+      <Description tag="talentdescription.ntsp_properfol">
+        <Replace tag="[itemname]" value="entityname.propofol" color="gui.orange" />
+      </Description>
+    </Talent>
   </Override>
 </Talents>

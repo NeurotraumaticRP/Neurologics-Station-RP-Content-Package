@@ -161,6 +161,7 @@
     </JobiconSmall>
     <Skills>
       <Skill identifier="medical" level="35,65" primary="true" />
+      <Skill identifier="surgery" level="35,65" />
       <Skill identifier="weapons" level="15,20" />
       <Skill identifier="mechanical" level="15,25" />
       <Skill identifier="electrical" level="15,25" />
@@ -170,8 +171,9 @@
     </Skills>
     <ItemSet>
       <Item identifier="idcard" equip="true" showpreview="false" />
-      <Item identifier="doctorclothes" equip="true" outfit="true" />
+      <Item identifier="surgeonclothes" equip="true" outfit="true" />
       <Item identifier="headset" equip="true" showpreview="false" />
+      <item identifier="surgicalmask" equip="true" showpreview="true"/>
       <Item identifier="batterycell" />
       <Item identifier="batterycell" />
       <item identifier="skillbookeuropanmedicine" />
@@ -236,7 +238,8 @@
     </ItemSet>
     <ItemSet>
       <Item identifier="idcard" equip="true" showpreview="false" />
-      <Item identifier="doctorclothes" equip="true" outfit="true" />
+      <Item identifier="surgeonclothes" equip="true" outfit="true" />
+      <item identifier="surgicalmask" equip="true" showpreview="true"/>
       <Item identifier="headset" equip="true" showpreview="false">
         <Item identifier="batterycell" showpreview="false" />
       </Item>
@@ -475,6 +478,7 @@
       <Skill identifier="mechanical" level="10,15" />
       <Skill identifier="electrical" level="10,15" />
       <Skill identifier="medical" level="60,75" primary="true" />
+      <Skill identifier="surgery" level="60,75" />
       <Skill identifier="helm" level="10,15" />
       <Skill identifier="cooking" level="1,15" />
       <Skill identifier="butchery" level="1,15" />
@@ -871,6 +875,12 @@
 
     <!-- Medical Doctor -->
     <Job identifier="medicaldoctor" onlyjobspecificdialog="false" initialcount="0" hiddenjob="true" uicolor="0.81,0.31,0.19">
+      <ItemSet>
+        <Item identifier="idcard" equip="true" showpreview="false" />
+      </ItemSet>
+    </Job>
+
+    <Job identifier="surgeon" allowalways="true" minkarma="10" uicolor="0.82,0.42,0.38" hiddenjob="true">
       <ItemSet>
         <Item identifier="idcard" equip="true" showpreview="false" />
       </ItemSet>

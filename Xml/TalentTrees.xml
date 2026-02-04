@@ -1,3 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TalentTrees>
+    <!-- Doctor -->
+    <TalentTree jobidentifier="doctor">
+        <SubTree identifier="medical_primary" nameidentifier="talenttree.primary" type="primary">
+          <TalentOptions requiredtalents="2" maxchosentalents="6">
+            <TalentOption identifier="healthinsurance" />
+            <TalentOption identifier="nobodyimportantdies" />
+            <TalentOption identifier="exampleofhealth" />
+            <TalentOption identifier="laresistance" />
+            <TalentOption identifier="selfcare" />
+            <TalentOption identifier="stayinalive" />
+          </TalentOptions>
+          <TalentOptions requiredtalents="2" maxchosentalents="5">
+            <TalentOption identifier="firemanscarry" />
+            <TalentOption identifier="medicalcompanion" />
+            <TalentOption identifier="dontdieonme" />
+            <TalentOption identifier="nopressure" />
+            <TalentOption identifier="blooddonor" />
+          </TalentOptions>
+        </SubTree>
+        <SubTree identifier="xenologist" type="specialization" requires="medical_primary" blocks="surgeon,scientist">
+          <TalentOptions>
+            <TalentOption identifier="geneharvester" />
+          </TalentOptions>
+          <TalentOptions>
+            <TalentOption identifier="bloodybusiness" />
+            <TalentOption identifier="genesplicer" />
+          </TalentOptions>
+          <TalentOptions>
+            <TalentOption identifier="blackmarketgenes" />
+            <TalentOption identifier="genetampering" />
+          </TalentOptions>
+          <TalentOptions>
+            <TalentOption identifier="geneticgenious" />
+          </TalentOptions>
+        </SubTree>
+        <SubTree identifier="surgeon" type="specialization" requires="medical_primary" blocks="xenologist,scientist">
+          <TalentOptions>
+            <TalentOption identifier="ntsp_unspecialisedspecialist" />
+          </TalentOptions>
+          <TalentOptions>
+            <TalentOption identifier="ntsp_mannitol" />
+          </TalentOptions>
+          <TalentOptions>
+            <TalentOption identifier="ntsp_underpressure" />
+          </TalentOptions>
+          <TalentOptions>
+            <TalentOption identifier="ntsp_experimental" />
+            <TalentOption identifier="ntsp_frankenstein" />
+          </TalentOptions>
+        </SubTree>
+        <SubTree identifier="scientist" type="specialization" requires="medical_primary" blocks="xenologist,surgeon">
+          <TalentOptions>
+            <TalentOption identifier="plaguedoctor" />
+          </TalentOptions>
+          <TalentOptions>
+            <TalentOption identifier="deliverysystem" />
+            <TalentOption identifier="labcontacts" />
+          </TalentOptions>
+          <TalentOptions>
+            <TalentOption identifier="supersoldiers" />
+            <TalentOption identifier="whatastench" />
+          </TalentOptions>
+          <TalentOptions>
+            <TalentOption identifier="macrodosing" />
+          </TalentOptions>
+        </SubTree>
+      </TalentTree>
+      <!-- Chief Medical Officer -->
+      <TalentTree jobidentifier="cmo">
+        <SubTree identifier="medical_primary" nameidentifier="talenttree.primary" type="primary">
+          <TalentOptions requiredtalents="2" maxchosentalents="6">
+            <TalentOption identifier="healthinsurance" />
+            <TalentOption identifier="nobodyimportantdies" />
+            <TalentOption identifier="exampleofhealth" />
+            <TalentOption identifier="laresistance" />
+            <TalentOption identifier="selfcare" />
+            <TalentOption identifier="stayinalive" />
+          </TalentOptions>
+          <TalentOptions requiredtalents="2" maxchosentalents="5">
+            <TalentOption identifier="firemanscarry" />
+            <TalentOption identifier="medicalcompanion" />
+            <TalentOption identifier="dontdieonme" />
+            <TalentOption identifier="nopressure" />
+            <TalentOption identifier="blooddonor" />
+          </TalentOptions>
+        </SubTree>
+        <SubTree identifier="xenologist" type="specialization" requires="medical_primary" blocks="surgeon,scientist">
+          <TalentOptions>
+            <TalentOption identifier="geneharvester" />
+          </TalentOptions>
+          <TalentOptions>
+            <TalentOption identifier="bloodybusiness" />
+            <TalentOption identifier="genesplicer" />
+          </TalentOptions>
+          <TalentOptions>
+            <TalentOption identifier="blackmarketgenes" />
+            <TalentOption identifier="genetampering" />
+          </TalentOptions>
+          <TalentOptions>
+            <TalentOption identifier="geneticgenious" />
+          </TalentOptions>
+        </SubTree>
+        <SubTree identifier="surgeon" type="specialization" requires="medical_primary" blocks="xenologist,scientist">
+          <TalentOptions>
+            <TalentOption identifier="ntsp_unspecialisedspecialist" />
+          </TalentOptions>
+          <TalentOptions>
+            <TalentOption identifier="ntsp_properfol" />
+            <TalentOption identifier="ntsp_mannitol" />
+          </TalentOptions>
+          <TalentOptions>
+            <TalentOption identifier="ntsp_underpressure" />
+          </TalentOptions>
+          <TalentOptions>
+            <TalentOption identifier="ntsp_experimental" />
+            <TalentOption identifier="ntsp_frankenstein" />
+          </TalentOptions>
+        </SubTree>
+        <SubTree identifier="scientist" type="specialization" requires="medical_primary" blocks="xenologist,surgeon">
+          <TalentOptions>
+            <TalentOption identifier="plaguedoctor" />
+          </TalentOptions>
+          <TalentOptions>
+            <TalentOption identifier="deliverysystem" />
+            <TalentOption identifier="labcontacts" />
+          </TalentOptions>
+          <TalentOptions>
+            <TalentOption identifier="supersoldiers" />
+            <TalentOption identifier="whatastench" />
+          </TalentOptions>
+          <TalentOptions>
+            <TalentOption identifier="macrodosing" />
+          </TalentOptions>
+        </SubTree>
+      </TalentTree>
+      <!-- Prisoner -->
+      <TalentTree jobidentifier="convict">
+        <SubTree identifier="escapist" type="specialization" blocks="savage">
+          <TalentOptions>
+            <TalentOption identifier="unstoppablecuriosity" />
+          </TalentOptions>
+          <TalentOptions>
+            <TalentOption identifier="skedaddle" />
+            <TalentOption identifier="foolhardy" />
+          </TalentOptions>
+          <TalentOptions>
+            <TalentOption identifier="daringdolphin" />
+          </TalentOptions>
+          <TalentOptions>
+            <TalentOption identifier="stonewall" />
+          </TalentOptions>
+        </SubTree>
+        <SubTree identifier="savage" type="specialization" blocks="escapist">
+          <TalentOptions>
+            <TalentOption identifier="combatinstincts" />
+            <TalentOption identifier="iamthatguy" />
+          </TalentOptions>
+          <TalentOptions>
+            <TalentOption identifier="multifunctional" />
+            <TalentOption identifier="beatcop" />
+          </TalentOptions>
+          <TalentOptions>
+            <TalentOption identifier="mudraptorwrestler" />
+            <TalentOption identifier="inordinateexsanguination" />
+            <TalentOption identifier="berserker" />
+          </TalentOptions>
+          <TalentOptions>
+            <TalentOption identifier="implacable" />
+          </TalentOptions>
+        </SubTree>
+      </TalentTree>
 </TalentTrees>

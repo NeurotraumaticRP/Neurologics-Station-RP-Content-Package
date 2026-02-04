@@ -177,4 +177,287 @@
     </Quality>
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
+  <!-- Surgical Bombs-->
+  <Item name="Surgical UEX" identifier="surgerybomb" category="Weapon" description="A stick of UEX that is able to be placed into someone surgically and can be detonated with Wi-Fi." Scale="0.5" Tags="smallitem,explosive,medical,surgery,surgerytool" maxstacksize="1" cargocontaineridentifier="explosivecrate" useinhealthinterface="True" impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.9.3.0" scale="0.5" />
+    <InventoryIcon texture="%ModDir%/Images/InventoryIconAtlas.png" depth="0.55" sourcerect="897,896,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/weapons_new.png" depth="0.55" sourcerect="154,478,45,30" origin="0.5,0.5" />
+    <Body width="45" height="30" density="20" />
+    <Throwable characterusable="true" slots="Any,RightHand,LeftHand" canbecombined="true" removeoncombined="true" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnUse" target="Limb" Condition="-100.0" comparison="And" disabledeltatime="true">
+        <Conditional analgesia="gte 1" />
+        <Conditional retractedskin="gte 99" />
+        <Sound file="%ModDir%/Sounds/drill.ogg" range="500" />
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  <Item name="Surgical C-4 Block" identifier="surgeryC4Block" category="Weapon" description="C-4 that can be placed inside of someone surgically. Detonate it with Wi-Fi." Scale="0.5" Tags="smallitem,explosive,medical,surgery,surgerytool" maxstacksize="1" cargocontaineridentifier="explosivecrate" useinhealthinterface="True" impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.9.3.0" scale="0.5" />
+    <InventoryIcon texture="%ModDir%/Images/InventoryIconAtlas.png" depth="0.55" sourcerect="768,64,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/weapons_new.png" depth="0.55" sourcerect="51,479,47,30" origin="0.5,0.5" />
+    <Body width="45" height="30" density="20" />
+    <Throwable characterusable="true" slots="Any,RightHand,LeftHand" canbecombined="true" removeoncombined="true" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnUse" target="Limb" Condition="-100.0" comparison="And" disabledeltatime="true">
+        <Conditional analgesia="gte 1" />
+        <Conditional retractedskin="gte 99" />
+        <Sound file="%ModDir%/Sounds/drill.ogg" range="500" />
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  <Item name="Surgical IC-4 Block" identifier="surgeryIC4Block" category="Weapon" description="IC-4 that can be placed inside of someone surgically. Detonate it with Wi-Fi." Scale="0.5" Tags="smallitem,explosive,medical,surgery,surgerytool" maxstacksize="1" cargocontaineridentifier="explosivecrate" useinhealthinterface="True" impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.9.3.0" scale="0.5" />
+    <InventoryIcon texture="%ModDir%/Images/InventoryIconAtlas.png" depth="0.55" sourcerect="960,69,64,56" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/weapons_new.png" depth="0.55" sourcerect="205,476,51,33" origin="0.5,0.5" />
+    <Body width="45" height="30" density="20" />
+    <Throwable characterusable="true" slots="Any,RightHand,LeftHand" canbecombined="true" removeoncombined="true" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnUse" target="Limb" Condition="-100.0" comparison="And" disabledeltatime="true">
+        <Conditional analgesia="gte 1" />
+        <Conditional retractedskin="gte 99" />
+        <Sound file="%ModDir%/Sounds/drill.ogg" range="500" />
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  <Item name="Surgical Compound N" identifier="surgerycompoundn" category="Weapon" description="Compound N that is able to be placed into people via surgery. Detonated with Wi-Fi." Scale="0.5" Tags="smallitem,explosive,medical,surgery,surgerytool" maxstacksize="1" cargocontaineridentifier="explosivecrate" useinhealthinterface="True" impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.9.3.0" scale="0.5" />
+    <InventoryIcon texture="%ModDir%/Images/InventoryIconAtlas.png" depth="0.55" sourcerect="832,64,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/weapons_new.png" depth="0.55" sourcerect="101,477,48,32" origin="0.5,0.5" />
+    <Body width="45" height="30" density="20" />
+    <Throwable characterusable="true" slots="Any,RightHand,LeftHand" canbecombined="true" removeoncombined="true" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnUse" target="Limb" Condition="-100.0" comparison="And" disabledeltatime="true">
+        <Conditional analgesia="gte 1" />
+        <Conditional retractedskin="gte 99" />
+        <Sound file="%ModDir%/Sounds/drill.ogg" range="500" />
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  <Item name="Dr. Javier's Surgical Bomb" identifier="javierwarhead" category="Weapon" description="Destruction" Scale="1" Tags="mediumitem,explosive,medical,surgery,surgerytool" maxstacksize="1" cargocontaineridentifier="explosivecrate" useinhealthinterface="True" impactsoundtag="impact_metal_heavy">
+    <Upgrade gameversion="0.9.3.0" scale="0.5" />
+    <InventoryIcon texture="%ModDir%/Images/weapons_new.png" depth="0.55" sourcerect="2,478,46,31" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/weapons_new.png" depth="0.55" sourcerect="2,478,46,31" origin="0.5,0.5" />
+    <Body width="60" height="35" density="30" />
+    <Throwable characterusable="true" slots="RightHand+LeftHand" canbecombined="true" removeoncombined="true" throwforce="0.8" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnUse" target="Limb" Condition="-100.0" comparison="And" disabledeltatime="true">
+        <Conditional analgesia="gte 1" />
+        <Conditional retractedskin="gte 99" />
+        <Sound file="%ModDir%/Sounds/bomb.ogg" range="500" />
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  <Item name="Surgical Dirty Bomb" identifier="surgerydirtybomb" category="Weapon" description="A highly radioactive explosive that you can place into someone surgically." Scale="0.5" Tags="smallitem,explosive,medical,surgery,surgerytool" maxstacksize="1" cargocontaineridentifier="explosivecrate" useinhealthinterface="True" impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.9.3.0" scale="0.5" />
+    <InventoryIcon texture="%ModDir%/Images/InventoryIconAtlas.png" depth="0.55" sourcerect="898,64,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/weapons_new.png" depth="0.55" sourcerect="258,477,46,30" origin="0.5,0.5" />
+    <Body width="45" height="30" density="20" />
+    <Throwable characterusable="true" slots="Any,RightHand,LeftHand" canbecombined="true" removeoncombined="true" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnUse" target="Limb" Condition="-100.0" comparison="And" disabledeltatime="true">
+        <Conditional analgesia="gte 1" />
+        <Conditional retractedskin="gte 99" />
+        <Sound file="%ModDir%/Sounds/drill.ogg" range="500" />
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  <!--Bombs end-->
+  <!--Detonator-->
+  <Item name="Surgical bomb detonator" description="This detonator sends a signal through Wi-Fi to detonate any surgical bombs. (Type !detonate in chat to explode specific targets)" identifier="internalbombdetonator" category="Equipment" tags="smallitem" scale="0.6">
+    <Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-13.5" handle1="0,3" handle2="0,-3" msg="ItemMsgPickUpSelect" />
+    <Sprite texture="%ModDir%/Images/weapons_new.png" depth="0.55" sourcerect="173,230,22,40" origin="0.5,0.5" />
+    <InventoryIcon texture="%ModDir%/Images/weapons_new.png" depth="0.55" sourcerect="215,242,41,21" origin="0.5,0.5" />
+    <Body width="50" height="50" density="30" />
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+      <GuiFrame relativesize="0.15,0.1" anchor="BottomCenter" pivot="BottomCenter" relativeoffset="0,0.1" style="ItemUI" />
+      <Button text="Detonate All" connection="signal_out1">
+        <StatusEffect type="OnUse" target="Contained">
+          <LuaHook name="Javier.DetonateAll" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+  </Item>
+  <!--Pliers-->
+  <Item name="Pliers" identifier="Javier_Pliers" description="Surgical device that is able to remove internal bombs." category="Equipment,Weapon" Tags="smallitem,medical,surgery,surgerytool" impactsoundtag="impact_metal_light" useinhealthinterface="True" RequireAimToUse="True" scale="0.025">
+    <sprite texture="%ModDir%/Images/PliersGround.png" scale="0.2" sourcerect="0,0,1123,577" origin="0.5,0.5" />
+    <InventoryIcon texture="%ModDir%/Images/Pliers.png" scale="0.2" sourcerect="420,118,1093,1215" origin="0.5,0.5" />
+    <Body width="52" height="65" density="20" />
+    <PreferredContainer primary="medcontainer" minamount="1" maxamount="1" spawnprobability="0.25" />
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-10,0" holdangle="60" reload="1.2" range="50" combatpriority="7" msg="ItemMsgPickUpSelect">
+      <Attack structuredamage="0" itemdamage="2" targetimpulse="2">
+        <Affliction identifier="lacerations" strength="4" />
+        <Affliction identifier="bleeding" strength="4" />
+        <Affliction identifier="stun" strength="0.02" />
+        <StatusEffect type="OnUse" target="UseTarget">
+          <Conditional entitytype="eq Character" />
+          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+        </StatusEffect>
+      </Attack>
+    </MeleeWeapon>
+    <Deconstruct time="5">
+      <Item identifier="iron" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="medicalfabricator" time="5">
+      <RequiredSkill identifier="medical" level="10" />
+      <RequiredItem identifier="iron" />
+      <RequiredItem identifier="zinc" />
+    </Fabricate>
+  </Item>
+  <!--Explosion-->
+  <Item name="surgeryexplosion" identifier="surgeryexplosion" Scale="1" tags="" sonarsize="0" hideinmenus="true" impacttolerance="0.001" health="0.01">
+    <Body radius="15" density="0" />
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,0,2,2" depth="0.55" origin="0.5,0.5" />
+    <MeleeWeapon slots="Any" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true" />
+    <ItemComponent>
+      <!-- reduce condition to remove the emitter shortly after spawning it -->
+      <StatusEffect type="Always" target="This" condition="-50" />
+      <StatusEffect type="OnBroken" target="This">
+        <ParticleEmitter particle="bloodsplash" particlespersecond="150" scalemin="2" scalemax="3" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+        <ParticleEmitter particle="waterblood" particlespersecond="150" scalemin="2" scalemax="3" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+        <sound file="Content/Items/Weapons/ExplosionMedium1.ogg" range="500" />
+        <sound file="Content/Items/Weapons/ExplosionMedium2.ogg" range="500" />
+        <sound file="Content/Items/Weapons/ExplosionMedium3.ogg" range="500" />
+        <Remove />
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  <!--DEATH EXPLOSION-->
+  <Item name="Javier's Explosion" identifier="javier_thermonuclearblast" tags="railgunequipment,railgunammo" showcontentsintooltip="true" category="Weapon" sonarsize="5" scale="0.5" impactsoundtag="impact_metal_heavy">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,128,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="1,131,217,33" depth="0.55" origin="0.5,0.5" />
+    <Body width="215" height="30" density="35" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" msg="ItemMsgPickUpSelect" />
+    <Projectile characterusable="false" launchimpulse="0" maxtargetstohit="1" damagedoors="true">
+      <Attack structuredamage="100" itemdamage="50" severlimbsprobability="5" penetration="0.5" targetforce="1000">
+        <Affliction identifier="explosiondamage" strength="250" />
+        <Affliction identifier="bleeding" strength="50" />
+        <Affliction identifier="stun" strength="15" />
+      </Attack>
+      <StatusEffect type="Always" target="This" condition="-500" />
+      <sound file="%ModDir%/Sounds/nuke.ogg" type="OnBroken" volume="2.8" range="50000" dontmuffle="true" forceplay="true" />
+      <StatusEffect type="OnBroken" target="This" Condition="-100.0" setvalue="true" allowwhenbroken="true">
+        <Explosion range="15000.0" structuredamage="1500" itemdamage="1500" ballastfloradamage="2000" force="100.0" severlimbsprobability="2" decal="explosion" decalsize="20.0" camerashake="1000" camerashakerange="50000" flashrange="10000" flashduration="7.5" screencolor="255,255,255,255" screencolorrange="5000" screencolorduration="5.0" penetration="1">
+          <Affliction identifier="explosiondamage" strength="3500" />
+          <Affliction identifier="burn" strength="3000" />
+          <Affliction identifier="radiationsickness" strength="600" />
+          <Affliction identifier="bleeding" strength="70" probability="0.15" dividebylimbcount="false" />
+          <Affliction identifier="stun" strength="30" />
+        </Explosion>
+        <Explosion range="6000" force="0.0" smoke="false" sparks="false" empstrength="2.5" applyfireeffects="false" ignorecover="true">
+          <Affliction identifier="emp" strength="50" multiplybymaxvitality="true" />
+        </Explosion>
+        <ParticleEmitter particle="underwaterexplosion" anglemin="0" anglemax="360" particleamount="15" velocitymin="0" velocitymax="0" scalemin="25" scalemax="40" />
+        <SpawnItem identifier="javiersFallout" spawnposition="This" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This">
+        <ParticleEmitter particle="bubbles" anglemin="0" anglemax="360" particleamount="5" velocitymin="0" velocitymax="50" scalemin="1" scalemax="3" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="Contained" allowwhenbroken="true">
+        <Use />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="The Fallout" identifier="javiersFallout" Scale="0.5" tags="" sonarsize="20" hideinmenus="true" health="60">
+    <AiTarget sightrange="3000.0" soundrange="1000" sonardisruption="10" static="True" />
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,0,2,2" depth="0.55" origin="0.5,0.5" />
+    <ItemComponent>
+      <StatusEffect type="Always" target="This">
+        <ParticleEmitter particle="risingbubbles" anglemin="0" anglemax="360" particlespersecond="50" velocitymin="0" velocitymax="50" scalemin="6" scalemax="12" distancemin="0" distancemax="500" />
+        <Sound file="%ModDir%/Sounds/geigercounter.ogg" type="always" range="3500" volume="1" loop="true" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" condition="-1" />
+      <StatusEffect type="Always" target="NearbyCharacters" range="2200" interval="0.5">
+        <Affliction identifier="radiationsickness" strength="300" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  <!--End of Surgical Bombs-->
+
+  <!-- Scientist stuff -->
+  <Item name="Mudraptor Virus Syringe" identifier="mudraptorvirussyringe" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" RequireAimToUse="True" HitOnlyCharacters="true">
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="30" >
+      <RequiredSkill identifier="medical" level="30" />
+      <RequiredItem identifier="smallmudraptoregg" />
+      <RequiredItem identifier="antibloodloss1" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="antibloodloss1" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/Images/MudraptorVirus.png" sourcerect="0,0,55,58" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/MudraptorVirusSprite.png" sourcerect="0,0,55,58" depth="0.6" origin="0.5,0.5" />
+    <Body width="35" height="70" density="20" />
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+      <!--Can't fail, but can't use OnUse for projectiles-->
+      <StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true"/>
+      <StatusEffect type="OnSuccess" target="UseTarget" duration="60.0">
+        <!-- MudraptorVirusState must be less than 0.01 so you can't speed up the infection -->
+        <Conditional mudraptorvirus="lt 0.01" />
+        <Affliction identifier="mudraptorvirus" amount="0.01" />
+      </StatusEffect>
+      <StatusEffect type="OnSuccess" target="UseTarget">
+        <Conditional entitytype="eq Character"/>
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget" multiplyafflictionsbymaxvitality="true" AllowWhenBroken="true">
+        <Affliction identifier="stun" amount="0.1" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional mudraptorvirus="lt 0.01" />
+        <Affliction identifier="mudraptorvirus" amount="0.01" />
+      </StatusEffect>
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MeleeWeapon>
+    <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" />
+  </Item>
+
+  <Item name="Cancer Syringe" identifier="cancersyringe" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" RequireAimToUse="True" HitOnlyCharacters="true">
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="30" >
+      <RequiredSkill identifier="medical" level="30" />
+      <RequiredItem identifier="radiotoxin" />
+      <RequiredItem identifier="geneticmaterial_unresearched" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="geneticmaterial_unresearched" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/Images/CancerSyringe.png" sourcerect="0,0,55,58" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Images/CancerSyringeSprite.png" sourcerect="0,0,55,58" depth="0.6" origin="0.5,0.5" />
+    <Body width="35" height="70" density="20" />
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+      <!--Can't fail, but can't use OnUse for projectiles-->
+      <StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true"/>
+      <StatusEffect type="OnSuccess" target="UseTarget" duration="60.0">
+        <!-- MudraptorVirusState must be less than 0.01 so you can't speed up the infection -->
+        <Conditional cancer="lt 0.01" />
+        <Affliction identifier="cancer" amount="0.01" />
+      </StatusEffect>
+      <StatusEffect type="OnSuccess" target="UseTarget">
+        <Conditional entitytype="eq Character"/>
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget" multiplyafflictionsbymaxvitality="true" AllowWhenBroken="true">
+        <Affliction identifier="stun" amount="0.1" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional cancer="lt 0.01" />
+        <Affliction identifier="cancer" amount="0.01" />
+      </StatusEffect>
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MeleeWeapon>
+    <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" />
+  </Item>
+  
 </Items>

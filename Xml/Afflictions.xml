@@ -67,4 +67,258 @@
     </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128" color="106,106,106,255" origin="0,0"/>
   </Affliction>
+  <Affliction name="Internal Bomb" identifier="internalbomb" description="" healableinmedicalclinic="false" limbspecific="true" showiconthreshold="500" showinhealthscannerthreshold="1" targets="human" type="uexBomb" isbuff="false" maxstrength="100">
+    <icon texture="%ModDir%/Images/weapons_new.png" sourcerect="2,478,47,32" origin="0.5,0.5" />
+  </Affliction>
+  <Affliction name="Internal Bomb" identifier="internaldirtybomb" description="" healableinmedicalclinic="false" limbspecific="true" showiconthreshold="500" showinhealthscannerthreshold="1" targets="human" type="unknown" isbuff="false" maxstrength="100">
+    <icon texture="%ModDir%/Images/weapons_new.png" sourcerect="2,478,47,32" origin="0.5,0.5" />
+  </Affliction>
+  <Affliction name="Internal Bomb" identifier="internalc4" description="" healableinmedicalclinic="false" limbspecific="true" showiconthreshold="500" showinhealthscannerthreshold="1" targets="human" type="unknown" isbuff="false" maxstrength="100">
+    <icon texture="%ModDir%/Images/weapons_new.png" sourcerect="2,478,47,32" origin="0.5,0.5" />
+  </Affliction>
+  <Affliction name="Internal Bomb" identifier="internalincendc4" description="" healableinmedicalclinic="false" limbspecific="true" showiconthreshold="500" showinhealthscannerthreshold="1" targets="human" type="unknown" isbuff="false" maxstrength="100">
+    <icon texture="%ModDir%/Images/weapons_new.png" sourcerect="2,478,47,32" origin="0.5,0.5" />
+  </Affliction>
+  <Affliction name="Internal Bomb" identifier="internalcompoundn" description="" healableinmedicalclinic="false" limbspecific="true" showiconthreshold="500" showinhealthscannerthreshold="1" targets="human" type="unknown" isbuff="false" maxstrength="100">
+    <icon texture="%ModDir%/Images/weapons_new.png" sourcerect="2,478,47,32" origin="0.5,0.5" />
+  </Affliction>
+  <Affliction name="Internal Warhead" identifier="internalwarhead" description="" healableinmedicalclinic="false" limbspecific="true" showiconthreshold="500" showinhealthscannerthreshold="1" targets="human" type="unknown" isbuff="false" maxstrength="100">
+    <icon texture="%ModDir%/Images/weapons_new.png" sourcerect="2,478,47,32" origin="0.5,0.5" />
+  </Affliction>
+  <Affliction name="Internal Explosion" identifier="javier_instantkill" description="The patient's organs have been turned to mush" type="braindeath" causeofdeathdescription="Lack of internal organs" selfcauseofdeathdescription="Your organs were blown to pieces." limbspecific="false" indicatorlimb="Head" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" treatmentthreshold="1000" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" multiplybymaxvitality="true" minvitalitydecrease="1000" maxvitalitydecrease="1000" strengthchange="5.0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="0,768,128,128" color="139,60,42,255" origin="0,0" />
+  </Affliction>
+
+  <!-- Scientist stuff -->
+  <Affliction name="Mudraptor Virus" identifier="mudraptorvirus" description="" type="alieninfection" targets="human" causeofdeathdescription="Taken over by Mudraptor Virus" selfcauseofdeathdescription="You have been taken over by the Mudraptor Virus" limbspecific="false" indicatorlimb="Torso" showiconthreshold="59" showinhealthscannerthreshold="20" maxstrength="100" iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
+    <icon texture="%ModDir%/Images/YAMJIcons.png" sourcerect="128,0,128,128" color="60,197,195,255" origin="0,0" />
+    <Effect minstrength="0" maxstrength="65"
+        strengthchange="0.5"
+        maxvitalitydecrease="0"
+        minbodytint="195,195,195,0"
+        maxbodytint="195,195,195,150"
+        minspeedmultiplier="1"
+        maxspeedmultiplier="1"
+        tag="poisoned">
+    </Effect>
+    <Effect minstrength="65" maxstrength="90"
+        strengthchange="0.5"
+        maxvitalitydecrease="0"
+        minscreendistort="0.1"
+        maxscreendistort="0.25"
+        minscreenblur="0.1"
+        maxscreenblur="0.25"
+        minfacetint="0,50,20,100"
+        maxfacetint="0,50,20,100"
+        minbodytint="0,50,20,80"
+        maxbodytint="0,50,20,80"
+        minspeedmultiplier="1"
+        maxspeedmultiplier="0.75"
+        tag="poisoned">
+    </Effect>
+    <Effect minstrength="90" maxstrength="100"
+        strengthchange="0.3"
+        maxvitalitydecrease="0"
+        minscreendistort="1.0"
+        maxscreendistort="1.0"
+        minscreenblur="1.0"
+        maxscreenblur="1.0"
+        minfacetint="0,90,50,100"
+        maxfacetint="0,90,50,100"
+        minbodytint="0,90,50,80"
+        maxbodytint="0,90,50,80"
+        minspeedmultiplier="0.75"
+        maxspeedmultiplier="0.1"
+        tag="poisoned">
+      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
+        <Affliction identifier="heartdamage" amount="3" />
+        <Affliction identifier="lungdamage" amount="3" />
+        <Affliction identifier="kidneydamage" amount="3" />
+        <Affliction identifier="liverdamage" amount="3" />
+        <Affliction identifier="internaldamage" amount="1" />
+        <Affliction identifier="internalbleeding" amount="1" />
+        <Affliction identifier="bleeding" amount="1" />
+        <Affliction identifier="severepainlite" amount="10" />
+        <Affliction identifier="t_fracture" amount="100" />
+        <Affliction identifier="miracleworker" amount="100" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- These are used to make hatchling and normal mudraptors grow into their older versions, those being the normal muudraptor and veteran mudraptor -->
+  <Affliction name="Mudraptor Growth" identifier="mudraptorgrowthhatchling" description="" type="alieninfection" targets="mudraptor_hatchling" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="false" indicatorlimb="Torso" showiconthreshold="0" showinhealthscannerthreshold="100" maxstrength="100" iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
+    <icon texture="%ModDir%/Images/YAMJIcons.png" sourcerect="128,0,128,128" color="60,197,195,255" origin="0,0" />
+    <Effect minstrength="0" maxstrength="100"
+        strengthchange="0.5"
+        maxvitalitydecrease="0"
+        minbodytint="195,195,195,0"
+        maxbodytint="195,195,195,0"
+        minspeedmultiplier="1"
+        maxspeedmultiplier="1"
+        tag="poisoned">
+    </Effect>
+  </Affliction>
+  <Affliction name="Mudraptor Growth" identifier="mudraptorgrowth" description="" type="alieninfection" targets="mudraptor" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="false" indicatorlimb="Torso" showiconthreshold="0" showinhealthscannerthreshold="100" maxstrength="100" iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
+    <icon texture="%ModDir%/Images/YAMJIcons.png" sourcerect="128,0,128,128" color="60,197,195,255" origin="0,0" />
+    <Effect minstrength="0" maxstrength="100"
+        strengthchange="0.25"
+        maxvitalitydecrease="0"
+        minbodytint="195,195,195,0"
+        maxbodytint="195,195,195,0"
+        minspeedmultiplier="1"
+        maxspeedmultiplier="1"
+        tag="poisoned">
+    </Effect>
+  </Affliction>
+  <Affliction name="Mudraptor Growth" identifier="mudraptorgrowthveteran" description="" type="alieninfection" targets="mudraptor_veteran" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="false" indicatorlimb="Torso" showiconthreshold="0" showinhealthscannerthreshold="100" maxstrength="100" iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
+    <icon texture="%ModDir%/Images/YAMJIcons.png" sourcerect="128,0,128,128" color="60,197,195,255" origin="0,0" />
+    <Effect minstrength="0" maxstrength="100"
+        strengthchange="0.25"
+        maxvitalitydecrease="0"
+        minbodytint="195,195,195,0"
+        maxbodytint="195,195,195,0"
+        minspeedmultiplier="1"
+        maxspeedmultiplier="1"
+        tag="poisoned">
+    </Effect>
+  </Affliction>
+
+  <Affliction name="Cancer" identifier="cancer" description="Experiencing Cancer" type="disease" targets="human" causeofdeathdescription="Cancer" selfcauseofdeathdescription="You have succumbed to Cancer." limbspecific="false" indicatorlimb="Torso" treatmentthreshold="50" showiconthreshold="100" showinhealthscannerthreshold="10" karmachangeonapplied="-1" maxstrength="200" healcostmultiplier="1.2" basehealcost="150" iconcolors="183,89,255,255;181,0,3,255">
+    <Effect minstrength="0" maxstrength="45" maxvitalitydecrease="0" strengthchange="0.3" maxfacetint="236,229,255,25" minfacetint="236,229,255,0">
+      <StatusEffect target="Character">
+        <Affliction identifier="hunger" amount="0.1" />
+        <Affliction identifier="thirst" amount="0.1" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="45" maxstrength="75" maxvitalitydecrease="0" strengthchange="0.5" maxfacetint="236,229,255,25" minfacetint="236,229,255,25"></Effect>
+    <Effect minstrength="75" maxstrength="100" maxvitalitydecrease="0" strengthchange="0.75" maxfacetint="236,229,255,50" minfacetint="236,229,255,25" minspeedmultiplier="0.95" maxspeedmultiplier="0.8" tag="cancer">
+      <StatusEffect target="Character" SpeedMultiplier="0.8" setvalue="true" />
+      <StatusEffect target="Character">
+        <Affliction identifier="lungdamage" amount="0.2" />
+        <Affliction identifier="liverdamage" amount="0.2" />
+        <Affliction identifier="kidneydamage" amount="0.2" />
+        <Affliction identifier="heartdamage" amount="0.2" />
+        <Affliction identifier="sym_confusion" amount="100" setvalue="true" />
+        <Affliction identifier="sym_blurredvision" amount="100" setvalue="true" />
+        <Affliction identifier="sym_sweating" amount="100" setvalue="true" />
+        <Affliction identifier="sym_headache" amount="100" setvalue="true" />
+        <Affliction identifier="sym_lightheadedness" amount="100" setvalue="true" />
+        <Affliction identifier="hunger" amount="0.05" />
+        <Affliction identifier="thirst" amount="0.1" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="100" maxstrength="185" maxvitalitydecrease="0" minvitalitydecrease="0" strengthchange="0.8" maxfacetint="236,229,255,100" minfacetint="236,229,255,50" minscreendistort="0.1" maxscreendistort="1" minscreenblur="0" maxscreenblur="0.6" minchromaticaberration="0.3" maxchromaticaberration="0.7" minspeedmultiplier="0.8" maxspeedmultiplier="0.1" tag="tuberculosis">
+      <StatusEffect target="Character">
+        <Affliction identifier="lungdamage" amount="0.5" />
+        <Affliction identifier="liverdamage" amount="0.5" />
+        <Affliction identifier="kidneydamage" amount="0.5" />
+        <Affliction identifier="heartdamage" amount="0.5" />
+        <Affliction identifier="internalbleeding" amount="0.5" />
+        <Affliction identifier="sym_confusion" amount="100" setvalue="true" />
+        <Affliction identifier="sym_blurredvision" amount="100" setvalue="true" />
+        <Affliction identifier="sym_sweating" amount="100" setvalue="true" />
+        <Affliction identifier="sym_headache" amount="100" setvalue="true" />
+        <Affliction identifier="sym_lightheadedness" amount="100" setvalue="true" />
+        <Affliction identifier="sym_hematemesis" amount="100" setvalue="true" />
+        <Affliction identifier="hunger" amount="0.1" />
+        <Affliction identifier="thirst" amount="0.2" />
+        <Affliction identifier="psychosis" amount="1" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="185" maxstrength="200" maxvitalitydecrease="0" minvitalitydecrease="0" strengthchange="1.1" maxfacetint="236,229,255,255" minfacetint="236,229,255,100" minscreendistort="1" maxscreendistort="10" minscreenblur="0.6" maxscreenblur="10" minchromaticaberration="0.7" maxchromaticaberration="10" minspeedmultiplier="0.1" maxspeedmultiplier="0.1" tag="tuberculosis">
+      <StatusEffect target="Character">
+        <Affliction identifier="givein" amount="10" setvalue="true" />
+        <Affliction identifier="lungdamage" amount="5" />
+        <Affliction identifier="liverdamage" amount="5" />
+        <Affliction identifier="kidneydamage" amount="5" />
+        <Affliction identifier="heartdamage" amount="5" />
+        <Affliction identifier="internalbleeding" amount="5" />
+        <Affliction identifier="internaldamage" amount="2" />
+        <Affliction identifier="cerebralhypoxia" amount="5" />
+        <Affliction identifier="sym_confusion" amount="100" setvalue="true" />
+        <Affliction identifier="sym_blurredvision" amount="100" setvalue="true" />
+        <Affliction identifier="sym_sweating" amount="100" setvalue="true" />
+        <Affliction identifier="sym_headache" amount="100" setvalue="true" />
+        <Affliction identifier="sym_lightheadedness" amount="100" setvalue="true" />
+        <Affliction identifier="sym_hematemesis" amount="100" setvalue="true" />
+        <Affliction identifier="hunger" amount="0.25" />
+        <Affliction identifier="thirst" amount="0.5" />
+        <Affliction identifier="psychosis" amount="3" />
+        <sound file="%ModDir%/Sounds/death.ogg" volume="1.5" range="550" />
+      </StatusEffect>
+    </Effect>
+    <PeriodicEffect mininterval="8" maxinterval="10">
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="male" />
+        <Conditional cancer="gteq 35" />
+        <Conditional cancer="lt 175" />
+        <Conditional IsUnconscious="false" />
+        <Sound file="%ModDir%/Sounds/male_wheeze1.ogg" volume="0.7" range="300" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/male_wheeze2.ogg" volume="0.7" range="300" />
+        <Sound file="%ModDir%/Sounds/male_wheeze3.ogg" volume="0.7" range="300" />
+        <Sound file="%ModDir%/Sounds/male_wheeze4.ogg" volume="0.7" range="300" />
+        <Sound file="%ModDir%/Sounds/male_wheeze5.ogg" volume="0.7" range="300" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="female" />
+        <Conditional cancer="gteq 35" />
+        <Conditional cancer="lt 175" />
+        <Conditional IsUnconscious="false" />
+        <Sound file="%ModDir%/Sounds/female_wheeze1.ogg" volume="0.7" range="300" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/female_wheeze2.ogg" volume="0.7" range="300" />
+        <Sound file="%ModDir%/Sounds/female_wheeze3.ogg" volume="0.7" range="300" />
+        <Sound file="%ModDir%/Sounds/female_wheeze4.ogg" volume="0.7" range="300" />
+        <Sound file="%ModDir%/Sounds/female_wheeze5.ogg" volume="0.7" range="300" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional cancer="gteq 35" />
+        <Conditional cancer="lt 175" />
+        <Conditional IsUnconscious="false" />
+        <Affliction identifier="oxygenlow" strength="20" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <PeriodicEffect mininterval="8" maxinterval="20">
+      <StatusEffect target="Character" SpeedMultiplier="0.15" setvalue="true" duration="1.1" />
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="male" />
+        <Conditional IsUnconscious="false" />
+        <Conditional cancer="gteq 100" />
+        <Conditional cancer="lt 175" />
+        <Sound file="%ModDir%/Sounds/male_cough1.ogg" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/male_cough2.ogg" />
+        <Sound file="%ModDir%/Sounds/male_cough3.ogg" />
+        <Sound file="%ModDir%/Sounds/male_cough4.ogg" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="female" />
+        <Conditional IsUnconscious="false" />
+        <Conditional cancer="gteq 100" />
+        <Conditional cancer="lt 175" />
+        <Sound file="%ModDir%/Sounds/female_cough1.ogg" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/female_cough2.ogg" />
+        <Sound file="%ModDir%/Sounds/female_cough3.ogg" />
+        <Sound file="%ModDir%/Sounds/female_cough4.ogg" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional cancer="gteq 100" />
+        <Conditional cancer="lt 175" />
+        <Conditional IsUnconscious="false" />
+        <Affliction identifier="stun" strength="0.3" />
+        <Affliction identifier="bloodloss" strength="4" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimbs="Head" duration="1" comparison="and">
+        <Conditional cancer="gteq 100" />
+        <Conditional cancer="lt 175" />
+        <Conditional IsUnconscious="false" />
+        <Sound file="Content/Sounds/Damage/Gore1.ogg" selectionmode="Random" />
+        <Sound file="Content/Sounds/Damage/Gore5.ogg" />
+        <Sound file="Content/Sounds/Damage/Gore8.ogg" />
+        <ParticleEmitter particle="bloodsplash" copyentityangle="true" anglemin="-10" anglemax="10" particlespersecond="50" velocitymin="50" velocitymax="200" scalemin="0.1" scalemax="0.2" />
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="1.25" shockwave="false" underwaterbubble="false" />
+        <Conditional HideFace="eq False" />
+        <Conditional IsUnconscious="false" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <icon texture="%ModDir%/Images/cancericon.png" sourcerect="0,0,128,128" color="255,130,211,255" origin="0,0" />
+  </Affliction>
 </Afflictions>
