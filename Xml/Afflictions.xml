@@ -321,4 +321,121 @@
     </PeriodicEffect>
     <icon texture="%ModDir%/Images/cancericon.png" sourcerect="0,0,128,128" color="255,130,211,255" origin="0,0" />
   </Affliction>
+  <Affliction name="Tuberculosis" identifier="tb_Tuberculosis" description="Experiencing Tuberculosis" type="disease" targets="human" causeofdeathdescription="Tuberculosis" selfcauseofdeathdescription="You have succumbed to Tuberculosis." limbspecific="false" indicatorlimb="Torso" treatmentthreshold="50" showiconthreshold="100" showinhealthscannerthreshold="10" karmachangeonapplied="-1" maxstrength="200" healcostmultiplier="1.2" basehealcost="150" iconcolors="183,89,255,255;181,0,3,255">
+    <Description textidentifier="afflictiondescription.tuber.self1" target="Self" minstrength="0" maxstrength="100" />
+    <Description textidentifier="afflictiondescription.tuber.self2" target="Self" minstrength="101" maxstrength="175" />
+    <Description textidentifier="afflictiondescription.tuber.self3" target="Self" minstrength="176" maxstrength="200" />
+    <Description textidentifier="afflictiondescription.tuber.other1" target="OtherCharacter" minstrength="0" maxstrength="100" />
+    <Description textidentifier="afflictiondescription.tuber.other2" target="OtherCharacter" minstrength="101" maxstrength="175" />
+    <Description textidentifier="afflictiondescription.tuber.other3" minstrength="176" maxstrength="200" />
+    <Effect minstrength="0" maxstrength="45" maxvitalitydecrease="0" strengthchange="0.3" maxfacetint="236,229,255,25" minfacetint="236,229,255,0"></Effect>
+    <Effect minstrength="45" maxstrength="75" maxvitalitydecrease="0" strengthchange="0.5" maxfacetint="236,229,255,25" minfacetint="236,229,255,25"></Effect>
+    <Effect minstrength="75" maxstrength="100" maxvitalitydecrease="0" strengthchange="0.75" maxfacetint="236,229,255,50" minfacetint="236,229,255,25" minspeedmultiplier="0.95" maxspeedmultiplier="0.8" tag="tuberculosis">
+      <StatusEffect target="Character" SpeedMultiplier="0.8" setvalue="true" />
+      <StatusEffect target="Character">
+        <Affliction identifier="lungdamage" amount="0.2" setvalue="true" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="100" maxstrength="185" maxvitalitydecrease="50" minvitalitydecrease="0" strengthchange="0.8" maxfacetint="236,229,255,100" minfacetint="236,229,255,50" minscreendistort="0.1" maxscreendistort="1" minscreenblur="0" maxscreenblur="0.6" minchromaticaberration="0.3" maxchromaticaberration="0.7" minspeedmultiplier="0.8" maxspeedmultiplier="0.1" tag="tuberculosis">
+      <StatusEffect target="Character">
+        <Affliction identifier="lungdamage" amount="0.5" setvalue="true" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="185" maxstrength="200" maxvitalitydecrease="250" minvitalitydecrease="50" strengthchange="1.1" maxfacetint="236,229,255,255" minfacetint="236,229,255,100" minscreendistort="1" maxscreendistort="10" minscreenblur="0.6" maxscreenblur="10" minchromaticaberration="0.7" maxchromaticaberration="10" minspeedmultiplier="0.1" maxspeedmultiplier="0.1" tag="tuberculosis">
+      <StatusEffect target="Character">
+        <Affliction identifier="givein" amount="10" setvalue="true" />
+        <Affliction identifier="lungdamage" amount="5" setvalue="true" />
+        <sound file="%ModDir%/Sounds/death.ogg" volume="1.5" range="550" />
+      </StatusEffect>
+    </Effect>
+    <PeriodicEffect mininterval="8" maxinterval="10">
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="male" />
+        <Conditional tb_Tuberculosis="gteq 35" />
+        <Conditional tb_Tuberculosis="lt 175" />
+        <Conditional IsUnconscious="false" />
+        <Sound file="%ModDir%/Sounds/male_wheeze1.ogg" volume="0.7" range="300" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/male_wheeze2.ogg" volume="0.7" range="300" />
+        <Sound file="%ModDir%/Sounds/male_wheeze3.ogg" volume="0.7" range="300" />
+        <Sound file="%ModDir%/Sounds/male_wheeze4.ogg" volume="0.7" range="300" />
+        <Sound file="%ModDir%/Sounds/male_wheeze5.ogg" volume="0.7" range="300" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="female" />
+        <Conditional tb_Tuberculosis="gteq 35" />
+        <Conditional tb_Tuberculosis="lt 175" />
+        <Conditional IsUnconscious="false" />
+        <Sound file="%ModDir%/Sounds/female_wheeze1.ogg" volume="0.7" range="300" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/female_wheeze2.ogg" volume="0.7" range="300" />
+        <Sound file="%ModDir%/Sounds/female_wheeze3.ogg" volume="0.7" range="300" />
+        <Sound file="%ModDir%/Sounds/female_wheeze4.ogg" volume="0.7" range="300" />
+        <Sound file="%ModDir%/Sounds/female_wheeze5.ogg" volume="0.7" range="300" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional tb_Tuberculosis="gteq 35" />
+        <Conditional tb_Tuberculosis="lt 175" />
+        <Conditional IsUnconscious="false" />
+        <Affliction identifier="oxygenlow" strength="20" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <PeriodicEffect mininterval="8" maxinterval="20">
+      <StatusEffect target="Character" SpeedMultiplier="0.15" setvalue="true" duration="1.1" />
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="male" />
+        <Conditional IsUnconscious="false" />
+        <Conditional tb_Tuberculosis="gteq 100" />
+        <Conditional tb_Tuberculosis="lt 175" />
+        <Sound file="%ModDir%/Sounds/male_cough1.ogg" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/male_cough2.ogg" />
+        <Sound file="%ModDir%/Sounds/male_cough3.ogg" />
+        <Sound file="%ModDir%/Sounds/male_cough4.ogg" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="female" />
+        <Conditional IsUnconscious="false" />
+        <Conditional tb_Tuberculosis="gteq 100" />
+        <Conditional tb_Tuberculosis="lt 175" />
+        <Sound file="%ModDir%/Sounds/female_cough1.ogg" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/female_cough2.ogg" />
+        <Sound file="%ModDir%/Sounds/female_cough3.ogg" />
+        <Sound file="%ModDir%/Sounds/female_cough4.ogg" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional tb_Tuberculosis="gteq 100" />
+        <Conditional tb_Tuberculosis="lt 175" />
+        <Conditional IsUnconscious="false" />
+        <Affliction identifier="stun" strength="0.3" />
+        <Affliction identifier="bloodloss" strength="4" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimbs="Head" duration="1" comparison="and">
+        <Conditional tb_Tuberculosis="gteq 100" />
+        <Conditional tb_Tuberculosis="lt 175" />
+        <Conditional IsUnconscious="false" />
+        <Sound file="Content/Sounds/Damage/Gore1.ogg" selectionmode="Random" />
+        <Sound file="Content/Sounds/Damage/Gore5.ogg" />
+        <Sound file="Content/Sounds/Damage/Gore8.ogg" />
+        <ParticleEmitter particle="bloodsplash" copyentityangle="true" anglemin="-10" anglemax="10" particlespersecond="50" velocitymin="50" velocitymax="200" scalemin="0.1" scalemax="0.2" />
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="1.25" shockwave="false" underwaterbubble="false" />
+        <Conditional HideFace="eq False" />
+        <Conditional IsUnconscious="false" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <PeriodicEffect mininterval="1" maxinterval="4">
+      <StatusEffect target="NearbyCharacters" range="300" comparison="and">
+        <Conditional tb_Tuberculosis="gte 175" />
+        <Conditional IsDead="False" />
+        <Affliction identifier="tb_contagion" amount="1" probability="0.2" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <icon texture="%ModDir%/Images/TBiCON.png" sourcerect="0,0,128,128" color="60,107,195,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="" identifier="tb_contagion" description="" type="airborneinfection" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="false" indicatorlimb="Head" showinhealthscannerthreshold="500" showiconthreshold="500" karmachangeonapplied="-100" maxstrength="300">
+    <Effect minstrength="0" maxstrength="3" minvitalitydecrease="0" maxvitalitydecrease="0" strengthchange="-1" minscreendistort="0.0" minscreenblur="0.0" maxscreenblur="0.0" minchromaticaberration="0.0" maxchromaticaberration="0" minfacetint="0,0,0,0" maxfacetint="0,25,0,25" minafflictionoverlayalphamultiplier="0.0" maxafflictionoverlayalphamultiplier="0.0">
+      <StatusEffect target="Character" comparison="and">
+        <Conditional PressureProtection="lt 2000" />
+        <Conditional hideface="false" />
+        <Affliction identifier="tb_Tuberculosis" amount="1" probability="0.2" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
 </Afflictions>

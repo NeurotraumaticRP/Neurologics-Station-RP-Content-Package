@@ -1,3 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Talents>
+    <Talent identifier="goodman">
+        <Description tag="talentdescription.goodman">
+          <Replace tag="[spreadreduction]" value="100" color="gui.green"/>
+          <Replace tag="[powerincrease]" value="25" color="gui.green"/>
+        </Description>
+        <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="7,1" sheetelementsize="128,128"/>
+        <AbilityGroupEffect abilityeffecttype="OnAttack">
+          <Conditions>
+            <AbilityConditionAttackData weapontype="handheldranged" />
+          </Conditions>
+          <Abilities>
+            <CharacterAbilityModifyAttackData addeddamagemultiplier="0.25"/>
+          </Abilities>
+        </AbilityGroupEffect>
+        <AbilityGroupInterval>
+          <Abilities>
+            <CharacterAbilityModifyStat stattype="RangedSpreadReduction" value="1"/>
+            <CharacterAbilityModifyStat stattype="RangedAttackSpeed" value="1"/>
+            <CharacterAbilityModifyStat stattype="MaximumHealthMultiplier" value="1"/>
+          </Abilities>
+        </AbilityGroupInterval>
+      </Talent>
 </Talents>

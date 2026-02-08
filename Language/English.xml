@@ -36,6 +36,16 @@
     <jobdescription.convict>[ADD DESCRIPTION HERE]</jobdescription.convict>
         <!-- MAKE SURE TO ADD A DESCRIPTION FOR THE PRISONER JOB HERE -->
 
+    <talentname.goodman>Good Man</talentname.goodman>
+    <talentdescription.goodman>Aim small, miss small</talentdescription.goodman>
+
+    <afflictiondescription.tuber.self1>You have a little bit of a cough.</afflictiondescription.tuber.self1>
+    <afflictiondescription.tuber.self2>There's a sharp pain in your chest. You feel fatigued.</afflictiondescription.tuber.self2>
+    <afflictiondescription.tuber.self3>You can barely breathe.. your lungs feel like as if they were on fire.</afflictiondescription.tuber.self3>
+    <afflictiondescription.tuber.other1>The patient is coughing periodically.</afflictiondescription.tuber.other1>
+    <afflictiondescription.tuber.other2>Weakness, chest pain, shortness of breath, profuse coughing. These are all symptoms of Tuberculosis.</afflictiondescription.tuber.other2>
+    <afflictiondescription.tuber.other3>The patient is coughing up blood profusely. They won't be alive for much longer.</afflictiondescription.tuber.other3>
+
 
 
 
