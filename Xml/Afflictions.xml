@@ -341,7 +341,7 @@
         <Affliction identifier="lungdamage" amount="0.5" setvalue="true" />
       </StatusEffect>
     </Effect>
-    <Effect minstrength="185" maxstrength="200" maxvitalitydecrease="250" minvitalitydecrease="50" strengthchange="1.1" maxfacetint="236,229,255,255" minfacetint="236,229,255,100" minscreendistort="1" maxscreendistort="10" minscreenblur="0.6" maxscreenblur="10" minchromaticaberration="0.7" maxchromaticaberration="10" minspeedmultiplier="0.1" maxspeedmultiplier="0.1" tag="tuberculosis">
+    <Effect minstrength="185" maxstrength="200" maxvitalitydecrease="350" minvitalitydecrease="50" strengthchange="1.1" maxfacetint="236,229,255,255" minfacetint="236,229,255,100" minscreendistort="1" maxscreendistort="10" minscreenblur="0.6" maxscreenblur="10" minchromaticaberration="0.7" maxchromaticaberration="10" minspeedmultiplier="0.1" maxspeedmultiplier="0.1" tag="tuberculosis">
       <StatusEffect target="Character">
         <Affliction identifier="givein" amount="10" setvalue="true" />
         <Affliction identifier="lungdamage" amount="5" setvalue="true" />
