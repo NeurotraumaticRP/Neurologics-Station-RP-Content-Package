@@ -438,4 +438,46 @@
       </StatusEffect>
     </Effect>
   </Affliction>
+  <Affliction name="Javier Virus" identifier="javiervirus" description="" type="alieninfection" targets="human" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="false" indicatorlimb="Torso" showiconthreshold="70" showinhealthscannerthreshold="20" maxstrength="100" iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
+    <icon texture="%ModDir%/Images/JavierIcon.png" sourcerect="0,0,128,128" color="60,197,195,255" origin="0,0" />
+    <Effect minstrength="0" maxstrength="100"
+        strengthchange="0.5"
+        maxvitalitydecrease="0"
+        minbodytint="195,195,195,0"
+        maxbodytint="195,195,195,0"
+        minspeedmultiplier="1"
+        maxspeedmultiplier="1"
+        tag="poisoned">
+    </Effect>
+    <!-- Contagion: spreads to nearby characters when strength >= 50 -->
+    <PeriodicEffect mininterval="1" maxinterval="4">
+      <StatusEffect target="NearbyCharacters" range="300" comparison="and">
+        <Conditional javiervirus="gte 50" />
+        <Conditional IsDead="False" />
+        <Affliction identifier="javier_contagion" amount="1" probability="0.2" />
+      </StatusEffect>
+    </PeriodicEffect>
+  </Affliction>
+  <!-- Hidden contagion helper affliction for Javier Virus -->
+  <Affliction name="" identifier="javier_contagion" description="" type="airborneinfection" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="false" indicatorlimb="Head" showinhealthscannerthreshold="500" showiconthreshold="500" karmachangeonapplied="-100" maxstrength="300">
+    <Effect minstrength="0" maxstrength="3" minvitalitydecrease="0" maxvitalitydecrease="0" strengthchange="-1" minscreendistort="0.0" minscreenblur="0.0" maxscreenblur="0.0" minchromaticaberration="0.0" maxchromaticaberration="0" minfacetint="0,0,0,0" maxfacetint="0,25,0,25" minafflictionoverlayalphamultiplier="0.0" maxafflictionoverlayalphamultiplier="0.0">
+      <StatusEffect target="Character" comparison="and">
+        <Conditional PressureProtection="lt 2000" />
+        <Conditional hideface="false" />
+        <Conditional javier_carrier="lt 1" />
+        <Affliction identifier="javiervirus" amount="1" probability="0.2" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Lua carrier affliction: hidden, stays at 100, spreads Javier Virus to nearby characters -->
+  <Affliction name="" identifier="javier_carrier" description="" type="hidden" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="false" indicatorlimb="Torso" showinhealthscannerthreshold="1000" showiconthreshold="1000" healableinmedicalclinic="false" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" strengthchange="10" minvitalitydecrease="0" maxvitalitydecrease="0" />
+    <!-- Spreads javier_contagion to nearby characters every 1-4 seconds -->
+    <PeriodicEffect mininterval="1" maxinterval="4">
+      <StatusEffect target="NearbyCharacters" range="300" comparison="and">
+        <Conditional IsDead="False" />
+        <Affliction identifier="javier_contagion" amount="1" probability="0.2" />
+      </StatusEffect>
+    </PeriodicEffect>
+  </Affliction>
 </Afflictions>
